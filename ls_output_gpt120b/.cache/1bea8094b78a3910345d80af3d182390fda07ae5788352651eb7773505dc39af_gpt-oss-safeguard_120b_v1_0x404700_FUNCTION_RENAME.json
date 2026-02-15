@@ -1,0 +1,15 @@
+{
+  "suggested_name": "ai_getenv_wrapper",
+  "confidence": 0.97,
+  "rationale": "The function is a thin wrapper that directly calls the standard getenv API to retrieve an environment variable value.",
+  "evidence_refs": [
+    "imports:getenv"
+  ],
+  "tags": [
+    "config"
+  ],
+  "alt_names": [
+    "ai_env_lookup",
+    "ai_get_environment_variable"
+  ]
+}

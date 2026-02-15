@@ -1,0 +1,17 @@
+{
+  "suggested_name": "ai_locale_number_format",
+  "confidence": 0.86,
+  "rationale": "The function retrieves locale information (decimal point, thousands separator) via localeconv, uses format strings like '%.0Lf' and '%.1Lf', and performs numeric division/modulo to format numbers according to locale settings.",
+  "evidence_refs": [
+    "strings:%.0Lf",
+    "strings:%.1Lf",
+    "imports:localeconv",
+    "imports:__sprintf_chk",
+    "call:0x404810"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_format_number_locale",
+    "ai_number_to_string_locale"
+  ]
+}

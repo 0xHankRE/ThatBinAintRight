@@ -1,0 +1,13 @@
+{
+  "summary": "The function is a thin wrapper that directly forwards its three arguments to the imported strncmp function and returns its result.",
+  "details": [
+    "Accepts three parameters (two strings and a length) and performs a tail call to the standard library strncmp.",
+    "No additional processing or logic is performed before or after the call."
+  ],
+  "evidence_refs": [
+    "imports:strncmp",
+    "call:0x422c90"
+  ],
+  "unknowns": [],
+  "confidence": 0.99
+}

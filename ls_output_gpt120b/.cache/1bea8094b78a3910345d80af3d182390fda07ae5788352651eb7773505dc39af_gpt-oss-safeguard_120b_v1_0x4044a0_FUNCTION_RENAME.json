@@ -1,0 +1,16 @@
+{
+  "suggested_name": "ai_stub_init_wrapper",
+  "confidence": 0.32,
+  "rationale": "Function simply forwards to sub_404020 after setting a constant, indicating a wrapper or stub for initialization/configuration.",
+  "evidence_refs": [
+    "call:0x404020",
+    "constants:0x47"
+  ],
+  "tags": [
+    "config"
+  ],
+  "alt_names": [
+    "ai_init_stub",
+    "ai_wrapper_call"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "summary": "sub_4043c0 initializes a local variable with the constant 0x39 and then tail-calls sub_404020, returning its result without further processing.",
+  "details": [
+    "A local variable var_8 is set to 0x39 (57) but is not used elsewhere in the function.",
+    "The function performs a tail call to sub_404020 at address 0x404020 and returns its value directly."
+  ],
+  "evidence_refs": [
+    "call:0x404020"
+  ],
+  "unknowns": [
+    "The purpose of the local variable var_8 and whether its value influences sub_404020 via registers or stack.",
+    "The actual behavior of sub_404020, which appears to jump to a nullptr placeholder."
+  ],
+  "confidence": 0.78
+}

@@ -1,0 +1,13 @@
+{
+  "suggested_name": "ai_mbstowcs_convert_chk",
+  "confidence": 0.96,
+  "rationale": "The function is a thin wrapper that tail-calls __mbstowcs_chk, which performs a bounded conversion from multibyte to wide-character strings.",
+  "evidence_refs": [
+    "imports:__mbstowcs_chk"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_mbstowcs_wrapper",
+    "ai_string_conversion_chk"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "suggested_name": "ai_resize_sort_file_buffer",
+  "confidence": 0.78,
+  "rationale": "The function checks and expands a dynamically allocated array used for sorting files, using free and reallocarray, and references strings like 'sort_files' and 'sort_type != sort_version'.",
+  "evidence_refs": [
+    "strings:sort_files",
+    "imports:reallocarray",
+    "imports:free",
+    "call:0x40e430"
+  ],
+  "tags": [
+    "file_io",
+    "process",
+    "config"
+  ],
+  "alt_names": [
+    "ai_ensure_sort_buffer_capacity",
+    "ai_expand_file_list_array"
+  ]
+}

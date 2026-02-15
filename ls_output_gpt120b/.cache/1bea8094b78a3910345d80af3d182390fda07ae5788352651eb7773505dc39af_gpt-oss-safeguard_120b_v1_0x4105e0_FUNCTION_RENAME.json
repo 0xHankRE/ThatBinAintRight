@@ -1,0 +1,16 @@
+{
+  "suggested_name": "ai_jump_table_dispatch",
+  "confidence": 0.78,
+  "rationale": "The function checks a global index (data_423344) and jumps to a handler via a jump table (jump_table_419180), indicating a dispatcher or switch-case implementation.",
+  "evidence_refs": [
+    "constants:0x423344",
+    "constants:0x419180"
+  ],
+  "tags": [
+    "process"
+  ],
+  "alt_names": [
+    "ai_dispatcher",
+    "ai_switch_handler"
+  ]
+}

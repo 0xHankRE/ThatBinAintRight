@@ -1,0 +1,16 @@
+{
+  "suggested_name": "ai_raise_signal",
+  "confidence": 0.93,
+  "rationale": "The function is a thin wrapper that directly calls the imported raise() to deliver a signal, indicating its purpose is to raise a signal.",
+  "evidence_refs": [
+    "imports:raise",
+    "call:0x40bf40"
+  ],
+  "tags": [
+    "process"
+  ],
+  "alt_names": [
+    "ai_signal_raise",
+    "ai_raise_sig"
+  ]
+}

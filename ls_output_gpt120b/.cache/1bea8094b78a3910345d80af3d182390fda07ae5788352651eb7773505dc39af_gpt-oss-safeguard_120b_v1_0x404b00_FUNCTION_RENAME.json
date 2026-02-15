@@ -1,0 +1,16 @@
+{
+  "suggested_name": "ai_get_fileno",
+  "confidence": 0.95,
+  "rationale": "Simple wrapper that returns the file descriptor of a FILE* by calling the standard fileno function.",
+  "evidence_refs": [
+    "imports:fileno",
+    "call:0x404b00"
+  ],
+  "tags": [
+    "file_io"
+  ],
+  "alt_names": [
+    "ai_fileno",
+    "ai_file_descriptor"
+  ]
+}

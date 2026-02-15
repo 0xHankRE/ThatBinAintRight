@@ -1,0 +1,16 @@
+{
+  "summary": "The function at 0x404cf0 is a thin wrapper that directly forwards its FILE* argument to the imported fflush_unlocked and returns the result.",
+  "details": [
+    "It imports the standard library function fflush_unlocked.",
+    "The implementation consists solely of a tail call: return fflush_unlocked(fp);",
+    "No additional processing, error handling, or side effects are performed."
+  ],
+  "evidence_refs": [
+    "imports:fflush_unlocked",
+    "call:0x422f50"
+  ],
+  "unknowns": [
+    "Reason for providing a wrapper instead of calling fflush_unlocked directly in callers."
+  ],
+  "confidence": 0.97
+}

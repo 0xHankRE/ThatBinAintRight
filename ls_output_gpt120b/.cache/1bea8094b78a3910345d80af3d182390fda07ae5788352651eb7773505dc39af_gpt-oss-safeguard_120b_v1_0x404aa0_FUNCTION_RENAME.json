@@ -1,0 +1,14 @@
+{
+  "suggested_name": "ai_safe_memory_copy",
+  "confidence": 0.96,
+  "rationale": "The function is a thin wrapper that directly tail-calls the imported __memcpy_chk, indicating its purpose is to perform a bounds-checked memory copy.",
+  "evidence_refs": [
+    "imports:__memcpy_chk",
+    "call:0x404aa0"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_memcpy_checked",
+    "ai_safe_copy"
+  ]
+}

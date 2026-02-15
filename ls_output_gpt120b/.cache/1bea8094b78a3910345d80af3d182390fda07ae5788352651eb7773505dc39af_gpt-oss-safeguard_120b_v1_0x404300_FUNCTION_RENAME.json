@@ -1,0 +1,13 @@
+{
+  "suggested_name": "ai_stub",
+  "confidence": 0.62,
+  "rationale": "Function sets a local constant then tail-calls another empty function, indicating a placeholder or no-op wrapper.",
+  "evidence_refs": [
+    "call:0x404020"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_placeholder",
+    "ai_dummy"
+  ]
+}

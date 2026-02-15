@@ -1,0 +1,14 @@
+{
+  "suggested_name": "ai_memory_realloc_wrapper",
+  "confidence": 0.86,
+  "rationale": "The function simply forwards its arguments to the standard realloc call, acting as a thin wrapper for memory resizing.",
+  "evidence_refs": [
+    "imports:realloc",
+    "call:0x404ba0"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_realloc",
+    "ai_resize_buffer"
+  ]
+}

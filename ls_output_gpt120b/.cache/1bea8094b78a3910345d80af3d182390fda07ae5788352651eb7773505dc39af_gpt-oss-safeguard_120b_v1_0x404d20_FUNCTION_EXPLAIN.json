@@ -1,0 +1,15 @@
+{
+  "summary": "The function is a thin wrapper that forwards its wide character argument to the imported C library function iswprint and returns its result, effectively checking if the character is printable.",
+  "details": [
+    "It performs a tail call to the imported iswprint function with the provided wide character argument.",
+    "No additional processing, checks, or side effects are performed within this wrapper."
+  ],
+  "evidence_refs": [
+    "imports:iswprint",
+    "call:0x422f68"
+  ],
+  "unknowns": [
+    "Potential locale-specific behavior is delegated to the imported iswprint implementation."
+  ],
+  "confidence": 0.98
+}

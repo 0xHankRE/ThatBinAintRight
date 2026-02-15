@@ -1,0 +1,20 @@
+{
+  "suggested_name": "ai_set_tz_env_and_cleanup",
+  "confidence": 0.88,
+  "rationale": "The function sets or unsets the TZ environment variable using setenv/unsetenv, calls tzset to apply changes, and then frees a linked list of allocated structures, preserving errno. This matches behavior of configuring timezone environment and cleaning up resources.",
+  "evidence_refs": [
+    "imports:setenv",
+    "imports:unsetenv",
+    "imports:tzset",
+    "imports:free",
+    "strings:TZ"
+  ],
+  "tags": [
+    "config",
+    "process"
+  ],
+  "alt_names": [
+    "ai_set_tz_env",
+    "ai_tz_env_cleanup"
+  ]
+}

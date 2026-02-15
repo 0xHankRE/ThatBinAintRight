@@ -1,0 +1,24 @@
+{
+  "summary": "sub_40e4b0 expands and populates a dynamically allocated array used for sorting file entries. It checks current capacity, frees and reallocates the buffer if needed, then fills it with pointers to file structures before handling different sort modes.",
+  "details": [
+    "If the required number of elements (data_423318) exceeds the allocated size (data_423448), the old buffer (data_423450) is freed and a new buffer is allocated with reallocarray for 24\u2011byte entries.",
+    "On allocation failure the function calls sub_40e430 (likely an error handler) and does not return.",
+    "When capacity is sufficient, it iterates over the number of entries, writing pointers (data_423320 + offset) into the buffer at data_423450.",
+    "A branch based on the global sort_type (data_4243e0) directs further processing, with a special case when sort_type == 2."
+  ],
+  "evidence_refs": [
+    "strings:sort_files",
+    "strings:src/ls.c",
+    "strings:sort_type != sort_version",
+    "imports:free",
+    "imports:reallocarray",
+    "imports:_setjmp",
+    "call:0x40e430"
+  ],
+  "unknowns": [
+    "Exact meaning of data_423478, data_423344 and the code after label_40e65f",
+    "What sub_40e430 does beyond being an error handler",
+    "How the populated array is later used for sorting"
+  ],
+  "confidence": 0.78
+}

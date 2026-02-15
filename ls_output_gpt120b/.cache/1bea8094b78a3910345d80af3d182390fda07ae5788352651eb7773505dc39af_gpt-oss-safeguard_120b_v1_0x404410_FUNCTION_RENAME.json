@@ -1,0 +1,17 @@
+{
+  "suggested_name": "ai_noop_stub",
+  "confidence": 0.32,
+  "rationale": "The function only sets a local constant and tail-calls another empty stub, indicating a no-op or placeholder routine with no observable side effects.",
+  "evidence_refs": [
+    "constants:0x3e",
+    "call:0x404020"
+  ],
+  "tags": [
+    "packer",
+    "anti_debug"
+  ],
+  "alt_names": [
+    "ai_placeholder",
+    "ai_dummy"
+  ]
+}

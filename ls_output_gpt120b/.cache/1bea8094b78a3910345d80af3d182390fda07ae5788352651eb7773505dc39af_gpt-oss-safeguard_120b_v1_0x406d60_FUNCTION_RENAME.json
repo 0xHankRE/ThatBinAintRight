@@ -1,0 +1,16 @@
+{
+  "suggested_name": "ai_cleanup_tm_clone_registry",
+  "confidence": 0.95,
+  "rationale": "Function deregisters transactional memory clones via _ITM_deregisterTMCloneTable, typical cleanup routine called during program termination.",
+  "evidence_refs": [
+    "imports:_ITM_deregisterTMCloneTable",
+    "call:0x422fa0"
+  ],
+  "tags": [
+    "process"
+  ],
+  "alt_names": [
+    "ai_deregister_tm_clones",
+    "ai_unregister_tm_clones"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "summary": "sub_40ae20 compares two objects by first checking type codes and a flag field, then performs a custom string comparison via sub_412600 and falls back to a standard strcmp, returning an ordering or difference value.",
+  "details": [
+    "It reads a byte at offset 0x15 from each argument and treats values 3 or 9 specially, setting a flag rdx_1.",
+    "It checks a masked field at offset 0xac for the bit pattern 0x4000 and uses this to influence the return value before any string comparison.",
+    "If the preliminary checks pass, it extracts pointers from the start of each argument and calls sub_412600 for a specialized comparison; if that yields zero it calls strcmp on the pointed strings.",
+    "The function returns either the result of the flag/field comparison, the result of sub_412600, or the strcmp result."
+  ],
+  "evidence_refs": [
+    "imports:strcmp",
+    "call:0x412600",
+    "constants:0xf000",
+    "constants:0x4000",
+    "strings:'[A\\\\]'"
+  ],
+  "unknowns": [
+    "Exact semantic meaning of the values 3 and 9 at offset 0x15",
+    "Purpose of the flag check using 0x4000 mask at offset 0xac",
+    "Detailed behavior of sub_412600 beyond its partial implementation"
+  ],
+  "confidence": 0.86
+}

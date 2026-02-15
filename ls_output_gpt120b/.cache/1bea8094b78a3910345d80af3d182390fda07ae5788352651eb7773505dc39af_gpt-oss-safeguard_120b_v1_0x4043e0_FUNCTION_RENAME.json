@@ -1,0 +1,16 @@
+{
+  "suggested_name": "ai_dummy_wrapper",
+  "confidence": 0.32,
+  "rationale": "The function only assigns a constant (0x3b) to a local variable and then tail-calls an empty stub (sub_404020), indicating a placeholder or no-op wrapper.",
+  "evidence_refs": [
+    "constants:0x3b",
+    "call:0x404020"
+  ],
+  "tags": [
+    "process"
+  ],
+  "alt_names": [
+    "ai_noop_wrapper",
+    "ai_set_constant_59"
+  ]
+}

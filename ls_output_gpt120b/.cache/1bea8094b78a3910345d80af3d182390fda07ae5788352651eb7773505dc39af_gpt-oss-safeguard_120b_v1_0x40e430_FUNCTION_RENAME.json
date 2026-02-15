@@ -1,0 +1,19 @@
+{
+  "suggested_name": "ai_memory_exhausted_abort",
+  "confidence": 0.96,
+  "rationale": "The function logs a 'memory exhausted' error via error() and then calls abort(), indicating a fatal out-of-memory handler.",
+  "evidence_refs": [
+    "strings:memory exhausted",
+    "imports:error",
+    "imports:abort",
+    "call:0x404c30",
+    "call:0x404750"
+  ],
+  "tags": [
+    "process"
+  ],
+  "alt_names": [
+    "ai_fatal_memory_error",
+    "ai_out_of_memory_handler"
+  ]
+}

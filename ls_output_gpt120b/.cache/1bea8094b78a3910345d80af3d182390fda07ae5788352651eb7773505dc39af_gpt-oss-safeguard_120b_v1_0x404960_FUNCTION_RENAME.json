@@ -1,0 +1,16 @@
+{
+  "suggested_name": "ai_file_stream_overflow",
+  "confidence": 0.96,
+  "rationale": "The function is a thin wrapper that directly calls the libc __overflow routine to write a character to a FILE stream when the buffer is full, indicating file I/O overflow handling.",
+  "evidence_refs": [
+    "imports:__overflow",
+    "call:0x404960"
+  ],
+  "tags": [
+    "file_io"
+  ],
+  "alt_names": [
+    "ai_file_overflow_handler",
+    "ai_stdout_char_write"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "summary": "sub_40a300 implements a comparator that first orders two objects by two integer fields at offsets 0xE and 0xF, returning a non\u2011zero ordering value if they differ; if those fields are equal it clears errno and delegates to locale\u2011aware string comparison via strcoll on the pointers stored at the start of each object.",
+  "details": [
+    "Loads 64\u2011bit values from arg1[0xE] and arg2[0xE] and from arg1[0xF] and arg2[0xF] and computes a signed comparison result using bitwise logic.",
+    "If the computed result is non\u2011zero, it is returned directly as the ordering indicator.",
+    "When the numeric fields compare equal, the function retrieves the first pointer from each structure, resets errno to 0, and tail\u2011calls strcoll to compare the associated strings."
+  ],
+  "evidence_refs": [
+    "imports:__errno_location",
+    "imports:strcoll",
+    "call:0x404760",
+    "call:0x404b60"
+  ],
+  "unknowns": [
+    "Exact semantic meaning of the fields at offsets 0xE and 0xF (e.g., timestamps, version numbers).",
+    "Why the result calculation uses the specific bitwise expression rather than a straightforward subtraction."
+  ],
+  "confidence": 0.92
+}

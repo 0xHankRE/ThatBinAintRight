@@ -1,0 +1,15 @@
+{
+  "suggested_name": "ai_get_dir_fd",
+  "confidence": 0.97,
+  "rationale": "Function is a thin wrapper that returns the file descriptor of a DIR* by calling the dirfd import.",
+  "evidence_refs": [
+    "imports:dirfd"
+  ],
+  "tags": [
+    "file_io"
+  ],
+  "alt_names": [
+    "ai_dirfd_wrapper",
+    "ai_get_directory_fd"
+  ]
+}

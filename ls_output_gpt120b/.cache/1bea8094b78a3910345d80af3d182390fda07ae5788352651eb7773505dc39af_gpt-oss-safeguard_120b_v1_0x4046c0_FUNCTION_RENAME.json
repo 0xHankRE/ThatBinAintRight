@@ -1,0 +1,14 @@
+{
+  "suggested_name": "ai_strcmp_wrapper",
+  "confidence": 0.96,
+  "rationale": "The function directly forwards its arguments to the standard library strcmp, acting as a thin wrapper for string comparison.",
+  "evidence_refs": [
+    "imports:strcmp",
+    "call:0x4046c0"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_string_compare",
+    "ai_strcmp"
+  ]
+}

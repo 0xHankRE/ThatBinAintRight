@@ -1,0 +1,19 @@
+{
+  "summary": "The function allocates a 56\u2011byte block, preserves the current errno value across the allocation, initializes the block with three static 128\u2011bit constants and one static 64\u2011bit constant, and returns a pointer to this initialized structure; on allocation failure it prints a memory exhausted error and aborts.",
+  "details": [
+    "Calls __errno_location to save the current errno value before calling malloc.",
+    "Allocates 0x38 (56) bytes; if malloc returns NULL, invokes sub_40e430 which reports a memory exhausted error and aborts.",
+    "Copies static data values (data_4232e0, data_4232f0, data_423300, data_423310) into the newly allocated memory in a specific order.",
+    "Restores the saved errno value before returning the pointer to the initialized memory."
+  ],
+  "evidence_refs": [
+    "imports:__errno_location",
+    "imports:malloc",
+    "call:0x40e430"
+  ],
+  "unknowns": [
+    "Exact purpose of the static data constants and the structure they initialize",
+    "Why errno is saved and restored in this context"
+  ],
+  "confidence": 0.94
+}

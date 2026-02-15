@@ -1,0 +1,22 @@
+{
+  "summary": "sub_407670 compares two data structures based on type fields and flag bits, then optionally compares numeric range fields before delegating to a string comparison. If both structures have type values 3 or 9, or a specific flag (0x4000) is set, it checks the values at offsets 0xc and 0xd for equality; when those match it calls strcmp on the first member of each structure. The function returns the result of strcmp or a derived integer indicating mismatch.",
+  "details": [
+    "The function reads a type field at offset 0x15 from both arguments and sets a flag if either equals 3 or 9.",
+    "When the type flag is set, it checks a flag bitmask ((value & 0xf000) == 0x4000) in the first argument to influence control flow.",
+    "It then compares 64\u2011bit values at offsets 0xc and 0xd of the two structures, combining the comparison results into a temporary integer.",
+    "If those numeric comparisons indicate equality, the function tail\u2011calls strcmp (imported at 0x4046c0) on the pointers stored at offset 0 of each structure.",
+    "If the initial type/flag checks fail, the function returns a non\u2011zero integer derived from the flag test."
+  ],
+  "evidence_refs": [
+    "imports:strcmp",
+    "call:0x4046c0",
+    "constants:0xf000",
+    "constants:0x4000"
+  ],
+  "unknowns": [
+    "Exact semantic meaning of the fields at offsets 0x15, 0xc, 0xd, and 0xac",
+    "Why the function returns rax_3 - rdi in some branches",
+    "The broader context in which this comparison is used"
+  ],
+  "confidence": 0.87
+}

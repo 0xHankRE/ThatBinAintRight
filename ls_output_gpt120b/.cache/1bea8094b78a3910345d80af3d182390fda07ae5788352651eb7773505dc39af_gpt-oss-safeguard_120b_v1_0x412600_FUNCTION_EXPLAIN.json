@@ -1,0 +1,21 @@
+{
+  "summary": "sub_412600 is a custom string comparator that first checks for null or '.' characters, handling special cases for empty strings and dot-prefixed components before delegating to helper routines for more detailed comparison. It returns -1, 0, or 1 like strcmp, and is used by higher\u2011level functions that fall back to a standard strcmp if this routine reports equality.",
+  "details": [
+    "The function reads the first byte of each input string (arg1, arg2) and treats a zero byte as end\u2011of\u2011string, returning a result based on sign inversion.",
+    "If the first character is a period (0x2e), it performs special handling for dot\u2011prefixed names, comparing subsequent characters and possibly recursing.",
+    "When both characters are non\u2011zero and not a dot, it calls sub_40c110 and sub_40c1f0 (numeric and dot\u2011segment helpers) to perform more complex ordering before falling back to a simple comparison.",
+    "A stack canary check (__stack_chk_fail) is present, indicating stack protection is enabled."
+  ],
+  "evidence_refs": [
+    "strings:'<.u|'",
+    "imports:__stack_chk_fail",
+    "call:0x40c110",
+    "call:0x40c1f0",
+    "call:0x4048f0"
+  ],
+  "unknowns": [
+    "Exact semantics of the numeric comparison performed by sub_40c1f0",
+    "Full handling of multi\u2011character dot sequences beyond the shown snippet"
+  ],
+  "confidence": 0.78
+}

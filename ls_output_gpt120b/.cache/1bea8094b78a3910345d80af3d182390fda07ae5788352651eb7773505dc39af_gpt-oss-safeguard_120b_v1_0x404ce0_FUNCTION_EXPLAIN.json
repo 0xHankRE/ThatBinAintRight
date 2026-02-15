@@ -1,0 +1,15 @@
+{
+  "summary": "The function is a thin wrapper that directly tail\u2011calls the imported getfilecon routine and returns its result without any additional logic.",
+  "details": [
+    "It contains a single instruction that performs a tail call to the imported getfilecon function.",
+    "No local processing, string handling, or other operations are performed; it simply forwards control to getfilecon."
+  ],
+  "evidence_refs": [
+    "imports:getfilecon",
+    "call:0x422f48"
+  ],
+  "unknowns": [
+    "Whether any arguments are prepared or passed to getfilecon before the call (the wrapper shows no explicit argument handling)."
+  ],
+  "confidence": 0.96
+}

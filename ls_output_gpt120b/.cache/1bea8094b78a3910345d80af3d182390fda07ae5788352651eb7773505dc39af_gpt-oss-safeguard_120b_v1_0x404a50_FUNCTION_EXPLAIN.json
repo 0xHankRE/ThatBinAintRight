@@ -1,0 +1,13 @@
+{
+  "summary": "This function is a thin wrapper that directly forwards its two arguments to the C library calloc and returns the allocated zero\u2011initialized memory.",
+  "details": [
+    "It performs a tail call to the imported calloc with the provided nmemb and size parameters.",
+    "No additional processing or error handling is performed; the result of calloc is returned unchanged."
+  ],
+  "evidence_refs": [
+    "imports:calloc",
+    "call:0x404a50"
+  ],
+  "unknowns": [],
+  "confidence": 0.98
+}

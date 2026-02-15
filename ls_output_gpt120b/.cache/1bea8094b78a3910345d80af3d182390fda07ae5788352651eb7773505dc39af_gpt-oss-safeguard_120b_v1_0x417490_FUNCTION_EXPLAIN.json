@@ -1,0 +1,24 @@
+{
+  "summary": "sub_417490 expands a dynamically allocated array of ACL entry structures, initializes a new entry, and populates fields based on the provided arguments and global state. It handles memory growth with reallocarray, zeroes the new entry, sets type flags, and may compute ACL type via sub_40bcc0, preparing data for later processing of file ACLs.",
+  "details": [
+    "If the current number of entries (data_423318) equals the allocated capacity (data_423328), the function doubles the capacity using reallocarray with an element size of 0x1a0 bytes.",
+    "A new entry is allocated at the end of the array, cleared with memset, and fields such as the file identifier (rbx) and a default flag (0xffffffff) are set.",
+    "When a specific global flag (data_4232c9) is not set but another flag (data_4232ca) is, the function calls sub_40bcc0(arg1) to determine an ACL type, storing the result in the entry.",
+    "The function references strings related to ACL types ('system.nfs4_acl', 'system.posix_acl_access', 'system.posix_acl_default') and error messages, indicating its role in ACL handling."
+  ],
+  "evidence_refs": [
+    "strings:'system.nfs4_acl'",
+    "strings:'system.posix_acl_access'",
+    "strings:'system.posix_acl_default'",
+    "imports:dcgettext",
+    "imports:strlen",
+    "imports:getfilecon",
+    "call:0x40e430",
+    "call:0x40bcc0"
+  ],
+  "unknowns": [
+    "Exact semantics of arg1 and arg2 (e.g., file path vs. mode) and the meaning of global variables data_4232c9/data_4232ca.",
+    "Precise structure layout of the ACL entry beyond the fields observed."
+  ],
+  "confidence": 0.78
+}

@@ -1,0 +1,16 @@
+{
+  "suggested_name": "ai_dummy_wrapper",
+  "confidence": 0.35,
+  "rationale": "Function assigns a constant then tail-calls another function without visible side effects; likely a placeholder or simple wrapper stub.",
+  "evidence_refs": [
+    "constants:0x4a",
+    "call:0x404020"
+  ],
+  "tags": [
+    "config"
+  ],
+  "alt_names": [
+    "ai_stub_wrapper",
+    "ai_noop_caller"
+  ]
+}

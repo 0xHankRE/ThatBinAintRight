@@ -1,0 +1,21 @@
+{
+  "summary": "sub_40f580 resolves a UID to a username string and processes it, falling back to formatting the UID as a decimal string when no name is available.",
+  "details": [
+    "If the global flag data_4232cc is false, it calls sub_40f4c0(arg1) to retrieve a cached or system username for the UID.",
+    "When a username is obtained, it calls sub_4140a0 with the name and its length; the result of that call is returned unless it is negative.",
+    "If the flag is true, the username lookup fails, or sub_4140a0 returns a negative value, the function tail\u2011calls __snprintf_chk with a null buffer to compute the length of the UID formatted as \"%lu\" and returns that length."
+  ],
+  "evidence_refs": [
+    "imports:__snprintf_chk",
+    "imports:strlen",
+    "call:0x40f4c0",
+    "call:0x4140a0",
+    "call:0x404720"
+  ],
+  "unknowns": [
+    "Exact semantics of sub_4140a0 (what processing it performs on the username)",
+    "Purpose of the global variable data_4232cc",
+    "What callers expect beyond the returned length/value"
+  ],
+  "confidence": 0.86
+}

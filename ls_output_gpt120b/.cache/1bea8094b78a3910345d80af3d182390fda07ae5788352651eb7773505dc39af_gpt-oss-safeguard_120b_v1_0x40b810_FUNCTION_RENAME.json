@@ -1,0 +1,19 @@
+{
+  "suggested_name": "ai_check_file_write_error",
+  "confidence": 0.92,
+  "rationale": "The function checks a FILE* stream for pending output, error flags, and errno to determine if a write error occurred, and is used by error handling for stdout/stderr.",
+  "evidence_refs": [
+    "imports:__fpending",
+    "imports:__errno_location",
+    "call:0x4047b0",
+    "call:0x40b6f0",
+    "call:0x404760"
+  ],
+  "tags": [
+    "file_io"
+  ],
+  "alt_names": [
+    "ai_stdout_error_check",
+    "ai_file_write_error_check"
+  ]
+}

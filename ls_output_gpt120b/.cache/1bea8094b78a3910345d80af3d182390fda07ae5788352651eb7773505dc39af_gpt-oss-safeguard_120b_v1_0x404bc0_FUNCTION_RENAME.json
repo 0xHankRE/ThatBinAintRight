@@ -1,0 +1,17 @@
+{
+  "suggested_name": "ai_set_locale_wrapper",
+  "confidence": 0.87,
+  "rationale": "The function directly tail-calls the C library setlocale with passed parameters, acting as a thin wrapper for locale initialization/configuration.",
+  "evidence_refs": [
+    "imports:setlocale",
+    "call:0x404bc0",
+    "constants:0x422eb8"
+  ],
+  "tags": [
+    "config"
+  ],
+  "alt_names": [
+    "ai_locale_init",
+    "ai_setlocale_proxy"
+  ]
+}

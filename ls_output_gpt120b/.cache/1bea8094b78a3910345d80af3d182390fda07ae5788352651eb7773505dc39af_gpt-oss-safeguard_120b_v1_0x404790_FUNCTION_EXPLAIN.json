@@ -1,0 +1,13 @@
+{
+  "summary": "The function is a thin wrapper that directly invokes the system _exit call with the provided status, causing immediate process termination.",
+  "details": [
+    "It imports the _exit function and performs a tail call to it, returning its result (which never returns).",
+    "No additional logic, strings, or side effects are present; it simply forwards the status argument to _exit."
+  ],
+  "evidence_refs": [
+    "imports:_exit",
+    "call:0x404790"
+  ],
+  "unknowns": [],
+  "confidence": 0.98
+}

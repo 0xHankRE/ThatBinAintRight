@@ -1,0 +1,18 @@
+{
+  "summary": "The function indexes two parallel tables using the provided index, checks a control value from the first table, and based on that either validates a character against '0' or extracts a digit value from a character pointer in the second table, returning a boolean or numeric result.",
+  "details": [
+    "It reads a control byte (rdx) from a table at data_4230c0 indexed by arg1*2.",
+    "If the control byte is 1, it returns whether the character at the corresponding address in data_4230c8 is not '0' (0x30).",
+    "If the control byte is 2, it computes a digit value by subtracting '0' from the character; if the first character is '0', it uses the next character instead.",
+    "If the control byte is zero or any other value, the function returns 0."
+  ],
+  "evidence_refs": [
+    "constants:0x4230c0",
+    "constants:0x4230c8"
+  ],
+  "unknowns": [
+    "Exact semantic meaning of the control values (1 and 2) and the broader context of the tables.",
+    "What higher-level logic calls this function and how its return value is used."
+  ],
+  "confidence": 0.78
+}

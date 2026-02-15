@@ -1,0 +1,14 @@
+{
+  "summary": "sub_404170 is a thin wrapper that allocates a small stack frame (0x14 bytes) and then tail-calls sub_404020, effectively forwarding control without additional logic.",
+  "details": [
+    "The function sets a local variable var_8 to 0x14, likely reserving stack space.",
+    "It performs a tail call to sub_404020, returning whatever that function returns."
+  ],
+  "evidence_refs": [
+    "call:0x404020"
+  ],
+  "unknowns": [
+    "The exact purpose of the allocated stack space (var_8) and any side effects of sub_404020."
+  ],
+  "confidence": 0.78
+}

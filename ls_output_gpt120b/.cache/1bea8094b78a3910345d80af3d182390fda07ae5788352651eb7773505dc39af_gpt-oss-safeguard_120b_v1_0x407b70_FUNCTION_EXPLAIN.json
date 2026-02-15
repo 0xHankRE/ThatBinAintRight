@@ -1,0 +1,23 @@
+{
+  "summary": "The function compares two structures based on a type field, a flag mask, a numeric field, and finally a string field. It first checks if either structure has a type of 3 or 9, then verifies a specific flag (0x4000) in a masked word at offset 0xac. If those checks match, it compares a numeric value at offset 9; if those also match, it delegates to strcmp to compare the strings pointed to by the structures. If any check fails, it returns a simple integer difference derived from the flag comparison.",
+  "details": [
+    "Loads type values from offset 0x15 of both arguments and sets a boolean if the type equals 3 or 9.",
+    "Checks a flag by masking a dword at offset 0xac with 0xf000 and comparing to 0x4000 for each structure.",
+    "If flag checks succeed, compares a numeric field at offset 9 of both structures, producing a signed difference.",
+    "When the numeric fields are equal, calls strcmp on the first pointer of each structure and returns its result.",
+    "If any earlier condition fails, returns the difference of the flag check results or a constant based on type presence."
+  ],
+  "evidence_refs": [
+    "imports:strcmp",
+    "call:0x4046c0",
+    "constants:0xf000",
+    "constants:0x4000",
+    "constants:0x4046c0"
+  ],
+  "unknowns": [
+    "Exact semantic meaning of the fields at offsets 0x15, 0x9, and 0xac",
+    "Why type values 3 and 9 are special in this context",
+    "What the overall higher-level purpose of this comparison is within the program"
+  ],
+  "confidence": 0.86
+}

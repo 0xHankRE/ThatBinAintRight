@@ -1,0 +1,16 @@
+{
+  "summary": "The function at 0x404ab0 is a thin wrapper that directly forwards its argument to the imported sigemptyset function and returns its result.",
+  "details": [
+    "Implements a tail call to the system sigemptyset, clearing the provided signal set structure.",
+    "No additional logic or side effects are present beyond invoking the imported sigemptyset."
+  ],
+  "evidence_refs": [
+    "imports:sigemptyset",
+    "call:0x422e30",
+    "strings:none"
+  ],
+  "unknowns": [
+    "Potential calling conventions or error handling beyond the direct call are not visible."
+  ],
+  "confidence": 0.99
+}

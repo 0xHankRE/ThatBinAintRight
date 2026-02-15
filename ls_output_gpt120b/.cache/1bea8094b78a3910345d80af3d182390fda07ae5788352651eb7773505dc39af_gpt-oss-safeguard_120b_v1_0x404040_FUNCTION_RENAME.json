@@ -1,0 +1,13 @@
+{
+  "suggested_name": "ai_forward_to_sub_404020",
+  "confidence": 0.22,
+  "rationale": "Function simply forwards execution to sub_404020 after setting a local variable, acting as a thin wrapper with no visible side effects.",
+  "evidence_refs": [
+    "call:0x404020"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_wrapper_sub_404020",
+    "ai_stub_call"
+  ]
+}

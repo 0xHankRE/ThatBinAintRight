@@ -1,0 +1,16 @@
+{
+  "suggested_name": "ai_stub_forward",
+  "confidence": 0.35,
+  "rationale": "The function only sets a constant and tail-calls another function, acting as a simple wrapper or stub without side effects.",
+  "evidence_refs": [
+    "call:0x404020",
+    "constants:0x11"
+  ],
+  "tags": [
+    "packer"
+  ],
+  "alt_names": [
+    "ai_forward_stub",
+    "ai_wrapper_noop"
+  ]
+}

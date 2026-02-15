@@ -1,0 +1,20 @@
+{
+  "suggested_name": "ai_format_file_mode_string",
+  "confidence": 0.78,
+  "rationale": "The function maps file type bits to characters like '-', 'd', 'b', 'c', 'l', 'p', 's', '?' and uses sprintf to build formatted output strings such as '%s %*s '. This matches behavior of generating a file permission/type string similar to 'ls -l' output.",
+  "evidence_refs": [
+    "strings:'?pcdb-lswd'",
+    "strings:'%s %*s '",
+    "strings:'%*s, %*s '",
+    "imports:__sprintf_chk",
+    "call:0x404d60"
+  ],
+  "tags": [
+    "file_io",
+    "process"
+  ],
+  "alt_names": [
+    "ai_ls_output_formatter",
+    "ai_file_permission_string"
+  ]
+}

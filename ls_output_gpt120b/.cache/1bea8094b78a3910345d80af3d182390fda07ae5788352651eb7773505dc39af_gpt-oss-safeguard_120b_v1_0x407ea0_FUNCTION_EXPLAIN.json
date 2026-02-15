@@ -1,0 +1,17 @@
+{
+  "summary": "The function frees a heap allocation referenced by the pointer stored at its argument, then frees the argument itself. It serves as a cleanup wrapper that releases both a nested allocation and its container.",
+  "details": [
+    "Dereferences arg1 to obtain a pointer and calls free on that pointer.",
+    "Tail-calls free on arg1 itself, releasing the outer allocation.",
+    "Both free calls resolve to the imported free routine at address 0x4046b0."
+  ],
+  "evidence_refs": [
+    "imports:free",
+    "call:0x4046b0"
+  ],
+  "unknowns": [
+    "Exact type and layout of the data referenced by arg1",
+    "Whether arg1 may be NULL or already freed in some contexts"
+  ],
+  "confidence": 0.98
+}

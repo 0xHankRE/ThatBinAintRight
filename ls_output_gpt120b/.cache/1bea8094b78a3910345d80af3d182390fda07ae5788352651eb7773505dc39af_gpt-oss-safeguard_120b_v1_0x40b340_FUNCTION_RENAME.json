@@ -1,0 +1,15 @@
+{
+  "suggested_name": "ai_cached_strcoll_compare",
+  "confidence": 0.92,
+  "rationale": "Function compares two objects using a cached value; if missing, computes it via sub_40b040, then falls back to locale-aware string comparison using strcoll, resetting errno. Indicates a cached string comparison routine.",
+  "evidence_refs": [
+    "imports:__errno_location",
+    "imports:strcoll",
+    "call:0x40b040"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_strcoll_with_cache",
+    "ai_locale_string_compare"
+  ]
+}

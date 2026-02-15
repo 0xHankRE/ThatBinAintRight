@@ -1,0 +1,22 @@
+{
+  "summary": "The function validates specific fields of two structures, checks a flag mask, clears errno, and then performs a locale-aware string comparison using strcoll, returning either the comparison result or a difference based on mismatched flags.",
+  "details": [
+    "It reads a byte at offset 0x15 from both arguments and checks if either value equals 3 or 9, setting a combined flag rcx_1.",
+    "It examines bits masked by 0xf000 at offset 0xac of the structures, comparing them against 0x4000, and returns the difference if they do not match expected values.",
+    "If the preliminary checks pass, it clears errno via __errno_location and delegates the actual string comparison to strcoll using the pointers stored at the start of each structure."
+  ],
+  "evidence_refs": [
+    "imports:__errno_location",
+    "imports:strcoll",
+    "call:0x404760",
+    "call:0x404b60",
+    "constants:0xf000",
+    "constants:0x4000"
+  ],
+  "unknowns": [
+    "Exact semantics of the structures pointed to by arg1 and arg2",
+    "Purpose of the specific type values 3 and 9",
+    "Reason for using the 0xf000 mask and the 0x4000 flag"
+  ],
+  "confidence": 0.86
+}

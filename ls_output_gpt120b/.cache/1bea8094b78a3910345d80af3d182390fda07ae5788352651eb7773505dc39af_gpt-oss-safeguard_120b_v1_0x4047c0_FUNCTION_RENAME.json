@@ -1,0 +1,17 @@
+{
+  "suggested_name": "ai_check_isatty",
+  "confidence": 0.96,
+  "rationale": "The function is a thin wrapper that directly calls the standard library isatty() to determine if a file descriptor refers to a terminal, often used for environment checks.",
+  "evidence_refs": [
+    "imports:isatty",
+    "call:0x422cb8"
+  ],
+  "tags": [
+    "anti_debug",
+    "process"
+  ],
+  "alt_names": [
+    "ai_isatty_wrapper",
+    "ai_terminal_check"
+  ]
+}

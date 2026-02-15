@@ -1,0 +1,20 @@
+{
+  "suggested_name": "ai_check_posix_locale",
+  "confidence": 0.78,
+  "rationale": "The function calls setlocale, retrieves the locale string, checks its length, copies it, and likely compares it against the 'POSIX' string, indicating it checks if the current locale is POSIX.",
+  "evidence_refs": [
+    "strings:POSIX",
+    "imports:setlocale",
+    "imports:strcmp",
+    "call:0x404bc0",
+    "call:0x4048e0"
+  ],
+  "tags": [
+    "config",
+    "process"
+  ],
+  "alt_names": [
+    "ai_is_posix_locale",
+    "ai_detect_locale"
+  ]
+}

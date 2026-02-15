@@ -1,0 +1,15 @@
+{
+  "summary": "The _init function checks if the imported __gmon_start__ symbol is present; if it is null it returns that null pointer, otherwise it calls __gmon_start__ and returns its result.",
+  "details": [
+    "Performs a null check on the __gmon_start__ function pointer.",
+    "Invokes __gmon_start__ when it is defined, acting as a stub for GNU profiling initialization."
+  ],
+  "evidence_refs": [
+    "imports:__gmon_start__",
+    "call:0x422fc8"
+  ],
+  "unknowns": [
+    "Exact side effects and return value semantics of __gmon_start__"
+  ],
+  "confidence": 0.96
+}

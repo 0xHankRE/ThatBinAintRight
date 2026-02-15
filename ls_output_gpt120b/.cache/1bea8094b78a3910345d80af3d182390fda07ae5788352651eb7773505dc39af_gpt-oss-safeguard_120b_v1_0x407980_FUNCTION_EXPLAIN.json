@@ -1,0 +1,22 @@
+{
+  "summary": "sub_407980 compares two data structures, first checking a type field at offset 0x15 for values 3 or 9, then evaluating a flag mask at offset 0xac. If the flag condition matches, it compares two coordinate fields (offsets 0xe and 0xf) for equality; when all checks succeed it falls back to a string comparison via strcmp. Otherwise it returns a boolean-like result based on the flag comparison.",
+  "details": [
+    "The function reads arg1[0x15] and arg2[0x15] and proceeds only if either value is 3 or 9.",
+    "It checks whether the high nibble of the dword at offset 0xac masked with 0xf000 equals 0x4000 for each argument.",
+    "If the flag check fails, it returns the difference of the flag results (result = rax_3 - rdi).",
+    "When the flag check passes, it compares the 64\u2011bit values at offsets 0xe and 0xf of both structures, forming a composite result; a zero result triggers a tail\u2011call to strcmp on the pointers stored at the start of each structure.",
+    "The only external call made is to strcmp (imported at 0x4046c0)."
+  ],
+  "evidence_refs": [
+    "imports:strcmp",
+    "call:0x4046c0",
+    "constants:0xf000",
+    "constants:0x4000"
+  ],
+  "unknowns": [
+    "Exact semantic meaning of the type values 3 and 9",
+    "Purpose of the structures being compared (e.g., file entries, UI objects)",
+    "What the function returns in the non\u2011strcmp branch beyond the boolean flag difference"
+  ],
+  "confidence": 0.88
+}

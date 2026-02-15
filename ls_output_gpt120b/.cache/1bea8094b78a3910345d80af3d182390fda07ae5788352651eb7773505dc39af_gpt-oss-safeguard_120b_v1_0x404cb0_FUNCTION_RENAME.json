@@ -1,0 +1,16 @@
+{
+  "suggested_name": "ai_exit_wrapper",
+  "confidence": 0.96,
+  "rationale": "The function is a thin wrapper that directly calls the imported exit() function to terminate the process.",
+  "evidence_refs": [
+    "imports:exit",
+    "call:0x422f30"
+  ],
+  "tags": [
+    "process"
+  ],
+  "alt_names": [
+    "ai_terminate_process",
+    "ai_exit_call"
+  ]
+}

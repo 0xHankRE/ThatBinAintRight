@@ -1,0 +1,14 @@
+{
+  "suggested_name": "ai_struct_compare_with_fallback_strcoll",
+  "confidence": 0.86,
+  "rationale": "The function compares two structures by numeric fields at offsets 0x10/0x11, and if they are equal it falls back to a locale-aware string comparison using strcoll, resetting errno before the call.",
+  "evidence_refs": [
+    "imports:__errno_location",
+    "imports:strcoll"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_compare_structs",
+    "ai_fallback_locale_string_compare"
+  ]
+}

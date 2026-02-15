@@ -1,0 +1,17 @@
+{
+  "summary": "sub_418d90 is a thin wrapper that registers a function to be called at program termination via __cxa_atexit, passing the provided function pointer, a null argument, and a static DSO handle located at data_423008.",
+  "details": [
+    "The function performs a tail call to __cxa_atexit with arg1 as the cleanup function, nullptr as the argument, and data_423008 as the DSO handle.",
+    "This registers the supplied function for execution when the process exits, enabling resource cleanup or finalization."
+  ],
+  "evidence_refs": [
+    "imports:__cxa_atexit",
+    "call:0x404c60",
+    "constants:0x423008"
+  ],
+  "unknowns": [
+    "The specific cleanup routine passed as arg1",
+    "The exact meaning or contents of the data_423008 constant"
+  ],
+  "confidence": 0.96
+}

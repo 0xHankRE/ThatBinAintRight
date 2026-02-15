@@ -1,0 +1,13 @@
+{
+  "summary": "The function at 0x404ca0 is a thin wrapper that directly forwards its arguments to the imported sigismember library function and returns its result.",
+  "details": [
+    "It receives parameters 'set' and 'signo' and performs a tail-call to sigismember(set, signo).",
+    "No additional processing or logic is performed; it simply returns the result of the library call."
+  ],
+  "evidence_refs": [
+    "imports:sigismember",
+    "call:0x422f28"
+  ],
+  "unknowns": [],
+  "confidence": 1.0
+}

@@ -1,0 +1,14 @@
+{
+  "suggested_name": "ai_gmon_init",
+  "confidence": 0.96,
+  "rationale": "Function checks for the presence of __gmon_start__ and calls it, acting as a wrapper for the GNU profiling initialization routine.",
+  "evidence_refs": [
+    "imports:__gmon_start__",
+    "call:0x422fc8"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_gmon_start_wrapper",
+    "ai_profiler_init"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "suggested_name": "ai_struct_comparator",
+  "confidence": 0.86,
+  "rationale": "The function compares two data structures by checking type fields (values 3 or 9), flag bits at offset 0xac, and numeric fields at offsets 0x10/0x11, then falls back to strcmp on string members, indicating a custom comparator for sorting or matching objects.",
+  "evidence_refs": [
+    "imports:strcmp",
+    "call:0x4046c0"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_compare_object",
+    "ai_entry_compare"
+  ]
+}

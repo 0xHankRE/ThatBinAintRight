@@ -1,0 +1,13 @@
+{
+  "summary": "The function is a thin wrapper that registers a cleanup routine to be called on program termination by forwarding its arguments to the C++ runtime __cxa_atexit.",
+  "details": [
+    "It receives a function pointer (func), an argument (arg), and a DSO handle, then tail\u2011calls the imported __cxa_atexit with those parameters.",
+    "The return value of __cxa_atexit is directly returned, indicating no additional processing."
+  ],
+  "evidence_refs": [
+    "imports:__cxa_atexit",
+    "call:0x422f08"
+  ],
+  "unknowns": [],
+  "confidence": 0.97
+}

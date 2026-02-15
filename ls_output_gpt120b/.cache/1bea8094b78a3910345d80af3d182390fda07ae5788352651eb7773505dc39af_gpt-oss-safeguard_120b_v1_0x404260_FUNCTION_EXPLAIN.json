@@ -1,0 +1,15 @@
+{
+  "summary": "sub_404260 initializes a local variable to 0x23 then immediately tail\u2011calls sub_404020, acting as a thin wrapper that delegates its work to the callee.",
+  "details": [
+    "The function sets var_8 = 0x23 but never uses it before the tailcall.",
+    "It performs a tailcall to sub_404020, which appears to be a stub that sets var_8 = 0 and jumps to a null address."
+  ],
+  "evidence_refs": [
+    "call:0x404020",
+    "constants:0x23"
+  ],
+  "unknowns": [
+    "The actual effect of sub_404020's jump to nullptr and any side\u2011effects of the var_8 assignments."
+  ],
+  "confidence": 0.82
+}

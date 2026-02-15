@@ -1,0 +1,17 @@
+{
+  "summary": "The function implements a custom comparator for two structures: it first compares 64\u2011bit values at offsets 0xC and 0xD, producing a signed result based on those numeric fields; if those fields are equal it falls back to a lexical comparison of the strings pointed to by the structures using strcmp.",
+  "details": [
+    "Loads two 64\u2011bit values from each argument at offsets 0xC and 0xD and evaluates <, > relationships to compute a small integer result.",
+    "Combines the boolean outcomes into a single integer (result = (secondDiff) + ((firstDiff) << 1)).",
+    "If the numeric comparison yields zero (both fields equal), the function calls strcmp on the pointers stored at the start of each structure and returns that result."
+  ],
+  "evidence_refs": [
+    "imports:strcmp",
+    "call:0x4046c0"
+  ],
+  "unknowns": [
+    "Exact semantic meaning of the fields at offsets 0xC and 0xD",
+    "Structure layout beyond the examined fields"
+  ],
+  "confidence": 0.93
+}

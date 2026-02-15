@@ -1,0 +1,20 @@
+{
+  "summary": "sub_40a730 implements a conditional comparator that first checks specific type codes (3 or 9) in two structures, then evaluates a masked flag at offset 0xac, returning a difference if they disagree; otherwise it forwards the comparison to sub_40a6c0 for further ordering logic.",
+  "details": [
+    "Reads a byte at offset 0x15 from both arguments and sets flags when the value equals 3 or 9.",
+    "If either argument has a type of 3 or 9, it checks whether the high nibble of the dword at offset 0xac matches 0x4000, and returns the boolean difference if mismatched.",
+    "When the type codes are not 3 or 9, it performs the same mask check on the second argument and returns a difference if needed.",
+    "If all preliminary checks pass, it tail\u2011calls sub_40a6c0, which performs further numeric comparisons and finally a locale\u2011aware string comparison (strcoll)."
+  ],
+  "evidence_refs": [
+    "constants:0xf000",
+    "constants:0x4000",
+    "call:0x40a6c0"
+  ],
+  "unknowns": [
+    "Exact semantic meaning of the values at offset 0x15 (type identifiers).",
+    "Purpose of the mask 0xf000/0x4000 on the field at offset 0xac (likely attribute flags).",
+    "Higher\u2011level context of the structures being compared (e.g., file entries, UI objects)."
+  ],
+  "confidence": 0.81
+}

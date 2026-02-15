@@ -1,0 +1,21 @@
+{
+  "suggested_name": "ai_flush_and_close_file",
+  "confidence": 0.88,
+  "rationale": "The function checks file descriptor validity, flushes pending output, adjusts file offset for reading streams, and finally calls fclose, handling errors. It implements a safe flush-and-close routine for FILE* objects.",
+  "evidence_refs": [
+    "imports:fileno",
+    "imports:__freading",
+    "imports:fflush",
+    "imports:__errno_location",
+    "imports:fclose",
+    "imports:lseek",
+    "imports:fseeko"
+  ],
+  "tags": [
+    "file_io"
+  ],
+  "alt_names": [
+    "ai_safe_fclose",
+    "ai_file_flush_close"
+  ]
+}

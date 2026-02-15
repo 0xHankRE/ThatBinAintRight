@@ -1,0 +1,14 @@
+{
+  "suggested_name": "ai_memset_wrapper",
+  "confidence": 0.97,
+  "rationale": "The function simply forwards its arguments to the standard memset import, acting as a thin wrapper for memory initialization.",
+  "evidence_refs": [
+    "imports:memset",
+    "call:0x4049c0"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_fill_memory",
+    "ai_memory_set"
+  ]
+}

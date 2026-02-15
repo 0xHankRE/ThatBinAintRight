@@ -1,0 +1,15 @@
+{
+  "summary": "sub_4044a0 is a thin wrapper that initializes a local variable with the constant 0x47 and then tail\u2011calls sub_404020, returning its result.",
+  "details": [
+    "The function sets a stack variable var_8 to the constant 0x47, but the value is never used elsewhere.",
+    "It performs a tail call to sub_404020 (address 0x404020) and returns whatever that function returns."
+  ],
+  "evidence_refs": [
+    "constants:0x47",
+    "call:0x404020"
+  ],
+  "unknowns": [
+    "The actual behavior of sub_404020, which appears to jump to a nullptr or perform no operation."
+  ],
+  "confidence": 0.78
+}

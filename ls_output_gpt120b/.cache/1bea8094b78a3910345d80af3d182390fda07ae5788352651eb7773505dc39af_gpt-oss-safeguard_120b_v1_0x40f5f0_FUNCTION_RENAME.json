@@ -1,0 +1,16 @@
+{
+  "suggested_name": "ai_get_group_name_by_gid",
+  "confidence": 0.92,
+  "rationale": "The function searches a linked list cache for a GID, uses getgrgid to retrieve the group entry, allocates memory, stores the GID and group name, and returns a pointer to the cached name. It implements a GID-to-group-name lookup with caching.",
+  "evidence_refs": [
+    "imports:getgrgid",
+    "imports:malloc",
+    "imports:strlen",
+    "imports:__strcpy_chk"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_gid_to_group_name",
+    "ai_group_name_cache"
+  ]
+}

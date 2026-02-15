@@ -1,0 +1,16 @@
+{
+  "suggested_name": "ai_noop_wrapper",
+  "confidence": 0.68,
+  "rationale": "The function only sets a local variable and tail-calls another stub function that does nothing, indicating a no-op or wrapper behavior.",
+  "evidence_refs": [
+    "constants:0x20",
+    "call:0x404020"
+  ],
+  "tags": [
+    "packer"
+  ],
+  "alt_names": [
+    "ai_stub_wrapper",
+    "ai_dummy_function"
+  ]
+}

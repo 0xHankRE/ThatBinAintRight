@@ -1,0 +1,15 @@
+{
+  "summary": "The function at 0x4049f0 is a thin wrapper that directly forwards its arguments to the imported mbrtoc32 routine and returns the result unchanged.",
+  "details": [
+    "It performs a tail-call to mbrtoc32 with parameters (pc32, s, n, ps).",
+    "No additional processing, checks, or side effects are performed within this wrapper."
+  ],
+  "evidence_refs": [
+    "imports:mbrtoc32",
+    "call:0x4049f0"
+  ],
+  "unknowns": [
+    "Exact runtime behavior of the underlying mbrtoc32 implementation (e.g., locale handling)."
+  ],
+  "confidence": 0.97
+}

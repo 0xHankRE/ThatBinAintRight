@@ -1,0 +1,24 @@
+{
+  "summary": "The function expands a buffer referenced by a two-element structure (pointer and size) by doubling its current length. It allocates a new block with malloc if the buffer is a static placeholder, otherwise attempts to resize with realloc, copying existing data when needed, and handles allocation failures by resetting to a default static buffer and setting errno.",
+  "details": [
+    "If the current buffer pointer equals the address of arg1[2] (a static buffer), it allocates a new block of size r14*2 using malloc and copies the existing data with __memcpy_chk.",
+    "If the buffer is dynamically allocated, it checks for overflow, then attempts to enlarge it with realloc to double the size; on failure it frees the old buffer, resets the pointer to the static buffer, sets the size to 0x400, and records ENOMEM (error 12).",
+    "On successful allocation or reallocation, it updates the structure's pointer and size fields and returns 1; otherwise it returns 0."
+  ],
+  "evidence_refs": [
+    "imports:malloc",
+    "imports:realloc",
+    "imports:__memcpy_chk",
+    "imports:free",
+    "imports:__errno_location",
+    "constants:0x400",
+    "call:0x4046d0",
+    "call:0x404ba0",
+    "call:0x404aa0"
+  ],
+  "unknowns": [
+    "Exact purpose and type of the structure pointed to by arg1 beyond pointer and size fields",
+    "The meaning of the static buffer located at &arg1[2]"
+  ],
+  "confidence": 0.96
+}

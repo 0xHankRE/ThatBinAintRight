@@ -1,0 +1,16 @@
+{
+  "suggested_name": "ai_compare_struct_by_type_and_timestamp",
+  "confidence": 0.85,
+  "rationale": "The function checks type fields (values 3 or 9), flag bits, compares timestamp fields, and finally performs a locale-aware string comparison via strcoll, indicating it is a custom comparator for sorting structures.",
+  "evidence_refs": [
+    "imports:__errno_location",
+    "imports:strcoll",
+    "call:0x404760",
+    "call:0x404b60"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_struct_comparator",
+    "ai_custom_sort"
+  ]
+}

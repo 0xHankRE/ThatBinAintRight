@@ -1,0 +1,13 @@
+{
+  "summary": "The function is a thin wrapper that directly forwards its arguments to the standard library mbstowcs function, returning its result.",
+  "details": [
+    "It imports mbstowcs and performs a tail call to it with the same parameters (pwcs, s, n).",
+    "No additional processing, checks, or transformations are performed before the call."
+  ],
+  "evidence_refs": [
+    "imports:mbstowcs",
+    "call:0x422ce8"
+  ],
+  "unknowns": [],
+  "confidence": 0.98
+}

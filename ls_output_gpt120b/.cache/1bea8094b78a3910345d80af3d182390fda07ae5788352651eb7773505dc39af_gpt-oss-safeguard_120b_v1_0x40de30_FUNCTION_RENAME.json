@@ -1,0 +1,13 @@
+{
+  "suggested_name": "ai_obstack_address_check",
+  "confidence": 0.86,
+  "rationale": "The function iterates over a linked list of memory blocks stored in an obstack structure and checks if a given address falls within any allocated range, returning true/false.",
+  "evidence_refs": [
+    "strings:H90s"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_check_obstack_allocation",
+    "ai_obstack_range_check"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "summary": "The function at 0x404d50 is a thin wrapper that simply forwards to the imported __ctype_b_loc function and returns its result, providing access to the locale's character classification table.",
+  "details": [
+    "The implementation consists of a single tailcall: return __ctype_b_loc();",
+    "It imports __ctype_b_loc and calls it at address 0x422f80, returning the pointer to the ctype bitmap."
+  ],
+  "evidence_refs": [
+    "imports:__ctype_b_loc",
+    "call:0x422f80"
+  ],
+  "unknowns": [],
+  "confidence": 0.98
+}

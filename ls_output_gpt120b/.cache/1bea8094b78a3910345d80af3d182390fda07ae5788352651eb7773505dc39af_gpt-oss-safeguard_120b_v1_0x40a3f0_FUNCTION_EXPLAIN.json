@@ -1,0 +1,20 @@
+{
+  "summary": "sub_40a3f0 compares two objects by inspecting two integer fields at offsets 0xc and 0xd; it returns a non\u2011zero ordering value if those fields differ. If the numeric fields are equal, it clears errno and delegates to strcoll to perform a locale\u2011aware string comparison of the pointers stored at the objects' first fields. The result is used as a combined ordering metric.",
+  "details": [
+    "Loads arg1[0xc] and arg2[0xc] and computes a signed comparison, contributing to the result.",
+    "Loads arg1[0xd] and arg2[0xd] and computes another signed comparison, also contributing to the result.",
+    "If the combined numeric comparison result is zero, retrieves the first pointer from each argument, resets errno via __errno_location, and calls strcoll to compare the strings.",
+    "Returns either the numeric comparison result or the strcoll result."
+  ],
+  "evidence_refs": [
+    "imports:__errno_location",
+    "imports:strcoll",
+    "call:0x404760",
+    "call:0x404b60"
+  ],
+  "unknowns": [
+    "Exact semantic meaning of the fields at offsets 0xc and 0xd",
+    "Structure layout of the arguments beyond the examined fields"
+  ],
+  "confidence": 0.92
+}

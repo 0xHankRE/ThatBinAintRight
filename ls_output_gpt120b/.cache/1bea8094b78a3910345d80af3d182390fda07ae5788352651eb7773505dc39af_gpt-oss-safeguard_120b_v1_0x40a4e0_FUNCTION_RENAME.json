@@ -1,0 +1,14 @@
+{
+  "suggested_name": "ai_struct_comparator",
+  "confidence": 0.86,
+  "rationale": "Function compares two structures by numeric fields at offsets 0xc and 0xd, then falls back to locale-aware string comparison using strcoll, typical of a custom sort comparator.",
+  "evidence_refs": [
+    "imports:__errno_location",
+    "imports:strcoll"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_entry_compare",
+    "ai_custom_sort"
+  ]
+}

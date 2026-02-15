@@ -1,0 +1,17 @@
+{
+  "suggested_name": "ai_validate_string_prefix_length",
+  "confidence": 0.68,
+  "rationale": "The function preserves errno, calls a helper (sub_412790) to compute a reference character and length, then checks the first byte of the input string against that character and compares its length, returning a boolean error flag. This indicates a validation of string format/prefix and length.",
+  "evidence_refs": [
+    "imports:__errno_location",
+    "imports:strlen",
+    "call:0x412790"
+  ],
+  "tags": [
+    "config"
+  ],
+  "alt_names": [
+    "ai_check_string_integrity",
+    "ai_verify_input_format"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "suggested_name": "ai_file_stat",
+  "confidence": 0.96,
+  "rationale": "The function is a thin wrapper that directly tail-calls the imported 'stat' system call, indicating its purpose is to retrieve file metadata (status).",
+  "evidence_refs": [
+    "imports:stat",
+    "call:0x404ac0"
+  ],
+  "tags": [
+    "file_io"
+  ],
+  "alt_names": [
+    "ai_stat_wrapper",
+    "ai_get_file_info"
+  ]
+}

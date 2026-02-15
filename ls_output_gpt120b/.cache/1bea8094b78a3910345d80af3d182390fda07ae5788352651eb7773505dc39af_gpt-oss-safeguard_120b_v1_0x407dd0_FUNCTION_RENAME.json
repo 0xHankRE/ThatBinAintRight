@@ -1,0 +1,13 @@
+{
+  "suggested_name": "ai_rot_mod_hash",
+  "confidence": 0.73,
+  "rationale": "The function rotates the input value right by 3 bits and returns the result modulo a divisor, typical of a simple hash or indexing routine.",
+  "evidence_refs": [],
+  "tags": [
+    "crypto"
+  ],
+  "alt_names": [
+    "ai_rot_mod",
+    "ai_hash_mod"
+  ]
+}

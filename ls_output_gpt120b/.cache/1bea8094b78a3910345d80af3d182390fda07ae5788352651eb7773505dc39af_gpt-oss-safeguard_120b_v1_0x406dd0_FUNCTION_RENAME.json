@@ -1,0 +1,17 @@
+{
+  "suggested_name": "ai_runtime_cleanup",
+  "confidence": 0.86,
+  "rationale": "The function checks a flag, calls __cxa_finalize to run global destructors, deregisters TM clones, and sets a flag, indicating it performs process termination cleanup.",
+  "evidence_refs": [
+    "imports:__cxa_finalize",
+    "call:0x4046e0",
+    "call:0x406d60"
+  ],
+  "tags": [
+    "process"
+  ],
+  "alt_names": [
+    "ai_global_destructor",
+    "ai_finalize_wrapper"
+  ]
+}

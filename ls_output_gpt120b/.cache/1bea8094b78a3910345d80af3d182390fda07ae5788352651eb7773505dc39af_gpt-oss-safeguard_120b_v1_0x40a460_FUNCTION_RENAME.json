@@ -1,0 +1,14 @@
+{
+  "suggested_name": "ai_compare_struct_entries",
+  "confidence": 0.78,
+  "rationale": "The function checks type fields (values 3 or 9) and flag bits (0xf000 mask) of two structures, then delegates to a secondary comparator that compares numeric fields and finally performs a string collation. This pattern matches a custom comparator used for ordering or matching entries.",
+  "evidence_refs": [
+    "constants:0xf000",
+    "call:0x40a3f0"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_struct_comparator",
+    "ai_entry_compare"
+  ]
+}

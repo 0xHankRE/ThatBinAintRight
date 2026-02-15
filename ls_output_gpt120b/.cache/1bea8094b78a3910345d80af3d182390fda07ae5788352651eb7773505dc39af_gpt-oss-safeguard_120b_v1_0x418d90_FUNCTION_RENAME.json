@@ -1,0 +1,16 @@
+{
+  "suggested_name": "ai_register_atexit_handler",
+  "confidence": 0.93,
+  "rationale": "The function simply forwards its argument to __cxa_atexit with a static DSO handle, registering a cleanup routine for program termination.",
+  "evidence_refs": [
+    "imports:__cxa_atexit",
+    "constants:0x423008"
+  ],
+  "tags": [
+    "process"
+  ],
+  "alt_names": [
+    "ai_atexit_register",
+    "ai_register_exit_callback"
+  ]
+}

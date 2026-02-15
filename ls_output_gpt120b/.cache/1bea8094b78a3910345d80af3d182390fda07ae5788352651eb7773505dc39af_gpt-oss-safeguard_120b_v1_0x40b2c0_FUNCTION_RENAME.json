@@ -1,0 +1,15 @@
+{
+  "suggested_name": "ai_type_flag_comparator",
+  "confidence": 0.78,
+  "rationale": "The function checks type codes (3,9) and a flag mask (0xf000 == 0x4000) in two structures, returns a difference or falls back to a string collation via sub_40b210, indicating it is a comparator for sorting items based on type and flag.",
+  "evidence_refs": [
+    "constants:0xf000",
+    "constants:0x4000",
+    "call:0x40b210"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_compare_by_type_and_flag",
+    "ai_struct_comparator"
+  ]
+}

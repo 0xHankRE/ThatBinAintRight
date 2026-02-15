@@ -1,0 +1,19 @@
+{
+  "summary": "sub_40b810 checks a FILE* for pending output and error conditions, invoking sub_40b6f0 to flush or sync the stream, then returns 0 on success or -1 on failure (with special handling for EAGAIN).",
+  "details": [
+    "Calls __fpending to get the number of pending output bytes for the file pointer.",
+    "Inspects the FILE's flag 0x20 (likely the error flag) and calls sub_40b6f0 to perform flushing or state checks.",
+    "If no error flag is set and sub_40b6f0 reports success, the function returns the result; otherwise it examines errno and returns -1 unless errno equals 9 (EAGAIN), in which case it returns 0.",
+    "When the error flag is set and sub_40b6f0 reports no error, errno is cleared before returning -1."
+  ],
+  "evidence_refs": [
+    "imports:__fpending",
+    "imports:__errno_location",
+    "call:0x40b6f0"
+  ],
+  "unknowns": [
+    "Exact meaning of the FILE flag bit 0x20 in this context",
+    "Full behavior of sub_40b6f0 beyond the provided snippet"
+  ],
+  "confidence": 0.86
+}

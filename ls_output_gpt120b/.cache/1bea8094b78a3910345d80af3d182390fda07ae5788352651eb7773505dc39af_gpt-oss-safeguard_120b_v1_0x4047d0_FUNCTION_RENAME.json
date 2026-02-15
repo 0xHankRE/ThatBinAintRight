@@ -1,0 +1,15 @@
+{
+  "suggested_name": "ai_set_signal_handler",
+  "confidence": 0.95,
+  "rationale": "The function is a thin wrapper that directly forwards its arguments to the imported sigaction call, indicating it sets or modifies a signal handler.",
+  "evidence_refs": [
+    "imports:sigaction"
+  ],
+  "tags": [
+    "process"
+  ],
+  "alt_names": [
+    "ai_sigaction_wrapper",
+    "ai_signal_handler_set"
+  ]
+}

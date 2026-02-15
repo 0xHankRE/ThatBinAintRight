@@ -1,0 +1,16 @@
+{
+  "suggested_name": "ai_fnmatch_wrapper",
+  "confidence": 0.96,
+  "rationale": "Thin wrapper that directly forwards arguments to the POSIX fnmatch function for pattern matching.",
+  "evidence_refs": [
+    "imports:fnmatch",
+    "call:0x422db0"
+  ],
+  "tags": [
+    "file_io"
+  ],
+  "alt_names": [
+    "ai_match_pattern",
+    "ai_glob_match"
+  ]
+}

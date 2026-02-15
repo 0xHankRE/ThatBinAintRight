@@ -1,0 +1,16 @@
+{
+  "summary": "sub_404280 is a thin wrapper that sets a local variable to 0x25 and then tail-calls sub_404020, returning its result.",
+  "details": [
+    "The function initializes a local variable var_8 with the constant 0x25 but does not use it further.",
+    "It performs a tail call to sub_404020 and returns whatever that function returns."
+  ],
+  "evidence_refs": [
+    "call:0x404020",
+    "constants:0x25"
+  ],
+  "unknowns": [
+    "The actual behavior and return value of sub_404020, which appears to jump to a nullptr or be a stub.",
+    "The purpose of the local variable var_8."
+  ],
+  "confidence": 0.78
+}

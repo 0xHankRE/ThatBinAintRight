@@ -1,0 +1,17 @@
+{
+  "suggested_name": "ai_wrapper_init",
+  "confidence": 0.42,
+  "rationale": "The function sets a constant (0x12) then tail-calls another stub function, suggesting a simple wrapper or initialization routine with no external side effects.",
+  "evidence_refs": [
+    "constants:0x12",
+    "call:0x404020"
+  ],
+  "tags": [
+    "config",
+    "process"
+  ],
+  "alt_names": [
+    "ai_stub_wrapper",
+    "ai_init_stub"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "suggested_name": "ai_check_multibyte_state",
+  "confidence": 0.96,
+  "rationale": "The function is a thin wrapper that directly returns the result of the standard library call mbsinit, which checks if a multibyte conversion state is in its initial state.",
+  "evidence_refs": [
+    "imports:mbsinit",
+    "call:0x422f58"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_mbs_state_init_check",
+    "ai_mbsinit_wrapper"
+  ]
+}

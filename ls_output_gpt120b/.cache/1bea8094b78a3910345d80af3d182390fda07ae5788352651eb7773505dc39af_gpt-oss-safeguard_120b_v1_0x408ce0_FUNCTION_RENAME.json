@@ -1,0 +1,16 @@
+{
+  "suggested_name": "ai_sort_array_by_comparator",
+  "confidence": 0.86,
+  "rationale": "The function recursively partitions an array, compares pairs using a comparator callback, and swaps elements using SIMD shuffle, indicating a generic sorting routine.",
+  "evidence_refs": [
+    "imports:memcpy",
+    "call:0x408ce0"
+  ],
+  "tags": [
+    "packer"
+  ],
+  "alt_names": [
+    "ai_quicksort",
+    "ai_bitonic_sort"
+  ]
+}

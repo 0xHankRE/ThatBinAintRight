@@ -1,0 +1,14 @@
+{
+  "suggested_name": "ai_reallocarray_wrapper",
+  "confidence": 0.95,
+  "rationale": "The function simply forwards its arguments to the system reallocarray call, acting as a thin wrapper for array memory allocation.",
+  "evidence_refs": [
+    "imports:reallocarray",
+    "call:0x422cd0"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_allocate_array",
+    "ai_memory_realloc"
+  ]
+}

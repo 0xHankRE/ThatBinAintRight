@@ -1,0 +1,14 @@
+{
+  "suggested_name": "ai_case_insensitive_two_char_match",
+  "confidence": 0.78,
+  "rationale": "The function reads two bytes from a structure at offsets 7 and 8, applies a case\u2011insensitive mask (0xDF) and compares them against provided characters, returning a boolean. This matches a case\u2011insensitive two\u2011character comparison routine.",
+  "evidence_refs": [
+    "constants:0xffffffdf",
+    "call:0x40df40"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_char_pair_ci_compare",
+    "ai_two_byte_case_insensitive_check"
+  ]
+}

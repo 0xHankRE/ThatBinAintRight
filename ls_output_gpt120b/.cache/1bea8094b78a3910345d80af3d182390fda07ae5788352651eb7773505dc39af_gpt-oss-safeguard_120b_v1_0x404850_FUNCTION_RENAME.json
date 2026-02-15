@@ -1,0 +1,16 @@
+{
+  "suggested_name": "ai_set_environment_variable",
+  "confidence": 0.96,
+  "rationale": "The function is a thin wrapper that directly calls the setenv import to set an environment variable, indicating its purpose is to set environment variables.",
+  "evidence_refs": [
+    "imports:setenv",
+    "call:0x422d00"
+  ],
+  "tags": [
+    "config"
+  ],
+  "alt_names": [
+    "ai_set_env",
+    "ai_set_env_var"
+  ]
+}

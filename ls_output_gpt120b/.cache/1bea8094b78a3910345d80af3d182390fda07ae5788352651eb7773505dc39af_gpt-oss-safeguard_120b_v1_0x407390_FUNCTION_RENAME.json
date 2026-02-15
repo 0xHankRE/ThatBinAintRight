@@ -1,0 +1,13 @@
+{
+  "suggested_name": "ai_struct_compare_by_fields",
+  "confidence": 0.86,
+  "rationale": "The function compares two structures by numeric fields at offsets 0xe and 0xf, then falls back to a string comparison using strcmp, indicating a comparator for sorting or ordering objects.",
+  "evidence_refs": [
+    "imports:strcmp"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_compare_struct_entries",
+    "ai_struct_key_compare"
+  ]
+}

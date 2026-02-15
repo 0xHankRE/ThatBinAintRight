@@ -1,0 +1,17 @@
+{
+  "summary": "The function acts as a comparator for two data structures: it first compares integer fields at offsets 0xE and 0xF, returning a non\u2011zero ordering value if they differ; if those fields are equal it falls back to a lexical comparison of the strings referenced by the first pointer in each structure via strcmp.",
+  "details": [
+    "Loads 64\u2011bit values from arg1[0xE] and arg2[0xE] and computes a signed/unsigned comparison, contributing to the result.",
+    "Loads 64\u2011bit values from arg1[0xF] and arg2[0xF] and performs a second comparison, combining both results into a signed ordering integer.",
+    "If the combined comparison result is zero, it tail\u2011calls strcmp on the pointers stored at the start of each structure and returns that result."
+  ],
+  "evidence_refs": [
+    "imports:strcmp",
+    "call:0x4046c0"
+  ],
+  "unknowns": [
+    "Whether the fields at offsets 0xE and 0xF are signed or unsigned integers.",
+    "Exact semantics of the bitwise manipulation used to compute the ordering value."
+  ],
+  "confidence": 0.88
+}

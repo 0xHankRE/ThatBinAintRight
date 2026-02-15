@@ -1,0 +1,17 @@
+{
+  "suggested_name": "ai_wrapper_stub",
+  "confidence": 0.32,
+  "rationale": "The function only sets a local constant (0x2e) and immediately tail-calls another function that appears to be a no-op placeholder, suggesting it acts as a thin wrapper or stub without side effects.",
+  "evidence_refs": [
+    "constants:0x2e",
+    "call:0x404020"
+  ],
+  "tags": [
+    "anti_debug",
+    "packer"
+  ],
+  "alt_names": [
+    "ai_noop_wrapper",
+    "ai_placeholder_call"
+  ]
+}

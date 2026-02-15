@@ -1,0 +1,14 @@
+{
+  "suggested_name": "ai_tailcall_wrapper",
+  "confidence": 0.32,
+  "rationale": "The function does nothing but set a local variable and tail-call another function (sub_404020), acting as a simple wrapper or stub.",
+  "evidence_refs": [
+    "call:0x404020",
+    "constants:0x38"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_stub_wrapper",
+    "ai_wrapper_init"
+  ]
+}

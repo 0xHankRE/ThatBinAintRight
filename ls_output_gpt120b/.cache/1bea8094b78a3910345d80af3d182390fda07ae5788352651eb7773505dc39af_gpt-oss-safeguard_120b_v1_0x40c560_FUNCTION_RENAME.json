@@ -1,0 +1,18 @@
+{
+  "suggested_name": "ai_buffer_grow",
+  "confidence": 0.92,
+  "rationale": "The function checks a buffer pointer, frees existing memory if needed, doubles the allocated size, allocates new memory with malloc, falls back to a static buffer on failure, and updates the buffer metadata. This matches typical buffer resizing/growth logic.",
+  "evidence_refs": [
+    "imports:free",
+    "imports:malloc",
+    "imports:__errno_location",
+    "call:0x4046b0",
+    "call:0x4046d0",
+    "call:0x404760"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_buffer_resize",
+    "ai_expand_buffer"
+  ]
+}

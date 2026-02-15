@@ -1,0 +1,15 @@
+{
+  "suggested_name": "ai_compare_struct_by_type_flag",
+  "confidence": 0.78,
+  "rationale": "The function checks type fields (values 3 or 9) and a masked flag (0xf000 == 0x4000) in two structures, returns a difference or delegates to sub_40a300 which performs further comparison, indicating a comparator for objects based on type and flag.",
+  "evidence_refs": [
+    "constants:0xf000",
+    "constants:0x4000",
+    "call:0x40a300"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_struct_comparator",
+    "ai_type_flag_compare"
+  ]
+}

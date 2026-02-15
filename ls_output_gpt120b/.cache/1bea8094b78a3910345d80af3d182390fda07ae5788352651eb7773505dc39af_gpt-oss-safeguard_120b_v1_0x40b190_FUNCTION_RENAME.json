@@ -1,0 +1,13 @@
+{
+  "suggested_name": "ai_compare_struct_by_type_and_flag",
+  "confidence": 0.78,
+  "rationale": "The function examines type fields at offset 0x15 and flag bits at offset 0xac of two structures, performs conditional checks, and returns a comparison result or delegates to a deeper comparator, indicating it is a comparator for objects based on type and flag attributes.",
+  "evidence_refs": [
+    "call:0x40b0f0"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_compare_objects",
+    "ai_struct_type_flag_cmp"
+  ]
+}

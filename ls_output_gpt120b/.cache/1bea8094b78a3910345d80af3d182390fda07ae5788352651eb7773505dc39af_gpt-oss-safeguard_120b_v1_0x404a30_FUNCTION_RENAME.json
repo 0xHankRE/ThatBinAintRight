@@ -1,0 +1,16 @@
+{
+  "suggested_name": "ai_print_string_to_stream",
+  "confidence": 0.86,
+  "rationale": "The function is a thin wrapper that directly calls fputs_unlocked to write a string to a FILE* stream, indicating output/printing behavior.",
+  "evidence_refs": [
+    "imports:fputs_unlocked",
+    "call:0x422df0"
+  ],
+  "tags": [
+    "file_io"
+  ],
+  "alt_names": [
+    "ai_fputs_wrapper",
+    "ai_write_string"
+  ]
+}

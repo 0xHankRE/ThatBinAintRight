@@ -1,0 +1,17 @@
+{
+  "suggested_name": "ai_unset_environment_variable",
+  "confidence": 0.97,
+  "rationale": "The function is a thin wrapper that directly calls the libc unsetenv() to remove an environment variable, indicating behavior of clearing environment settings.",
+  "evidence_refs": [
+    "imports:unsetenv",
+    "call:0x404c50"
+  ],
+  "tags": [
+    "config",
+    "process"
+  ],
+  "alt_names": [
+    "ai_clear_env_var",
+    "ai_remove_env"
+  ]
+}

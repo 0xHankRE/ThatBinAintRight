@@ -1,0 +1,18 @@
+{
+  "suggested_name": "ai_cleanup_global_structs",
+  "confidence": 0.93,
+  "rationale": "The function iterates over a global array, frees multiple allocated pointers for each entry, conditionally frees a connection object, then resets the count and zeroes a data region, indicating a global cleanup routine.",
+  "evidence_refs": [
+    "imports:free",
+    "imports:freecon",
+    "call:0x4046b0",
+    "call:0x4248e8"
+  ],
+  "tags": [
+    "process"
+  ],
+  "alt_names": [
+    "ai_release_global_memory",
+    "ai_reset_global_state"
+  ]
+}

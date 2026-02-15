@@ -1,0 +1,16 @@
+{
+  "summary": "sub_404370 is a thin wrapper that initializes a local variable to 0x34 and then tail-calls sub_404020, which appears to be a stub that does nothing and returns.",
+  "details": [
+    "The function sets a stack variable var_8 to the constant 0x34 before performing a tail call to sub_404020.",
+    "sub_404020 sets its own var_8 to 0 and then jumps to a null pointer, indicating no further action."
+  ],
+  "evidence_refs": [
+    "call:0x404020",
+    "constants:0x34"
+  ],
+  "unknowns": [
+    "The actual effect of the var_8 assignments (if any) on program state.",
+    "The purpose of the jump to nullptr in sub_404020."
+  ],
+  "confidence": 0.85
+}

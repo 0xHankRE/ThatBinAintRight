@@ -1,0 +1,21 @@
+{
+  "suggested_name": "ai_collect_file_acl_info",
+  "confidence": 0.78,
+  "rationale": "The function expands a dynamic array of structures, initializes entries, and references ACL-related strings (system.nfs4_acl, system.posix_acl_access, system.posix_acl_default) and SELinux context via getfilecon, indicating it gathers file ACL and security metadata.",
+  "evidence_refs": [
+    "strings:system.nfs4_acl",
+    "strings:system.posix_acl_access",
+    "strings:system.posix_acl_default",
+    "strings:cannot access %s",
+    "strings:cannot read symbolic link %s",
+    "imports:getfilecon",
+    "imports:dcgettext"
+  ],
+  "tags": [
+    "file_io"
+  ],
+  "alt_names": [
+    "ai_store_file_metadata",
+    "ai_process_acl_entry"
+  ]
+}

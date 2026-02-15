@@ -1,0 +1,15 @@
+{
+  "summary": "The function performs a case\u2011insensitive comparison of two byte buffers (likely strings) up to a given length, returning the difference of the first mismatched characters (or zero if they match).",
+  "details": [
+    "Iterates byte\u2011by\u2011byte using rcx as an index, reading from arg1 and arg2.",
+    "Converts any uppercase ASCII letters (A\u2011Z) to lowercase by adding 0x20 before comparison.",
+    "Stops when the end of the specified length (arg3), a null byte, or a mismatch is encountered.",
+    "Returns the signed difference between the two characters at the point of divergence."
+  ],
+  "evidence_refs": [],
+  "unknowns": [
+    "Exact types of arg1, arg2 (e.g., char* vs. other buffers) and handling of non\u2011ASCII characters",
+    "Whether arg3 is a length limit or includes the terminating null"
+  ],
+  "confidence": 0.96
+}

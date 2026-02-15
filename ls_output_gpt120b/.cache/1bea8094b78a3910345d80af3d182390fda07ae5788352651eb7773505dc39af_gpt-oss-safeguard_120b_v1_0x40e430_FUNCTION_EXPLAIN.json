@@ -1,0 +1,22 @@
+{
+  "summary": "sub_40e430 is a fatal out-of-memory handler. It retrieves a localized \"memory exhausted\" message, reports it via the error() function, and then aborts the program execution.",
+  "details": [
+    "Calls dcgettext with \"memory exhausted\" to obtain a localized error string.",
+    "Invokes error() with a status code from data_423088 and the formatted message.",
+    "Calls abort() to terminate the process; the function does not return."
+  ],
+  "evidence_refs": [
+    "strings:memory exhausted",
+    "imports:error",
+    "imports:abort",
+    "imports:dcgettext",
+    "call:0x4048c0",
+    "call:0x404c30",
+    "call:0x404750"
+  ],
+  "unknowns": [
+    "Exact value and meaning of data_423088 used as the error status",
+    "Whether any cleanup occurs before abort"
+  ],
+  "confidence": 0.97
+}

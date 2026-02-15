@@ -1,0 +1,22 @@
+{
+  "summary": "The function checks whether a given message string has a translation and then determines if the current locale uses UTF-8 encoding. If the locale encoding is UTF-8 (case\u2011insensitively), it returns the second argument; otherwise it falls back to a default handling path. It uses dcgettext to fetch a translation and nl_langinfo(CODESET) to query the character set.",
+  "details": [
+    "Calls dcgettext(nullptr, arg1, 5) and compares the returned pointer to arg1 to detect missing translation.",
+    "Retrieves the current locale's character set via nl_langinfo(0xe) and defaults to \"ASCII\" if unavailable.",
+    "Performs a case\u2011insensitive comparison of the locale string against \"UTF-8\" using a manual loop.",
+    "If the locale is UTF-8, the function returns arg2; otherwise it proceeds to alternative logic (not shown)."
+  ],
+  "evidence_refs": [
+    "imports:dcgettext",
+    "imports:nl_langinfo",
+    "strings:ASCII",
+    "strings:UTF-8",
+    "call:0x4048c0",
+    "call:0x404b50"
+  ],
+  "unknowns": [
+    "Exact behavior after the case\u2011insensitive comparison when the locale is not UTF-8",
+    "Precise meaning of arg1 and arg2 in the broader program context"
+  ],
+  "confidence": 0.88
+}

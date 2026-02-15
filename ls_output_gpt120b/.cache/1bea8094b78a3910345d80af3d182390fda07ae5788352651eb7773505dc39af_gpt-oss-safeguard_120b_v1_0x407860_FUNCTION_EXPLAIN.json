@@ -1,0 +1,17 @@
+{
+  "summary": "The function implements a comparator that first compares two 64-bit fields at offsets 0xE and 0xF of the two input structures; if they differ it returns a non-zero ordering value, otherwise it falls back to a lexical string comparison using strcmp on the pointers at the start of each structure.",
+  "details": [
+    "It loads arg1[0xe] and arg2[0xe] and sets flags for less/greater, then does the same for arg1[0xf] and arg2[0xf].",
+    "A result is computed from the comparison flags; a non-zero result is returned immediately, otherwise strcmp is called on the first 8-byte pointers of the structures."
+  ],
+  "evidence_refs": [
+    "imports:strcmp",
+    "call:0x4046c0",
+    "strings:none"
+  ],
+  "unknowns": [
+    "Exact semantic meaning of the fields at offsets 0xE and 0xF (e.g., version, timestamp).",
+    "Whether the arguments are pointers to structs or arrays of 64-bit values."
+  ],
+  "confidence": 0.88
+}

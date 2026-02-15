@@ -1,0 +1,16 @@
+{
+  "summary": "sub_4045e0 is a thin wrapper that sets a local variable to 0x5b and then tail-calls sub_404020, effectively delegating its functionality.",
+  "details": [
+    "The function initializes a stack variable var_8 with the constant 0x5b, which appears unused.",
+    "It then performs a tail call to sub_404020, returning whatever that function returns."
+  ],
+  "evidence_refs": [
+    "call:0x404020",
+    "constants:0x5b"
+  ],
+  "unknowns": [
+    "The actual effect of sub_404020 since its body is unclear (jump to nullptr).",
+    "Whether the var_8 assignment influences any external state."
+  ],
+  "confidence": 0.78
+}

@@ -1,0 +1,16 @@
+{
+  "suggested_name": "ai_close_file",
+  "confidence": 0.96,
+  "rationale": "The function is a thin wrapper that directly calls the C library fclose to close a FILE pointer, indicating file I/O cleanup behavior.",
+  "evidence_refs": [
+    "imports:fclose",
+    "call:0x404870"
+  ],
+  "tags": [
+    "file_io"
+  ],
+  "alt_names": [
+    "ai_fclose_wrapper",
+    "ai_file_close"
+  ]
+}

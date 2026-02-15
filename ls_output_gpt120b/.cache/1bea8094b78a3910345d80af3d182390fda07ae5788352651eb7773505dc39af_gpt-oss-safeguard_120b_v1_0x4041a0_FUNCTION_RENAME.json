@@ -1,0 +1,16 @@
+{
+  "suggested_name": "ai_wrapper_stub",
+  "confidence": 0.32,
+  "rationale": "Function only sets a local variable then tail-calls another stub function, indicating a simple wrapper or placeholder with no side effects.",
+  "evidence_refs": [
+    "call:0x404020"
+  ],
+  "tags": [
+    "anti_debug",
+    "packer"
+  ],
+  "alt_names": [
+    "ai_noop_wrapper",
+    "ai_stub_call"
+  ]
+}

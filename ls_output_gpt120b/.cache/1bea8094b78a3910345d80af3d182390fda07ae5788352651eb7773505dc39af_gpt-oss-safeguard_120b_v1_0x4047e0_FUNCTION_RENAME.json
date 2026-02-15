@@ -1,0 +1,13 @@
+{
+  "suggested_name": "ai_is_wide_control_char",
+  "confidence": 0.93,
+  "rationale": "The function is a thin wrapper that directly calls the standard library iswcntrl to test if a wide character is a control character.",
+  "evidence_refs": [
+    "imports:iswcntrl"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_check_wchar_control",
+    "ai_wchar_is_control"
+  ]
+}

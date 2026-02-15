@@ -1,0 +1,20 @@
+{
+  "summary": "sub_4140a0 computes the display width (column count) of a string, handling both single-byte and multibyte locales. It iterates over the characters, using ctype tables for single-byte characters and wcwidth for multibyte characters, counting only printable characters and capping the result at 0x7fffffff.",
+  "details": [
+    "If __ctype_get_mb_cur_max() <= 1, the function walks each byte, checks character classification via __ctype_b_loc(), and increments a counter for characters that are not control or non\u2011printable.",
+    "If the locale supports multibyte characters, it likely uses wcwidth (and related wide\u2011character checks) to add the column width of each wide character.",
+    "The loop stops when the end of the buffer is reached or when the counter reaches the maximum 0x7fffffff."
+  ],
+  "evidence_refs": [
+    "imports:__ctype_get_mb_cur_max",
+    "imports:wcwidth",
+    "imports:__ctype_b_loc",
+    "call:0x4048d0",
+    "call:0x404b30"
+  ],
+  "unknowns": [
+    "Exact handling of multibyte characters beyond the truncated portion of the code",
+    "Specific treatment of control characters versus printable characters in the multibyte branch"
+  ],
+  "confidence": 0.92
+}

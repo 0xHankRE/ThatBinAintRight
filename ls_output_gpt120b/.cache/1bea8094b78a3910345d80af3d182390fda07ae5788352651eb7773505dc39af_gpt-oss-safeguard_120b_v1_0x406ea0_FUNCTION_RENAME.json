@@ -1,0 +1,13 @@
+{
+  "suggested_name": "ai_decode_escape_sequence",
+  "confidence": 0.78,
+  "rationale": "The function walks through a character buffer, checks for a leading backslash-like context, subtracts '0' to detect octal digits (0-7) and handles '?' escape, indicating parsing of C-style escape sequences, likely decoding octal/hex escapes in strings.",
+  "evidence_refs": [
+    "constants:0x419040"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_parse_octal_escape",
+    "ai_decode_string_literal"
+  ]
+}

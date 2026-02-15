@@ -1,0 +1,17 @@
+{
+  "suggested_name": "ai_add_list_node",
+  "confidence": 0.86,
+  "rationale": "Allocates a 32-byte struct, duplicates two input strings, stores a value and links the struct into a global linked list (data_423720), typical of a list node creation/insertion routine.",
+  "evidence_refs": [
+    "imports:malloc",
+    "call:0x410b30",
+    "call:0x40e430"
+  ],
+  "tags": [
+    "config"
+  ],
+  "alt_names": [
+    "ai_create_list_entry",
+    "ai_push_node"
+  ]
+}

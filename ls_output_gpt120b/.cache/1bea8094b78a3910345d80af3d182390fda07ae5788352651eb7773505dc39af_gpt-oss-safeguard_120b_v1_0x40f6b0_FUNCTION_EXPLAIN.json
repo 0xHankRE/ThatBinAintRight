@@ -1,0 +1,20 @@
+{
+  "summary": "sub_40f6b0 formats file metadata for display, converting file mode bits into the typical ls -l type character and building a formatted output string using sprintf.",
+  "details": [
+    "It reads a flag byte (arg1[0x17]) and a mode field (arg1[6]), masking the high-order bits (0xf000) to select a file type character, mapping values like 0x8000 to '-', 0x4000 to 'd', 0x2000 to 'c', 0x6000 to 'b', 0x1000 to 'p', 0xa000 to 'l', 0xc000 to 's', otherwise '?' (evidence: string \"?pcdb-lswd\").",
+    "The selected character is stored in var_12a4 and later used in formatted output strings such as \"%s %*s \" and \"%*s, %*s \" via __sprintf_chk calls, likely constructing a columnar listing similar to the Unix \"ls -l\" output."
+  ],
+  "evidence_refs": [
+    "strings:?pcdb-lswd",
+    "strings:%s %*s ",
+    "strings:%*s, %*s ",
+    "imports:__sprintf_chk",
+    "call:0x404d60",
+    "call:0x4140a0"
+  ],
+  "unknowns": [
+    "Exact handling of the remaining fields (e.g., timestamps, sizes) beyond the file type character",
+    "Purpose of the constants like 0x338, 0x419648, and the large negative values"
+  ],
+  "confidence": 0.86
+}

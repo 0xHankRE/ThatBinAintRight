@@ -1,0 +1,14 @@
+{
+  "suggested_name": "ai_stub_wrapper",
+  "confidence": 0.32,
+  "rationale": "Function only sets a local constant and tail-calls another stub function, indicating a placeholder or wrapper with no observable side effects.",
+  "evidence_refs": [
+    "call:0x404020",
+    "constants:0x2b"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_dummy_forward",
+    "ai_noop_wrapper"
+  ]
+}

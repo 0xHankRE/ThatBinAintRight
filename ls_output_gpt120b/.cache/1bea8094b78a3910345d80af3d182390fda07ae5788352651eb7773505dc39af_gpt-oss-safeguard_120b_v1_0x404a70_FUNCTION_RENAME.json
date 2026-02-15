@@ -1,0 +1,16 @@
+{
+  "suggested_name": "ai_set_signal_handler",
+  "confidence": 0.95,
+  "rationale": "Thin wrapper that directly calls the POSIX signal() function to register a handler for a given signal.",
+  "evidence_refs": [
+    "imports:signal",
+    "call:0x422e10"
+  ],
+  "tags": [
+    "process"
+  ],
+  "alt_names": [
+    "ai_register_signal_handler",
+    "ai_signal_wrapper"
+  ]
+}

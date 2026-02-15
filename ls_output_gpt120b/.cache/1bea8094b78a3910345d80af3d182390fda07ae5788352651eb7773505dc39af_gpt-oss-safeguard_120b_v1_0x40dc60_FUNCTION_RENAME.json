@@ -1,0 +1,13 @@
+{
+  "suggested_name": "ai_obstack_init",
+  "confidence": 0.86,
+  "rationale": "The function sets up fields of a structure and then tail-calls sub_407ed0 which performs the core initialization of an obstack (memory allocation stack), indicating it initializes an obstack data structure.",
+  "evidence_refs": [
+    "call:0x407ed0"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_obstack_initialize",
+    "ai_memory_stack_init"
+  ]
+}

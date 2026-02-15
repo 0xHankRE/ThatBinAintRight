@@ -1,0 +1,15 @@
+{
+  "summary": "The function at 0x404990 is a thin wrapper that directly forwards its three arguments to the system lseek call and returns the result.",
+  "details": [
+    "It imports the lseek function and performs a tailcall to it with the same parameters (fd, __arg2, whence).",
+    "No additional processing, checks, or side effects are performed; it simply returns the lseek return value."
+  ],
+  "evidence_refs": [
+    "imports:lseek",
+    "call:0x422da0"
+  ],
+  "unknowns": [
+    "The exact purpose of the constant 0x422da0 referenced as a callee address."
+  ],
+  "confidence": 0.97
+}

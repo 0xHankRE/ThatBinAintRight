@@ -1,0 +1,20 @@
+{
+  "suggested_name": "ai_initialize_object_pool",
+  "confidence": 0.78,
+  "rationale": "The function allocates a struct, validates input via sub_40c7b0, computes element count with sub_4168e0, allocates a buffer with calloc, and initializes fields, typical of an object pool or buffer initialization routine.",
+  "evidence_refs": [
+    "imports:malloc",
+    "imports:calloc",
+    "imports:free",
+    "imports:__errno_location",
+    "call:0x40c7b0",
+    "call:0x4168e0"
+  ],
+  "tags": [
+    "config"
+  ],
+  "alt_names": [
+    "ai_alloc_and_init",
+    "ai_create_buffer_struct"
+  ]
+}

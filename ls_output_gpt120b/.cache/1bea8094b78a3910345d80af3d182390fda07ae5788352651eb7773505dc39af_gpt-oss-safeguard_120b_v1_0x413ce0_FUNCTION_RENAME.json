@@ -1,0 +1,18 @@
+{
+  "suggested_name": "ai_dynamic_array_ensure_and_process",
+  "confidence": 0.78,
+  "rationale": "The function checks if an index exceeds the current size, expands a dynamically allocated array using a custom realloc, zeroes new slots, then updates an entry and calls a processing routine. This matches behavior of ensuring capacity and inserting/processing an element in a dynamic array.",
+  "evidence_refs": [
+    "imports:malloc",
+    "imports:free",
+    "imports:memset",
+    "imports:__errno_location",
+    "call:0x410a20",
+    "call:0x412790"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_ensure_capacity",
+    "ai_vector_set"
+  ]
+}

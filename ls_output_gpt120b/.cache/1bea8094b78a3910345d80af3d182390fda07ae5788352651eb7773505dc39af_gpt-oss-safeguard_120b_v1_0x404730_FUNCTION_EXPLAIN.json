@@ -1,0 +1,15 @@
+{
+  "summary": "The function is a thin wrapper that forwards its argument to the raise() system call, causing the current process to deliver the specified signal.",
+  "details": [
+    "It receives a signal number (sig) and immediately tail-calls the imported raise function with that argument.",
+    "The function returns the result of raise, which is typically 0 on success or -1 on error."
+  ],
+  "evidence_refs": [
+    "imports:raise",
+    "call:0x422c70"
+  ],
+  "unknowns": [
+    "The exact calling convention or any additional side effects beyond raising the signal are not shown."
+  ],
+  "confidence": 0.97
+}

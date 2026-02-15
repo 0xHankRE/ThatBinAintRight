@@ -1,0 +1,13 @@
+{
+  "summary": "The function is a thin wrapper that directly forwards its argument to the imported wcwidth function and returns the result, effectively providing the display width of a wide character.",
+  "details": [
+    "It imports the wcwidth library function and makes a tail call to it with the provided character argument.",
+    "No additional processing or logic is performed; the return value of wcwidth is passed back unchanged."
+  ],
+  "evidence_refs": [
+    "imports:wcwidth",
+    "call:0x422e70"
+  ],
+  "unknowns": [],
+  "confidence": 0.99
+}

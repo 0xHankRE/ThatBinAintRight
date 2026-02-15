@@ -1,0 +1,18 @@
+{
+  "summary": "sub_4099e0 is a thin wrapper that invokes sub_4090e0 with a constant argument (1) and never returns, causing the program to display usage/help information for the SHA\u20112 utilities and then terminate.",
+  "details": [
+    "The function consists of a single call to sub_4090e0(1) and has no return statement.",
+    "sub_4090e0 prints usage text (e.g., \"Usage: %s [OPTION]... [FILE]...\"), help messages about SHA\u20112 utilities, and likely calls exit, as indicated by its imports."
+  ],
+  "evidence_refs": [
+    "call:0x4090e0",
+    "strings:'sha2 utilities'",
+    "imports:__printf_chk",
+    "imports:exit"
+  ],
+  "unknowns": [
+    "Exact control flow after sub_4090e0 returns (if it ever does)",
+    "The broader context in which sub_4099e0 is invoked"
+  ],
+  "confidence": 0.93
+}

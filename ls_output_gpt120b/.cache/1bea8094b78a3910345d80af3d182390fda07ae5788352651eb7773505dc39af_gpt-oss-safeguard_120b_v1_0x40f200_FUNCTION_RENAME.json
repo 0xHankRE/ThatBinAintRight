@@ -1,0 +1,15 @@
+{
+  "suggested_name": "ai_ensure_capacity",
+  "confidence": 0.86,
+  "rationale": "The function dynamically resizes a buffer using reallocarray, checks capacity, and reallocates internal structures, typical of an ensure-capacity or buffer expansion routine.",
+  "evidence_refs": [
+    "imports:reallocarray",
+    "call:0x4047f0",
+    "call:0x40e430"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_expand_buffer",
+    "ai_dynamic_array_grow"
+  ]
+}

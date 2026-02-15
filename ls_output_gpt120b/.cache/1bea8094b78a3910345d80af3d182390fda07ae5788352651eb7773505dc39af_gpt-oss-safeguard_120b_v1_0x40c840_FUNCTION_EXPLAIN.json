@@ -1,0 +1,20 @@
+{
+  "summary": "sub_40c840 walks a container structure passed in arg1 and frees all allocated elements, handling two cleanup paths depending on flags at offsets 4 and 8. It iterates over an array of entries, freeing linked lists within each entry, and finally frees the array itself.",
+  "details": [
+    "The function obtains the current errno pointer via __errno_location but does not modify it in the shown code.",
+    "If either arg1[8] or arg1[4] is zero, it treats the structure as a simple array of pointers and frees each linked list found at offset 8 of each entry.",
+    "If both flags are non-zero, it iterates over the entries, calling a function pointer stored at arg1[8] to free each node in a linked list until the list ends.",
+    "Memory is released using the imported free function throughout the loops."
+  ],
+  "evidence_refs": [
+    "imports:__errno_location",
+    "imports:free",
+    "call:0x404760",
+    "call:0x4046b0"
+  ],
+  "unknowns": [
+    "Exact meaning of arg1[4] and arg1[8] fields and the overall data structure type",
+    "What additional cleanup may occur after the truncated portion of the function"
+  ],
+  "confidence": 0.78
+}

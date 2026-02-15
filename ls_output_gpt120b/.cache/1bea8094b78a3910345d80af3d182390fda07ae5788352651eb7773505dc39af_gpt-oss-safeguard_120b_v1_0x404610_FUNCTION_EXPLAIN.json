@@ -1,0 +1,16 @@
+{
+  "summary": "sub_404610 is a thin wrapper that initializes a local variable to 0x5e and then tail\u2011calls sub_404020, effectively delegating its behavior to that function.",
+  "details": [
+    "The function sets a local 64\u2011bit variable to the constant 0x5e, which is not used elsewhere.",
+    "It performs a tail call to sub_404020, passing control without further processing."
+  ],
+  "evidence_refs": [
+    "call:0x404020",
+    "constants:0x5e"
+  ],
+  "unknowns": [
+    "The actual effect or return value of sub_404020, which appears to be a stub or placeholder.",
+    "Whether the local variable influences any later code via side\u2011effects."
+  ],
+  "confidence": 0.78
+}

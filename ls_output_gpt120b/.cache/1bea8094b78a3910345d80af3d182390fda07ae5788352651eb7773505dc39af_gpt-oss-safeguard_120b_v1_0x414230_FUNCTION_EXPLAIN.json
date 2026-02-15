@@ -1,0 +1,22 @@
+{
+  "summary": "sub_414230 processes an input string, computes its length, and determines a flag based on internal configuration and character properties. It may allocate a transformed copy of the string, store the length in an optional out\u2011parameter, and set a status byte indicating special handling (e.g., presence of multibyte or whitespace characters). The function is used by higher\u2011level routines for formatting output and memory management.",
+  "details": [
+    "If the third argument is null, a default data pointer is used; a flag is derived from a global mask (data_4232cb) and a comparison against a small integer.",
+    "When arg4 is false, the function calls strlen on the provided string (arg2) to obtain its length, optionally storing it via arg5 and setting a status byte via arg6 based on global flags (data_4232ca, data_4232c9).",
+    "The function imports and likely uses __ctype_get_mb_cur_max, __ctype_b_loc, and mbrtowc, indicating handling of multibyte character classification and conversion.",
+    "Higher\u2011level callers (sub_40b040, sub_40e910) receive a pointer to a possibly allocated buffer, a length value, and a flag, and they free the buffer if it was allocated."
+  ],
+  "evidence_refs": [
+    "imports:strlen",
+    "imports:__ctype_get_mb_cur_max",
+    "imports:__ctype_b_loc",
+    "imports:mbrtowc",
+    "call:0x4048e0"
+  ],
+  "unknowns": [
+    "Exact semantics of arg4 and the meaning of the flag stored at arg6",
+    "Precise conditions under which a new buffer is allocated versus using the original string",
+    "The role of data_4232e0, data_4232ca, data_4232c9 in controlling behavior"
+  ],
+  "confidence": 0.78
+}

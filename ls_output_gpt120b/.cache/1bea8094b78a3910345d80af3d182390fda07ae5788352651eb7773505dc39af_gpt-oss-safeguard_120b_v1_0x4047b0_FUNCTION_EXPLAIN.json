@@ -1,0 +1,15 @@
+{
+  "summary": "The function is a thin wrapper that directly forwards its argument to the imported __fpending routine and returns the result unchanged.",
+  "details": [
+    "Implements a tail call to __fpending(fp), acting as a pass\u2011through.",
+    "No additional processing, error handling, or side effects are performed."
+  ],
+  "evidence_refs": [
+    "imports:__fpending",
+    "call:0x422cb0"
+  ],
+  "unknowns": [
+    "Exact behavior of __fpending in the target runtime (e.g., pending input count semantics)."
+  ],
+  "confidence": 0.97
+}

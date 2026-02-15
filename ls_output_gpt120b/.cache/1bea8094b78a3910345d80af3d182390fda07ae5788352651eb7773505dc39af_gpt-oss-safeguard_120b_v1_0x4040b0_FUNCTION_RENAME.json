@@ -1,0 +1,13 @@
+{
+  "suggested_name": "ai_stub_wrapper",
+  "confidence": 0.42,
+  "rationale": "The function simply tail-calls sub_404020, which appears to be a stub that jumps to nullptr, indicating a no-op or placeholder wrapper.",
+  "evidence_refs": [
+    "call:0x404020"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_noop",
+    "ai_placeholder"
+  ]
+}

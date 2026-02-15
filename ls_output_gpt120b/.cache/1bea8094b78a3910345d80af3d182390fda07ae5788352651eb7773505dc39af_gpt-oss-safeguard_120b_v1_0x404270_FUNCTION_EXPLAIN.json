@@ -1,0 +1,15 @@
+{
+  "summary": "sub_404270 is a thin wrapper that initializes a local variable with the constant 0x24 and then tail-calls sub_404020, which appears to be a stub that does nothing and returns.",
+  "details": [
+    "The function sets var_8 to 0x24 before performing a tail call to sub_404020.",
+    "sub_404020 sets its own var_8 to 0 and then jumps to a null pointer, indicating no further action."
+  ],
+  "evidence_refs": [
+    "call:0x404020"
+  ],
+  "unknowns": [
+    "The actual effect of the local variable var_8 on program state.",
+    "The return value and side effects of sub_404020 due to the jump to nullptr."
+  ],
+  "confidence": 0.73
+}

@@ -1,0 +1,15 @@
+{
+  "suggested_name": "ai_check_file_pending",
+  "confidence": 0.85,
+  "rationale": "The function is a thin wrapper that directly returns the result of the __fpending call, indicating it checks the number of pending bytes in a FILE stream.",
+  "evidence_refs": [
+    "imports:__fpending"
+  ],
+  "tags": [
+    "file_io"
+  ],
+  "alt_names": [
+    "ai_get_pending_input",
+    "ai_fpending_wrapper"
+  ]
+}

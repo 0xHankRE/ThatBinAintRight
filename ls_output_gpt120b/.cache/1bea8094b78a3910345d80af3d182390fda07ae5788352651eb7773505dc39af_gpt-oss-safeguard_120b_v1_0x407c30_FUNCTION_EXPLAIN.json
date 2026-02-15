@@ -1,0 +1,15 @@
+{
+  "summary": "sub_407c30 is a thin wrapper that dereferences its two arguments as pointers to strings and forwards them to strcmp, returning the lexical comparison result.",
+  "details": [
+    "The function takes two arguments (arg1, arg2) which are pointers to pointers; it loads the 64-bit values at those addresses and passes them to strcmp.",
+    "It performs a tail call to the imported strcmp function, effectively acting as a comparator (e.g., for qsort) that compares the referenced strings."
+  ],
+  "evidence_refs": [
+    "imports:strcmp",
+    "call:0x4046c0"
+  ],
+  "unknowns": [
+    "The reason for swapping arg order (if any) and the broader context in which this comparator is used."
+  ],
+  "confidence": 0.96
+}

@@ -1,0 +1,16 @@
+{
+  "summary": "sub_404500 is a thin wrapper that initializes a local variable to 0x4d and then tail\u2011calls sub_404020, effectively delegating its work to that function.",
+  "details": [
+    "The function sets a stack variable var_8 to the constant 0x4d, which appears unused.",
+    "It performs a tail call to sub_404020 and returns whatever that function returns."
+  ],
+  "evidence_refs": [
+    "constants:0x404020",
+    "call:0x404020"
+  ],
+  "unknowns": [
+    "The actual effect or return value of sub_404020, since its implementation shows a jump to nullptr.",
+    "The purpose of the local variable assignment (var_8) if any side effects exist."
+  ],
+  "confidence": 0.78
+}

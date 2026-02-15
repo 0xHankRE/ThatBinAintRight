@@ -1,0 +1,18 @@
+{
+  "suggested_name": "ai_resolve_path",
+  "confidence": 0.86,
+  "rationale": "The function validates a path argument, checks for null or empty strings, distinguishes absolute paths (starting with '/') and likely builds a canonical absolute path using buffers of size 0x400, calling getcwd for relative paths and setting errno on errors, matching typical realpath/canonicalize behavior.",
+  "evidence_refs": [
+    "imports:getcwd",
+    "imports:__errno_location",
+    "imports:malloc",
+    "imports:free"
+  ],
+  "tags": [
+    "file_io"
+  ],
+  "alt_names": [
+    "ai_realpath",
+    "ai_canonicalize_path"
+  ]
+}

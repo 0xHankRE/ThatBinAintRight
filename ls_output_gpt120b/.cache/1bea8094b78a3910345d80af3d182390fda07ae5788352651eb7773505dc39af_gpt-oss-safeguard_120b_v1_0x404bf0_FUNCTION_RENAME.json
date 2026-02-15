@@ -1,0 +1,13 @@
+{
+  "suggested_name": "ai_utc_timestamp_from_tm",
+  "confidence": 0.96,
+  "rationale": "The function is a thin wrapper that directly calls the standard library timegm to convert a struct tm (UTC) to a Unix timestamp.",
+  "evidence_refs": [
+    "imports:timegm"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_timegm_wrapper",
+    "ai_convert_tm_to_epoch"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "suggested_name": "ai_get_toupper_locale",
+  "confidence": 0.86,
+  "rationale": "The function simply tail-calls __ctype_toupper_loc, returning a pointer to the locale-specific uppercase character mapping table.",
+  "evidence_refs": [
+    "imports:__ctype_toupper_loc"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_ctype_toupper_loc",
+    "ai_get_uppercase_table"
+  ]
+}

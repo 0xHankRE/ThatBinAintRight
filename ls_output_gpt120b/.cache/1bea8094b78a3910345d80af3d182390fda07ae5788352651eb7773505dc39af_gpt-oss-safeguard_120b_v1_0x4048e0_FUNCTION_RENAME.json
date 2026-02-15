@@ -1,0 +1,14 @@
+{
+  "suggested_name": "ai_string_length",
+  "confidence": 0.98,
+  "rationale": "The function is a thin wrapper that directly calls the imported strlen to compute the length of a string.",
+  "evidence_refs": [
+    "imports:strlen",
+    "call:0x4048e0"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_strlen_wrapper",
+    "ai_get_string_length"
+  ]
+}

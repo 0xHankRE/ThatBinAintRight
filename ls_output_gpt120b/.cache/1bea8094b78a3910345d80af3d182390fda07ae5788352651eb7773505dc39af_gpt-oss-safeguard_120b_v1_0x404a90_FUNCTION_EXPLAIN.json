@@ -1,0 +1,13 @@
+{
+  "summary": "The function is a thin wrapper that forwards its arguments to the standard library fputc_unlocked function and returns its result.",
+  "details": [
+    "It receives a character and a FILE pointer, then directly tail-calls the imported fputc_unlocked with those parameters.",
+    "No additional logic or processing is performed; it simply returns the result of fputc_unlocked."
+  ],
+  "evidence_refs": [
+    "imports:fputc_unlocked",
+    "call:0x422e20"
+  ],
+  "unknowns": [],
+  "confidence": 0.99
+}

@@ -1,0 +1,15 @@
+{
+  "suggested_name": "ai_readlink_wrapper",
+  "confidence": 0.96,
+  "rationale": "The function simply tail-calls the imported readlink API, indicating it resolves a symbolic link path.",
+  "evidence_refs": [
+    "imports:readlink"
+  ],
+  "tags": [
+    "file_io"
+  ],
+  "alt_names": [
+    "ai_symlink_resolve",
+    "ai_readlink_call"
+  ]
+}

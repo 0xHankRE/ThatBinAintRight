@@ -1,0 +1,16 @@
+{
+  "suggested_name": "ai_check_signal_membership",
+  "confidence": 0.88,
+  "rationale": "The function is a thin wrapper that directly calls the imported sigismember API to test if a signal number is present in a signal set, indicating signal set membership checking.",
+  "evidence_refs": [
+    "imports:sigismember",
+    "call:0x404ca0"
+  ],
+  "tags": [
+    "process"
+  ],
+  "alt_names": [
+    "ai_signal_set_member",
+    "ai_is_signal_in_set"
+  ]
+}

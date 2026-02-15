@@ -1,0 +1,16 @@
+{
+  "summary": "The function parses a numeric literal from a character buffer, handling different bases (decimal, octal, possibly hex) and returns the parsed integer while updating the input pointers.",
+  "details": [
+    "It reads characters from the buffer pointed to by arg2, converting ASCII digits by subtracting 0x30 and using a switch to handle digit ranges.",
+    "State variable r10 controls parsing phases; when a digit is recognized it updates the accumulator r9 and advances pointers arg1 and arg2, storing the final value in arg4.",
+    "The function returns zero on end-of-string or invalid input and updates the caller's pointers to the next unprocessed character."
+  ],
+  "evidence_refs": [
+    "constants:0x419040"
+  ],
+  "unknowns": [
+    "Exact handling of hexadecimal prefixes and overflow conditions",
+    "The purpose of the constant 0x419040 in the broader context"
+  ],
+  "confidence": 0.78
+}

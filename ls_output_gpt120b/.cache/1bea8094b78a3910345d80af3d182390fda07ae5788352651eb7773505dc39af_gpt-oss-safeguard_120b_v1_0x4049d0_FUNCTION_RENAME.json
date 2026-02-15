@@ -1,0 +1,16 @@
+{
+  "suggested_name": "ai_ioctl_wrapper",
+  "confidence": 0.86,
+  "rationale": "The function simply forwards to the imported ioctl system call, indicating a wrapper for device control operations.",
+  "evidence_refs": [
+    "imports:ioctl",
+    "call:0x422dc0"
+  ],
+  "tags": [
+    "file_io"
+  ],
+  "alt_names": [
+    "ai_device_control",
+    "ai_ioctl_call"
+  ]
+}

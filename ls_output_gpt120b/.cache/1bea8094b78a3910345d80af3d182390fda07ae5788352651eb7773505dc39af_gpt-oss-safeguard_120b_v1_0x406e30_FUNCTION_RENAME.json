@@ -1,0 +1,11 @@
+{
+  "suggested_name": "ai_memcmp_8byte",
+  "confidence": 0.78,
+  "rationale": "The function checks equality of two memory regions by comparing a 64-bit value and a subsequent byte, indicating a simple memory comparison utility.",
+  "evidence_refs": [],
+  "tags": [],
+  "alt_names": [
+    "ai_compare_struct",
+    "ai_memory_equality"
+  ]
+}

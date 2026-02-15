@@ -1,0 +1,16 @@
+{
+  "suggested_name": "ai_stub_function",
+  "confidence": 0.32,
+  "rationale": "The function only sets a local variable and immediately tail-calls another function without any imports or strings, indicating a placeholder or stub wrapper.",
+  "evidence_refs": [
+    "call:0x404020",
+    "constants:0x1e"
+  ],
+  "tags": [
+    "packer"
+  ],
+  "alt_names": [
+    "ai_dummy_wrapper",
+    "ai_no_op"
+  ]
+}

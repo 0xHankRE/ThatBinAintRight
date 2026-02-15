@@ -1,0 +1,14 @@
+{
+  "suggested_name": "ai_mbrtoc32_wrapper",
+  "confidence": 0.97,
+  "rationale": "Function simply forwards arguments to the standard library mbrtoc32, converting multibyte sequences to UTF-32 code points.",
+  "evidence_refs": [
+    "imports:mbrtoc32",
+    "call:0x4049f0"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_utf32_decode",
+    "ai_convert_multibyte_to_utf32"
+  ]
+}

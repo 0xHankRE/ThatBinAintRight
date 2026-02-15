@@ -1,0 +1,21 @@
+{
+  "summary": "sub_411700 is a wrapper around the C library function mbrtoc32 that converts a multibyte character to a UTF-32 code point. It handles a null input pointer by using a default byte string, checks the conversion result and a locale condition via sub_40c6a0, and on success optionally stores the raw byte as a code point before returning 1; otherwise it returns the mbrtoc32 result.",
+  "details": [
+    "If arg2 is null, the function uses a default byte (data_41af54) and sets a flag (r14) to indicate a fallback mode.",
+    "Calls mbrtoc32(pc32, s, arg3, arg4) to perform the multibyte-to-char32 conversion.",
+    "If the conversion result is not an error (result > -3), the fallback flag is set, and sub_40c6a0(0) returns false (likely indicating a non\u2011POSIX locale), the function writes the first byte of the input to *pc32 when pc32 is non\u2011null and returns 1.",
+    "If any of those conditions fail, the original mbrtoc32 result is returned."
+  ],
+  "evidence_refs": [
+    "imports:mbrtoc32",
+    "call:0x4049f0",
+    "call:0x40c6a0",
+    "strings:data_41af54"
+  ],
+  "unknowns": [
+    "Exact semantics of sub_40c6a0 return value and its locale check",
+    "Purpose of arg1, arg3, arg4 beyond being passed to mbrtoc32",
+    "Why the function writes only the first byte of s to pc32 in the fallback case"
+  ],
+  "confidence": 0.86
+}

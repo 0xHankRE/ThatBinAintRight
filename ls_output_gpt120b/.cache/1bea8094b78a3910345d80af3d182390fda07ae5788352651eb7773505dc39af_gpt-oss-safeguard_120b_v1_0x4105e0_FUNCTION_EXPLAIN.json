@@ -1,0 +1,17 @@
+{
+  "summary": "sub_4105e0 is a simple dispatcher that checks a global index (data_423344) and, if within the range 0-4, jumps to a corresponding entry in a jump table located at 0x419180.",
+  "details": [
+    "The function first verifies that data_423344 is not greater than 4; otherwise it returns immediately.",
+    "It then prepares stack space for saved registers and performs an indirect jump using the value of data_423344 as an index into jump_table_419180."
+  ],
+  "evidence_refs": [
+    "constants:0x423344",
+    "constants:0x419180",
+    "call:0x419180"
+  ],
+  "unknowns": [
+    "The specific actions performed by each jump-table target.",
+    "The overall purpose of the dispatcher within the larger program."
+  ],
+  "confidence": 0.86
+}

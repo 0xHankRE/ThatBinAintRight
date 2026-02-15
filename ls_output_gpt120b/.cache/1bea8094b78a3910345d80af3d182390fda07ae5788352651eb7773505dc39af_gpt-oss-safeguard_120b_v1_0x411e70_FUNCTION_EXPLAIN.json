@@ -1,0 +1,20 @@
+{
+  "summary": "The function scans a NULL\u2011terminated array of strings (arg2) for entries that match the provided key string (arg1). It returns the index of an exact match, -1 if no match is found, and -2 if the key is a prefix of multiple entries that differ in an associated value array (arg3), indicating an ambiguous match.",
+  "details": [
+    "Computes the length of arg1 with strlen and uses strncmp to compare each candidate string in arg2 against arg1 up to that length.",
+    "If a candidate string exactly equals arg1 (same length), the current index is returned immediately.",
+    "Tracks the first prefix match (r14) and sets a flag (var_41_1) when a later prefix match has a different associated value in arg3, leading to an ambiguous result (-2).",
+    "Returns -1 when the array is empty or no candidate matches the prefix."
+  ],
+  "evidence_refs": [
+    "imports:strlen",
+    "imports:strncmp",
+    "call:0x4048e0",
+    "call:0x404770"
+  ],
+  "unknowns": [
+    "Exact semantics of the arg3 integer array and how its values influence the ambiguous\u2011match flag.",
+    "The remaining code after the truncated section, which may handle additional edge cases or cleanup."
+  ],
+  "confidence": 0.86
+}

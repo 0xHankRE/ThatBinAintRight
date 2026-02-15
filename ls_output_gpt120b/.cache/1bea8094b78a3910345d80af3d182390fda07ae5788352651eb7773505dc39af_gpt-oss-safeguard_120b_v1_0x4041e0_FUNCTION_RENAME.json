@@ -1,0 +1,13 @@
+{
+  "suggested_name": "ai_dummy_wrapper",
+  "confidence": 0.32,
+  "rationale": "Function only sets a local variable and tail-calls another empty stub, indicating a placeholder or no-op wrapper.",
+  "evidence_refs": [
+    "call:0x404020"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_stub",
+    "ai_noop"
+  ]
+}

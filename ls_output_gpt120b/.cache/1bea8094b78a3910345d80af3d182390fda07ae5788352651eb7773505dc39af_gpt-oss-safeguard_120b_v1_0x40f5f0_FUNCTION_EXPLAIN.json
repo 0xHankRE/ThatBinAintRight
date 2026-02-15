@@ -1,0 +1,27 @@
+{
+  "summary": "The function implements a simple cache for POSIX group names. It searches a linked list for an entry matching the supplied GID, and if not found it queries getgrgid, allocates a new entry, stores the GID and the group name string, inserts it into the list, and returns a pointer to the cached name.",
+  "details": [
+    "Iterates a global linked list (data_423358) comparing stored GIDs to the argument; if a match is found the cached name is returned.",
+    "When no entry exists, calls getgrgid(arg1) to retrieve the group struct, extracts the group name, allocates memory sized to the name plus overhead, stores the GID and copies the name, then prepends the new node to the list.",
+    "If getgrgid fails, a default string (data_41af54) is used; allocation failures trigger sub_40e430 (likely an error handler).",
+    "The function returns a pointer to the stored name string (offset 16 in the allocated struct) or nullptr if the name is empty."
+  ],
+  "evidence_refs": [
+    "imports:getgrgid",
+    "imports:strlen",
+    "imports:malloc",
+    "imports:__strcpy_chk",
+    "call:0x404940",
+    "call:0x4048e0",
+    "call:0x4046d0",
+    "call:0x40e430",
+    "strings:D9#u",
+    "strings:[A\\A]A^]"
+  ],
+  "unknowns": [
+    "Exact layout of the allocated struct beyond the observed fields",
+    "Purpose of the default string referenced by data_41af54",
+    "What sub_40e430 does on allocation failure"
+  ],
+  "confidence": 0.93
+}

@@ -1,0 +1,15 @@
+{
+  "summary": "The function at 0x404830 is a thin wrapper that directly tail-calls the imported readlink system call, returning its result unchanged.",
+  "details": [
+    "It imports the readlink function and performs a tail-call without any additional logic.",
+    "No arguments are processed or modified within this wrapper; it simply forwards the call to readlink."
+  ],
+  "evidence_refs": [
+    "imports:readlink",
+    "call:0x422cf0"
+  ],
+  "unknowns": [
+    "Exact argument handling and any caller-side context are not visible in this snippet."
+  ],
+  "confidence": 0.96
+}

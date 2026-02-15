@@ -1,0 +1,13 @@
+{
+  "summary": "The function is a thin wrapper that directly forwards its arguments to the standard library fnmatch and returns its result.",
+  "details": [
+    "It receives pattern, string, and flags parameters.",
+    "It performs a tail-call to the imported fnmatch function and returns its return value without additional processing."
+  ],
+  "evidence_refs": [
+    "imports:fnmatch",
+    "call:0x422db0"
+  ],
+  "unknowns": [],
+  "confidence": 0.98
+}

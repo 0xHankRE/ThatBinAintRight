@@ -1,0 +1,13 @@
+{
+  "suggested_name": "ai_allocate_memory",
+  "confidence": 0.96,
+  "rationale": "The function is a thin wrapper that directly forwards its argument to the standard malloc call, indicating its purpose is to allocate memory.",
+  "evidence_refs": [
+    "imports:malloc"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_malloc_wrapper",
+    "ai_mem_alloc"
+  ]
+}

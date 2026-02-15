@@ -1,0 +1,14 @@
+{
+  "suggested_name": "ai_gettext_wrapper",
+  "confidence": 0.86,
+  "rationale": "The function simply forwards its arguments to dcgettext and returns the result, acting as a wrapper for gettext localization calls.",
+  "evidence_refs": [
+    "imports:dcgettext",
+    "call:0x4048c0"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_localize_message",
+    "ai_translate_string"
+  ]
+}

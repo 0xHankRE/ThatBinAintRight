@@ -1,0 +1,13 @@
+{
+  "summary": "The function is a thin wrapper that forwards its argument to the system unsetenv call and returns the result.",
+  "details": [
+    "It takes a single argument (the environment variable name) and immediately calls the imported unsetenv function with that argument.",
+    "The function performs no additional logic, checks, or error handling beyond the tailcall to unsetenv."
+  ],
+  "evidence_refs": [
+    "imports:unsetenv",
+    "call:0x422f00"
+  ],
+  "unknowns": [],
+  "confidence": 0.98
+}

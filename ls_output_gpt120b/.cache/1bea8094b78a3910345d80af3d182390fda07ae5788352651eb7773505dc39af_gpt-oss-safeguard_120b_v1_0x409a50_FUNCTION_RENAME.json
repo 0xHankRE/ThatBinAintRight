@@ -1,0 +1,14 @@
+{
+  "suggested_name": "ai_hash_table_lookup",
+  "confidence": 0.86,
+  "rationale": "The function indexes into a table using a hash, checks for key equality via a comparator, optionally removes the entry, and returns the stored value, indicating hash table lookup/removal behavior.",
+  "evidence_refs": [
+    "imports:abort",
+    "call:0x404750"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_map_find_entry",
+    "ai_hash_lookup"
+  ]
+}

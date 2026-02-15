@@ -1,0 +1,18 @@
+{
+  "suggested_name": "ai_print_formatted_config_value",
+  "confidence": 0.78,
+  "rationale": "The function conditionally formats numeric data into a string and prints it using __printf_chk, handling configuration-like globals and calling helper routines for validation, indicating a status/config output routine.",
+  "evidence_refs": [
+    "imports:__printf_chk",
+    "call:0x40bbb0",
+    "call:0x40be90"
+  ],
+  "tags": [
+    "config",
+    "file_io"
+  ],
+  "alt_names": [
+    "ai_display_status_output",
+    "ai_format_and_print_number"
+  ]
+}

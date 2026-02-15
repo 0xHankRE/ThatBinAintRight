@@ -1,0 +1,14 @@
+{
+  "suggested_name": "ai_mktime_wrapper",
+  "confidence": 0.96,
+  "rationale": "Function is a thin wrapper that directly returns the result of the standard library mktime, converting a struct tm to a timestamp.",
+  "evidence_refs": [
+    "imports:mktime",
+    "call:0x404b70"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_time_struct_to_epoch",
+    "ai_convert_tm_to_timestamp"
+  ]
+}

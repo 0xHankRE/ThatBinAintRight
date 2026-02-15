@@ -1,0 +1,21 @@
+{
+  "suggested_name": "ai_config_lookup",
+  "confidence": 0.62,
+  "rationale": "The function appears to be a generic handler that returns a value based on an index set by its callers (sub_404030, sub_404040, sub_404050) which set var_8 to 0,1,2. The presence of constant addresses suggests a lookup table, indicating a configuration or data retrieval routine.",
+  "evidence_refs": [
+    "constants:0x422c40",
+    "constants:0x422c48",
+    "call:0x404030",
+    "call:0x404040",
+    "call:0x404050"
+  ],
+  "tags": [
+    "config",
+    "lookup",
+    "data"
+  ],
+  "alt_names": [
+    "ai_get_option",
+    "ai_get_config_value"
+  ]
+}

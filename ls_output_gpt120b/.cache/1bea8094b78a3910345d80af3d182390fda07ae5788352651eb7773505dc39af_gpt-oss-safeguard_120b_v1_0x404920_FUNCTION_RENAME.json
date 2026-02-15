@@ -1,0 +1,14 @@
+{
+  "suggested_name": "ai_free_security_context",
+  "confidence": 0.85,
+  "rationale": "The function is a thin wrapper that directly calls the imported freecon routine, which frees a SELinux security context string.",
+  "evidence_refs": [
+    "imports:freecon",
+    "call:0x422d68"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_release_selinux_context",
+    "ai_freecon_wrapper"
+  ]
+}

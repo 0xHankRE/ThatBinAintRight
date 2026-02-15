@@ -1,0 +1,18 @@
+{
+  "summary": "The function builds a configuration bitmask by combining several global flags and constants, validates a mode index, and returns the mask; it aborts if the mode index exceeds an allowed range.",
+  "details": [
+    "Computes an initial flag using data_423348 and masks with 0x400, then adds base flags (0x2 or 0x102) depending on data_423349.",
+    "If data_423344 is zero, further ORs the mask with a value from an array indexed by data_4243e4 and adds additional bits based on data_42308d, data_423343, and data_42308c.",
+    "Checks data_4243e0; if greater than 6 the function calls abort, otherwise returns the constructed mask for specific case values (0,1,2,4,6)."
+  ],
+  "evidence_refs": [
+    "imports:abort",
+    "call:0x404750",
+    "strings:none"
+  ],
+  "unknowns": [
+    "Exact meaning of each global variable (e.g., data_423349, data_423344) and the purpose of the returned bitmask",
+    "The full behavior for cases of data_4243e0 not shown in the truncated code"
+  ],
+  "confidence": 0.78
+}

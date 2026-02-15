@@ -1,0 +1,13 @@
+{
+  "suggested_name": "ai_mbrtowc_wrapper",
+  "confidence": 0.96,
+  "rationale": "Function simply forwards arguments to the standard library mbrtowc, acting as a wrapper for multibyte-to-wide-char conversion.",
+  "evidence_refs": [
+    "imports:mbrtowc"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_multibyte_to_wchar",
+    "ai_mbrtowc_proxy"
+  ]
+}

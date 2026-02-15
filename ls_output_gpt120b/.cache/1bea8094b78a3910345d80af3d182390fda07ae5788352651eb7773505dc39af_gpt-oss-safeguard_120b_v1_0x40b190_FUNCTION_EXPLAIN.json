@@ -1,0 +1,19 @@
+{
+  "summary": "sub_40b190 compares two objects by inspecting a type field at offset 0x15 and a flag field at offset 0xac, returning a numeric difference if they differ, otherwise delegating to sub_40b0f0 for deeper comparison. It handles special type values 3 and 9, checks a high-order nibble mask (0xf000) against 0x4000, and uses the result to decide whether to return early or call the secondary comparator.",
+  "details": [
+    "Reads a 32-bit value at offset 0x15 from each argument and checks for values 3 or 9, setting a combined flag rdx_1.",
+    "If either argument has type 3 or 9, it sets a default result of 1 and may compare the masked flag at offset 0xac against this result.",
+    "If neither argument has those types, it extracts the flag bit from arg2's offset 0xac, compares it to the flag from arg1, and may return the difference.",
+    "When no early return occurs, it tail-calls sub_40b0f0, which further compares other fields and finally performs a strcmp on string pointers."
+  ],
+  "evidence_refs": [
+    "constants:0xf000",
+    "constants:0x4000",
+    "call:0x40b0f0"
+  ],
+  "unknowns": [
+    "Exact semantics of the fields at offsets 0x15 and 0xac",
+    "Purpose of the type values 3 and 9 in the broader application"
+  ],
+  "confidence": 0.87
+}

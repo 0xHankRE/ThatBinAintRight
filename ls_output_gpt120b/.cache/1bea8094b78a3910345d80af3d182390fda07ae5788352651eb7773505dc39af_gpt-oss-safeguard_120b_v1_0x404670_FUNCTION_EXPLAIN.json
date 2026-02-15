@@ -1,0 +1,15 @@
+{
+  "summary": "sub_404670 is a thin wrapper that sets a local variable to 0x64 and then tail\u2011calls sub_404020, returning whatever that function returns.",
+  "details": [
+    "The function initializes a local variable var_8 with the constant 0x64 but does not use it.",
+    "It performs a tail call to sub_404020 (address 0x404020) and returns its result."
+  ],
+  "evidence_refs": [
+    "call:0x404020"
+  ],
+  "unknowns": [
+    "The actual effect of sub_404020, which appears to jump to a nullptr or perform no operation.",
+    "The purpose of the local variable var_8 set to 0x64."
+  ],
+  "confidence": 0.78
+}

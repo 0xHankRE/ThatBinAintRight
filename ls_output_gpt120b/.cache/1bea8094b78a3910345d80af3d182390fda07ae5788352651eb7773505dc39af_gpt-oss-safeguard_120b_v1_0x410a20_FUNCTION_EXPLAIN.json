@@ -1,0 +1,21 @@
+{
+  "summary": "sub_410a20 computes a new allocation size for a buffer, applying a growth factor, limiting it by a maximum, rounding to a multiple of the element size, handling overflow, and then invokes realloc to resize the memory. On failure it triggers a memory\u2011exhausted abort routine.",
+  "details": [
+    "Reads the current allocation size from *arg2, calculates a 1.5\u00d7 growth (rcx + rcx/2) and caps it at 0x7FFFFFFFFFFFFF on overflow.",
+    "Chooses the smaller of the computed growth size and arg4 (unless arg4 is -1) as the target capacity.",
+    "Multiplies the target capacity by arg5 (element size), checks for multiplication overflow, and rounds the result up to a whole number of elements.",
+    "Updates the stored size in *arg2 when appropriate and calls realloc (import at 0x404ba0) with the new byte count.",
+    "If allocation fails, it calls sub_40e430 which prints \"memory exhausted\" and aborts."
+  ],
+  "evidence_refs": [
+    "imports:realloc",
+    "call:0x404ba0",
+    "call:0x40e430",
+    "strings:memory exhausted"
+  ],
+  "unknowns": [
+    "Exact meaning of arg1, arg3, and the conditional branches involving them",
+    "Precise handling of the zero\u2011size case and the return value semantics"
+  ],
+  "confidence": 0.87
+}

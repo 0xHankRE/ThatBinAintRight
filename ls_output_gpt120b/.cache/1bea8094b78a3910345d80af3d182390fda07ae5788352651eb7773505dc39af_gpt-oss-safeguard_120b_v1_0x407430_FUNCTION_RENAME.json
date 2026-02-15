@@ -1,0 +1,15 @@
+{
+  "suggested_name": "ai_compare_struct_by_type_and_range",
+  "confidence": 0.78,
+  "rationale": "The function checks type fields (values 3 or 9), examines flag bits at offset 0xac, compares range values at offsets 0xe/0xf, and finally calls strcmp on the objects' string fields, indicating a custom comparator for structured data.",
+  "evidence_refs": [
+    "imports:strcmp",
+    "constants:0xf000",
+    "constants:0x4000"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_struct_comparator",
+    "ai_custom_compare"
+  ]
+}

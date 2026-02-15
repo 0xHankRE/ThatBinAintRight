@@ -1,0 +1,14 @@
+{
+  "suggested_name": "ai_memcpy_wrapper",
+  "confidence": 0.85,
+  "rationale": "The function is a thin wrapper that directly tail-calls the standard mempcpy library routine, indicating its role is to copy memory blocks and return a pointer to the end of the destination.",
+  "evidence_refs": [
+    "imports:mempcpy",
+    "call:0x404c10"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_copy_memory",
+    "ai_mempcpy_proxy"
+  ]
+}

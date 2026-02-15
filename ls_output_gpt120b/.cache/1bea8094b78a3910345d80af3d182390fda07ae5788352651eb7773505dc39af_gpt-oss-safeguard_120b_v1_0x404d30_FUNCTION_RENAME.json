@@ -1,0 +1,16 @@
+{
+  "suggested_name": "ai_add_signal_to_set",
+  "confidence": 0.96,
+  "rationale": "The function is a thin wrapper that directly calls the imported sigaddset to add a signal number to a signal set, indicating signal handling behavior.",
+  "evidence_refs": [
+    "imports:sigaddset",
+    "call:0x422f70"
+  ],
+  "tags": [
+    "process"
+  ],
+  "alt_names": [
+    "ai_sigaddset_wrapper",
+    "ai_signal_set_add"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "suggested_name": "ai_compare_struct_by_type_and_flags",
+  "confidence": 0.86,
+  "rationale": "The function examines type fields (offset 0x15) and flag bits (mask 0xf000) of two structures, returns a difference or delegates to sub_40a6c0 which performs further numeric and string comparison, indicating a comparator for sorting or ordering objects.",
+  "evidence_refs": [
+    "call:0x40a6c0"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_struct_comparator",
+    "ai_sort_key_function"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "suggested_name": "ai_null_stub",
+  "confidence": 0.88,
+  "rationale": "Function contains only a return nullptr with no side effects, acting as a no-op placeholder.",
+  "evidence_refs": [
+    "imports:_ITM_registerTMCloneTable",
+    "call:0x406e10"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_noop",
+    "ai_stub"
+  ]
+}

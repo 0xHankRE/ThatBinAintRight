@@ -1,0 +1,17 @@
+{
+  "summary": "sub_414030 prepares a small stack frame, initializes a constant vector and a flag value, then forwards the call to sub_413ce0 with arguments (0, arg1, &var_48) and returns its result, while enforcing stack canary protection.",
+  "details": [
+    "Loads a 128\u2011bit constant from data_41db00 into a local variable and zeroes another buffer.",
+    "Sets a local integer var_48 to 3 and passes its address to sub_413ce0 along with a zero and the original argument.",
+    "After the call, verifies the stack canary stored at FS:0x28; on mismatch it invokes __stack_chk_fail."
+  ],
+  "evidence_refs": [
+    "imports:__stack_chk_fail",
+    "call:0x413ce0"
+  ],
+  "unknowns": [
+    "Exact semantic purpose of the constant data_41db00 and the flag value 3.",
+    "The higher\u2011level functionality performed by sub_413ce0."
+  ],
+  "confidence": 0.86
+}

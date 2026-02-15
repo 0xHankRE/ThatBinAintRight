@@ -1,0 +1,17 @@
+{
+  "suggested_name": "ai_compare_file_extension",
+  "confidence": 0.88,
+  "rationale": "The function forwards arguments to sub_409d10 which extracts file extensions using strrchr and compares them with strcmp, indicating a file extension comparison utility.",
+  "evidence_refs": [
+    "imports:strrchr",
+    "call:0x409d10",
+    "strings:'[A\\\\A]A^]'"
+  ],
+  "tags": [
+    "file_io"
+  ],
+  "alt_names": [
+    "ai_file_ext_cmp",
+    "ai_path_extension_compare"
+  ]
+}

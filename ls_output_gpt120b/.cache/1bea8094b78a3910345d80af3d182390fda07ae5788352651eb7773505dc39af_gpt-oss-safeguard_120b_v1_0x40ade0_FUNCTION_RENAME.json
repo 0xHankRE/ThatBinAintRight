@@ -1,0 +1,18 @@
+{
+  "suggested_name": "ai_custom_strcmp",
+  "confidence": 0.78,
+  "rationale": "The function performs a custom string comparison by first calling sub_412600 for special handling, then falling back to the standard strcmp, indicating a wrapper around string comparison with extra logic.",
+  "evidence_refs": [
+    "strings:[A\\]",
+    "imports:strcmp",
+    "call:0x412600",
+    "call:0x4046c0"
+  ],
+  "tags": [
+    "config"
+  ],
+  "alt_names": [
+    "ai_strcmp_wrapper",
+    "ai_string_compare_with_precheck"
+  ]
+}

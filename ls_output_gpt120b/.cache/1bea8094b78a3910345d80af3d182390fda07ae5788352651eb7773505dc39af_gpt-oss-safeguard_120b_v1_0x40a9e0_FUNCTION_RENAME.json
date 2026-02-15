@@ -1,0 +1,14 @@
+{
+  "suggested_name": "ai_locale_string_compare",
+  "confidence": 0.96,
+  "rationale": "The function resets errno and forwards its arguments to strcoll, acting as a wrapper for locale-aware string comparison.",
+  "evidence_refs": [
+    "imports:__errno_location",
+    "imports:strcoll"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_strcoll_wrapper",
+    "ai_string_compare_locale"
+  ]
+}

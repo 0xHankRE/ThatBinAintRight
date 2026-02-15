@@ -1,0 +1,13 @@
+{
+  "suggested_name": "ai_forward_stub",
+  "confidence": 0.68,
+  "rationale": "The function simply tail-calls another function (sub_404020) without any processing, acting as a forwarding stub or no-op wrapper.",
+  "evidence_refs": [
+    "call:0x404020"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_noop_wrapper",
+    "ai_function_forwarder"
+  ]
+}

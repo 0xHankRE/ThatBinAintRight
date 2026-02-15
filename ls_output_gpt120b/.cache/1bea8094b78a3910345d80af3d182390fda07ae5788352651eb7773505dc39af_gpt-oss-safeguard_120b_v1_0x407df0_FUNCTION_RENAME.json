@@ -1,0 +1,11 @@
+{
+  "suggested_name": "ai_check_equality",
+  "confidence": 0.96,
+  "rationale": "Function returns result of arg2 == arg1, indicating a basic equality comparison between two arguments.",
+  "evidence_refs": [],
+  "tags": [],
+  "alt_names": [
+    "ai_is_equal",
+    "ai_compare_args"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "suggested_name": "ai_string_hash_mod",
+  "confidence": 0.86,
+  "rationale": "The function iterates over a null\u2011terminated byte sequence, rotating an accumulator and adding each byte, then applies a modulus operation, which matches a custom string hashing routine.",
+  "evidence_refs": [
+    "strings:none",
+    "imports:none",
+    "call:0x407e00"
+  ],
+  "tags": [
+    "crypto",
+    "hash",
+    "string_processing"
+  ],
+  "alt_names": [
+    "ai_custom_string_hash",
+    "ai_rol_based_hash"
+  ]
+}

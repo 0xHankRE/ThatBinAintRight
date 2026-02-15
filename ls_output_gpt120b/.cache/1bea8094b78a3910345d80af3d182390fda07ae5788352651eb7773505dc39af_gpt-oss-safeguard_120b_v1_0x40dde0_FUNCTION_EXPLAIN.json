@@ -1,0 +1,16 @@
+{
+  "summary": "sub_40dde0 pushes a global 64\u2011bit value onto an obstack, allocating a new chunk when the current one lacks at least 8 bytes, updates the obstack pointer, and returns the stored value.",
+  "details": [
+    "It checks the remaining space in the obstack (arg1[4] - arg1[3]) and calls _obstack_newchunk(arg1, 8) if less than 8 bytes are available.",
+    "It writes the global variable data_423350 into the current obstack position, advances the obstack's top pointer by 8, and returns the written value."
+  ],
+  "evidence_refs": [
+    "call:0x40dca0",
+    "constants:0x423350"
+  ],
+  "unknowns": [
+    "Exact semantics of the global data_423350 (counter, identifier, etc.)",
+    "Full layout and purpose of the obstack structure referenced by arg1"
+  ],
+  "confidence": 0.96
+}

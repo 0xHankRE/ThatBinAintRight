@@ -1,0 +1,14 @@
+{
+  "suggested_name": "ai_gmtime_wrapper",
+  "confidence": 0.92,
+  "rationale": "The function directly tail-calls the standard library gmtime_r to convert a timestamp to a UTC broken-down time structure, acting as a thin wrapper.",
+  "evidence_refs": [
+    "imports:gmtime_r",
+    "call:0x422d98"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_utc_time_converter",
+    "ai_time_struct_wrapper"
+  ]
+}

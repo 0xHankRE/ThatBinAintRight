@@ -1,0 +1,18 @@
+{
+  "summary": "sub_40a010 compares two structures by examining the 0x10 and 0x11 fields; it returns a non\u2011zero integer if those fields differ, otherwise it clears errno and delegates to strcoll to compare the strings pointed to by the structures' first members.",
+  "details": [
+    "The function loads 64\u2011bit values at offset 0x10 from both arguments and computes a signed result based on <, > comparisons of those values and the values at offset 0x11.",
+    "If the computed result is non\u2011zero, it is returned directly; otherwise the function retrieves the pointers stored at offset 0 of each argument, resets errno to 0 via __errno_location, and calls strcoll on the two strings."
+  ],
+  "evidence_refs": [
+    "imports:__errno_location",
+    "imports:strcoll",
+    "call:0x404760",
+    "call:0x404b60"
+  ],
+  "unknowns": [
+    "Exact semantic meaning of the fields at offsets 0x10 and 0x11 (e.g., version, timestamp, or other numeric identifier).",
+    "Why the result calculation mixes two comparison flags into a single integer rather than using a simple subtraction."
+  ],
+  "confidence": 0.86
+}

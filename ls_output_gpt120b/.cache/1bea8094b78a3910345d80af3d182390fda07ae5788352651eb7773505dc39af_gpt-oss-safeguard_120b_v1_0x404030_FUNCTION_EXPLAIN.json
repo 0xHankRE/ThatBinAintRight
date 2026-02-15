@@ -1,0 +1,15 @@
+{
+  "summary": "sub_404030 is a thin wrapper that immediately tail-calls sub_404020 and returns its result, performing no additional logic.",
+  "details": [
+    "The function allocates a local variable but does not use it before making a tail call to sub_404020.",
+    "sub_404020 appears to contain a jump to a null pointer, suggesting it may be a placeholder or cause a termination."
+  ],
+  "evidence_refs": [
+    "call:0x404020"
+  ],
+  "unknowns": [
+    "Exact behavior and return value of sub_404020 due to the jump to nullptr",
+    "Purpose of the allocated local variable"
+  ],
+  "confidence": 0.73
+}

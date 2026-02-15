@@ -1,0 +1,20 @@
+{
+  "summary": "The function iterates over a fixed-size array of string pointers, scanning each string for a \"%b\" format specifier. For each entry it records either the address of the \"%b\" occurrence or zero if not found, storing the result in a parallel array. This appears to prepare format strings for later processing, likely related to color or formatting output in the dircolors utility.",
+  "details": [
+    "Loops over up to nine entries (rsi from 0 to 8) reading pointers from data_423240.",
+    "Scans each string character by character, looking for a '%' followed by 'b'; on finding it stores the pointer to that position in var_658 + rsi, otherwise stores zero.",
+    "Handles escaped '%%' sequences by skipping the second '%' before checking for 'b'.",
+    "The function uses standard C library imports (e.g., strchr, malloc) elsewhere, suggesting further processing of the captured pointers."
+  ],
+  "evidence_refs": [
+    "strings:%.*s%s%s",
+    "imports:strchr",
+    "imports:malloc",
+    "call:0x404740"
+  ],
+  "unknowns": [
+    "Exact downstream use of the stored pointers in var_658",
+    "Why the function limits to nine entries and the meaning of the constants listed"
+  ],
+  "confidence": 0.82
+}

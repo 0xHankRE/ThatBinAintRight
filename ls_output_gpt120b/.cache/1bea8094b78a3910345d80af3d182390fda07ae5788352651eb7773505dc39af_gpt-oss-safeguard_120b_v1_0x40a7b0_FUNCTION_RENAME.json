@@ -1,0 +1,14 @@
+{
+  "suggested_name": "ai_compare_struct_by_numeric_and_string",
+  "confidence": 0.86,
+  "rationale": "The function compares two objects: first by a numeric field at offset 9, returning -1/0/1, and if equal, falls back to locale-aware string comparison using strcoll, resetting errno before the call.",
+  "evidence_refs": [
+    "imports:__errno_location",
+    "imports:strcoll"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_struct_comparator",
+    "ai_numeric_string_compare"
+  ]
+}

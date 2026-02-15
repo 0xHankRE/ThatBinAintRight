@@ -1,0 +1,15 @@
+{
+  "suggested_name": "ai_cli_option_parser",
+  "confidence": 0.96,
+  "rationale": "The function is a thin wrapper that directly tail-calls the standard library function getopt_long, indicating its role is to parse command-line options.",
+  "evidence_refs": [
+    "imports:getopt_long"
+  ],
+  "tags": [
+    "process"
+  ],
+  "alt_names": [
+    "ai_getopt_long_wrapper",
+    "ai_argument_parser"
+  ]
+}

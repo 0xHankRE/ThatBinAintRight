@@ -1,0 +1,15 @@
+{
+  "summary": "The function at 0x404b00 is a thin wrapper that returns the file descriptor of a FILE* by directly calling the standard library fileno function.",
+  "details": [
+    "It receives a FILE* pointer (fp) as its argument and immediately returns the result of fileno(fp), performing a tail call.",
+    "No additional processing, error handling, or side effects are present; it simply forwards the call to the imported fileno routine."
+  ],
+  "evidence_refs": [
+    "imports:fileno",
+    "call:0x422e58"
+  ],
+  "unknowns": [
+    "The broader context in which this wrapper is used beyond the observed callers."
+  ],
+  "confidence": 0.98
+}

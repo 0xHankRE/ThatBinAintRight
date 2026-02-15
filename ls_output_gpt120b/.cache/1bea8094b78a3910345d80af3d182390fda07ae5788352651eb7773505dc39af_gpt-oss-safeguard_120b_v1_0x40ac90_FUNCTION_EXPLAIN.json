@@ -1,0 +1,21 @@
+{
+  "summary": "The function compares two file path strings by first extracting their extensions (text after the last '.') and comparing those extensions using locale-aware string comparison; if the extensions differ, it returns that result, otherwise it falls back to comparing the full original strings.",
+  "details": [
+    "It retrieves the last '.' in each input string via strrchr; if none is found, it substitutes a default string located at data_41af54.",
+    "It clears errno, then calls strcoll on the two extensions; a non-zero result is returned immediately.",
+    "If the extensions are equal, it calls strcoll again on the original full strings and returns that result."
+  ],
+  "evidence_refs": [
+    "imports:strrchr",
+    "imports:__errno_location",
+    "imports:strcoll",
+    "strings:data_41af54",
+    "call:0x404970",
+    "call:0x404760"
+  ],
+  "unknowns": [
+    "Exact content of data_41af54 (likely an empty string or placeholder)",
+    "Purpose of the constant string \"[A\\A]A^]\" which is not used in this function"
+  ],
+  "confidence": 0.97
+}

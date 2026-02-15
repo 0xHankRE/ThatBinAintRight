@@ -1,0 +1,16 @@
+{
+  "summary": "sub_4040d0 is a thin wrapper that initializes a local variable to 10 and then tail-calls sub_404020, which appears to be a stub that sets a local variable to zero and jumps to a null address, effectively doing nothing useful.",
+  "details": [
+    "The function sets var_8 = 0xa (10) but does not use it before calling sub_404020.",
+    "sub_404020 sets its own var_8 = 0 and then jumps to a nullptr, indicating a placeholder or no-op implementation."
+  ],
+  "evidence_refs": [
+    "call:0x404020",
+    "constants:0xa"
+  ],
+  "unknowns": [
+    "The actual effect of the jump to nullptr in sub_404020",
+    "Whether var_8 influences any external state"
+  ],
+  "confidence": 0.78
+}

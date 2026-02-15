@@ -1,0 +1,21 @@
+{
+  "suggested_name": "ai_compute_file_mode_flags",
+  "confidence": 0.78,
+  "rationale": "The function builds a result by combining several global flag variables using bitwise operations, checks a mode index, and aborts on invalid values, indicating it computes configuration or file mode flags.",
+  "evidence_refs": [
+    "imports:abort",
+    "constants:0x400",
+    "constants:0x102",
+    "constants:0x20c",
+    "constants:0x204",
+    "call:0x404750"
+  ],
+  "tags": [
+    "config",
+    "file_io"
+  ],
+  "alt_names": [
+    "ai_assemble_flags",
+    "ai_compute_mode"
+  ]
+}

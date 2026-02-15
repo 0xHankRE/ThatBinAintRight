@@ -1,0 +1,13 @@
+{
+  "summary": "The function is a thin wrapper that directly invokes the imported __stack_chk_fail routine, causing program termination when a stack canary check fails.",
+  "details": [
+    "The function consists of a single tail-call to __stack_chk_fail.",
+    "It imports __stack_chk_fail and calls it at address 0x422d50."
+  ],
+  "evidence_refs": [
+    "imports:__stack_chk_fail",
+    "call:0x422d50"
+  ],
+  "unknowns": [],
+  "confidence": 0.99
+}

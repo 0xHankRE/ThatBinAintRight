@@ -1,0 +1,16 @@
+{
+  "summary": "The function is a thin wrapper that directly forwards its arguments to the imported fwrite_unlocked routine and returns its result, performing no additional processing.",
+  "details": [
+    "It receives parameters (buf, size, count, fp) and tail-calls fwrite_unlocked with the same arguments.",
+    "The wrapper returns the value from fwrite_unlocked, acting as a simple pass-through."
+  ],
+  "evidence_refs": [
+    "imports:fwrite_unlocked",
+    "call:0x422ea0"
+  ],
+  "unknowns": [
+    "Why this wrapper exists in the codebase (e.g., abstraction or compatibility layer)",
+    "Any side effects beyond the fwrite_unlocked call"
+  ],
+  "confidence": 0.97
+}

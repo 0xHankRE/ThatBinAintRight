@@ -1,0 +1,13 @@
+{
+  "summary": "The function reads a 64-bit integer from the memory address given by arg1, combines it with a zero high part, and returns the remainder of dividing this value by arg2.",
+  "details": [
+    "Loads a uint64_t value from the pointer arg1.",
+    "Applies a COMBINE operation with a zero high word, effectively using the loaded value as a 64-bit integer.",
+    "Computes the modulo of this integer with arg2 and returns the result."
+  ],
+  "evidence_refs": [],
+  "unknowns": [
+    "Exact definition of the COMBINE macro (e.g., whether it creates a larger integer type)."
+  ],
+  "confidence": 0.96
+}

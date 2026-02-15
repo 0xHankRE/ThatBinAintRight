@@ -1,0 +1,16 @@
+{
+  "summary": "sub_4043f0 is a thin wrapper that sets a local variable to 0x3c and then tail-calls sub_404020, returning its result.",
+  "details": [
+    "The function initializes a stack variable var_8 with the constant 0x3c, which appears unused.",
+    "It performs a tail call to sub_404020 and returns whatever that function returns."
+  ],
+  "evidence_refs": [
+    "call:0x404020",
+    "constants:0x3c"
+  ],
+  "unknowns": [
+    "The actual behavior of sub_404020 (it appears to jump to a nullptr or be a stub).",
+    "The purpose of the var_8 assignment."
+  ],
+  "confidence": 0.78
+}

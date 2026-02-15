@@ -1,0 +1,18 @@
+{
+  "suggested_name": "ai_struct_comparator",
+  "confidence": 0.85,
+  "rationale": "The function compares two structures by numeric fields at offsets 0xe/0xf, returns a result if they differ, otherwise clears errno and performs a locale-aware string comparison via strcoll, indicating a custom comparator used for sorting.",
+  "evidence_refs": [
+    "imports:__errno_location",
+    "imports:strcoll",
+    "call:0x404760",
+    "call:0x404b60"
+  ],
+  "tags": [
+    "file_io"
+  ],
+  "alt_names": [
+    "ai_custom_compare",
+    "ai_locale_string_compare"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "summary": "sub_40aed0 compares two objects by first checking a type field and a flag field, then optionally performing a custom string comparison before falling back to a standard strcmp. It returns a difference based on mismatched flags or the result of the custom comparison, otherwise the lexical string comparison result.",
+  "details": [
+    "The function reads a byte at offset 0x15 from both arguments and checks for values 3 or 9, using this to set a flag (rcx_1).",
+    "It then examines a 32-bit field at offset 0xac masked with 0xf000 to see if it equals 0x4000, using this to compute a boolean (rax_3) that is compared against the flag, returning the difference if they differ.",
+    "If the flag checks pass, it retrieves pointers stored at the start of each structure (arg1 and arg2) and calls sub_412600 for a specialized comparison.",
+    "If sub_412600 returns non\u2011zero, that value is returned; otherwise the function calls strcmp on the two strings and returns its result."
+  ],
+  "evidence_refs": [
+    "imports:strcmp",
+    "call:0x412600",
+    "constants:0xf000",
+    "constants:0x4000",
+    "strings:'[A\\\\]'"
+  ],
+  "unknowns": [
+    "Exact semantics of the type values 3 and 9",
+    "Purpose of the custom comparison performed by sub_412600",
+    "Structure layout beyond the examined offsets"
+  ],
+  "confidence": 0.86
+}

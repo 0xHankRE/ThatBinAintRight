@@ -1,0 +1,19 @@
+{
+  "suggested_name": "ai_print_version_and_license",
+  "confidence": 0.78,
+  "rationale": "The function references many strings related to GNU coreutils version, author credits, and GPL license text, and uses __fprintf_chk and fputc_unlocked to output formatted text, indicating it prints version/license information.",
+  "evidence_refs": [
+    "strings:'GNU coreutils'",
+    "strings:'License GPLv3+: GNU GPL version 3 or later <%s>.'",
+    "imports:__fprintf_chk",
+    "imports:fputc_unlocked",
+    "imports:dcgettext"
+  ],
+  "tags": [
+    "file_io"
+  ],
+  "alt_names": [
+    "ai_print_license",
+    "ai_print_version"
+  ]
+}

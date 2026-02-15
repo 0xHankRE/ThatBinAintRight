@@ -1,0 +1,16 @@
+{
+  "suggested_name": "ai_struct_comparator_by_fields_and_name",
+  "confidence": 0.86,
+  "rationale": "The function compares two structures using numeric fields at offsets 0xe/0xf, returns a comparison result, and falls back to a string collation (strcoll) after clearing errno, indicating a custom comparator used for sorting.",
+  "evidence_refs": [
+    "imports:__errno_location",
+    "imports:strcoll",
+    "call:0x404760",
+    "call:0x404b60"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_custom_sort_comparator",
+    "ai_compare_entries"
+  ]
+}

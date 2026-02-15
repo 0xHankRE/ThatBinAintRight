@@ -1,0 +1,17 @@
+{
+  "suggested_name": "ai_ensure_capacity",
+  "confidence": 0.78,
+  "rationale": "The function calculates a required element count, allocates a new buffer with calloc, copies existing data, frees old memory, and updates structure fields, typical of a dynamic array resize or capacity ensure routine.",
+  "evidence_refs": [
+    "imports:calloc",
+    "imports:free",
+    "imports:abort",
+    "call:0x4168e0",
+    "call:0x409b80"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_grow_vector",
+    "ai_resize_buffer"
+  ]
+}

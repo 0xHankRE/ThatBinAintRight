@@ -1,0 +1,22 @@
+{
+  "summary": "sub_410b70 allocates a 32-byte structure, duplicates optional string arguments, stores a third argument, and inserts the new node at the head of a global linked list. It returns the previous head of the list and aborts on allocation failure via sub_40e430.",
+  "details": [
+    "Calls malloc (0x4046d0) to allocate memory for a new node; on failure it invokes sub_40e430 which does not return.",
+    "If arg2 is non\u2011null, duplicates it using sub_410b30 (string copy with malloc) and stores the copy in the node's second field.",
+    "If arg1 is non\u2011null, duplicates it similarly and stores the copy in the node's first field.",
+    "Stores arg3 in the node's third field and the previous global list head (data_423720) in the fourth field, then updates data_423720 to point to the new node.",
+    "Returns the previous head of the list (the value of data_423720 before update)."
+  ],
+  "evidence_refs": [
+    "imports:malloc",
+    "call:0x4046d0",
+    "call:0x410b30",
+    "call:0x40e430"
+  ],
+  "unknowns": [
+    "Exact purpose of arg3 and the semantics of the stored fields",
+    "The structure layout beyond the observed fields",
+    "Behavior of sub_40e430 (error handling routine)"
+  ],
+  "confidence": 0.93
+}

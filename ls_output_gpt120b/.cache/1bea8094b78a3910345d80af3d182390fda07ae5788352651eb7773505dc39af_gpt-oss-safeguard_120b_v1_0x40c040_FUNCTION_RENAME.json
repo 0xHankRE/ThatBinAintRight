@@ -1,0 +1,17 @@
+{
+  "suggested_name": "ai_argument_error_report",
+  "confidence": 0.92,
+  "rationale": "The function formats and emits localized error messages for invalid or ambiguous command-line arguments, using dcgettext and error functions.",
+  "evidence_refs": [
+    "strings:invalid argument %s for %s",
+    "strings:ambiguous argument %s for %s",
+    "imports:error",
+    "imports:dcgettext",
+    "call:0x413ce0"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_invalid_argument_error",
+    "ai_ambiguous_argument_error"
+  ]
+}

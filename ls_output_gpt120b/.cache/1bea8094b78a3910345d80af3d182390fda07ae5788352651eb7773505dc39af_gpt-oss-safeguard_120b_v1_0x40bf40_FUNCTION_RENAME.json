@@ -1,0 +1,21 @@
+{
+  "suggested_name": "ai_signal_suspension_loop",
+  "confidence": 0.78,
+  "rationale": "The function repeatedly manipulates signal masks, raises signals (including SIGSTOP), and checks global flags, indicating a loop that suspends or controls execution via signals, a common anti-debug/anti-analysis technique.",
+  "evidence_refs": [
+    "imports:sigprocmask",
+    "imports:raise",
+    "imports:signal",
+    "imports:__stack_chk_fail",
+    "call:0x40be90"
+  ],
+  "tags": [
+    "anti_debug",
+    "process",
+    "evasion"
+  ],
+  "alt_names": [
+    "ai_signal_suspension",
+    "ai_signal_control_loop"
+  ]
+}

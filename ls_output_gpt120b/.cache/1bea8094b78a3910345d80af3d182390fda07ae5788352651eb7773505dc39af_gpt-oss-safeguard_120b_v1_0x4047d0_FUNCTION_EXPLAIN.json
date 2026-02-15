@@ -1,0 +1,16 @@
+{
+  "summary": "The function is a thin wrapper that directly forwards its three arguments to the imported sigaction system call and returns its result.",
+  "details": [
+    "It receives a signal number, a pointer to a new sigaction struct, and a pointer for the old sigaction struct.",
+    "The implementation performs a tail call to the imported sigaction function without any additional processing."
+  ],
+  "evidence_refs": [
+    "imports:sigaction",
+    "call:0x422cc0"
+  ],
+  "unknowns": [
+    "Why the wrapper exists (e.g., abstraction or future extension)",
+    "Any error handling or logging performed elsewhere"
+  ],
+  "confidence": 0.97
+}

@@ -1,0 +1,21 @@
+{
+  "suggested_name": "ai_cleanup_unlabeled_label",
+  "confidence": 0.78,
+  "rationale": "The function checks for a specific label string \"unlabeled\" when arg1 equals 10, frees the associated security context via freecon, clears the pointer, and sets errno. This behavior matches cleanup of an unlabeled security context.",
+  "evidence_refs": [
+    "strings:unlabeled",
+    "imports:strcmp",
+    "imports:freecon",
+    "imports:__errno_location",
+    "call:0x4046c0",
+    "call:0x404920",
+    "call:0x404760"
+  ],
+  "tags": [
+    "config"
+  ],
+  "alt_names": [
+    "ai_handle_unlabeled_label",
+    "ai_free_unlabeled_context"
+  ]
+}

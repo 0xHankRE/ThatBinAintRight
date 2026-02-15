@@ -1,0 +1,16 @@
+{
+  "suggested_name": "ai_open_directory",
+  "confidence": 0.96,
+  "rationale": "The function is a thin wrapper that directly calls the POSIX opendir() API to open a directory, indicating its primary behavior is opening directories.",
+  "evidence_refs": [
+    "imports:opendir",
+    "call:0x404880"
+  ],
+  "tags": [
+    "file_io"
+  ],
+  "alt_names": [
+    "ai_open_dir",
+    "ai_dir_open"
+  ]
+}

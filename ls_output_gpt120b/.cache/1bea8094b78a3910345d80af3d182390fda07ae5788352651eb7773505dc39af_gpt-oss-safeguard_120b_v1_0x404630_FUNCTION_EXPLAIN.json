@@ -1,0 +1,16 @@
+{
+  "summary": "sub_404630 is a thin wrapper that initializes a local variable to 0x60 and then tail\u2011calls sub_404020, effectively delegating its functionality to that routine.",
+  "details": [
+    "The function sets var_8 = 0x60 but never uses it before the tail call.",
+    "It performs a tail call to sub_404020, passing control without further processing."
+  ],
+  "evidence_refs": [
+    "constants:0x404020",
+    "call:0x404020"
+  ],
+  "unknowns": [
+    "The actual behavior of sub_404020, which appears to jump to a nullptr or be a stub.",
+    "The purpose of the local variable var_8 in both functions."
+  ],
+  "confidence": 0.73
+}

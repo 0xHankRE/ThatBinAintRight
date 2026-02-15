@@ -1,0 +1,19 @@
+{
+  "suggested_name": "ai_signal_handler_setup",
+  "confidence": 0.88,
+  "rationale": "The function iterates over a static list of signal numbers, checks membership in a signal set, clears or restores handlers using signal, sigaction, sigemptyset, sigaddset, indicating it configures or resets signal handling for the process.",
+  "evidence_refs": [
+    "imports:sigismember",
+    "imports:signal",
+    "imports:sigemptyset",
+    "imports:sigaction",
+    "imports:sigaddset"
+  ],
+  "tags": [
+    "process"
+  ],
+  "alt_names": [
+    "ai_signal_mask_init",
+    "ai_signal_handler_config"
+  ]
+}

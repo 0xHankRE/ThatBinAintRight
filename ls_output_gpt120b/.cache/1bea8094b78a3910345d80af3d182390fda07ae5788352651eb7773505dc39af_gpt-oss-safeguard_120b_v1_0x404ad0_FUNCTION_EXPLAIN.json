@@ -1,0 +1,14 @@
+{
+  "summary": "The function at 0x404ad0 is a thin wrapper that directly forwards its arguments to the standard library memcpy and returns its result.",
+  "details": [
+    "Accepts three arguments: destination pointer, source pointer, and byte count.",
+    "Performs a tail-call to the imported memcpy routine (address 0x422e40) with those arguments.",
+    "Returns the pointer returned by memcpy, typically the destination address."
+  ],
+  "evidence_refs": [
+    "imports:memcpy",
+    "call:0x422e40"
+  ],
+  "unknowns": [],
+  "confidence": 0.99
+}

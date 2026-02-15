@@ -1,0 +1,13 @@
+{
+  "summary": "The function at 0x404a10 is a thin wrapper that directly forwards its three arguments to the standard library memcmp and returns the result.",
+  "details": [
+    "It imports the memcmp function and makes a tail call to it with arg1, arg2, and arg3 unchanged.",
+    "No additional logic, string handling, or side effects are present; it simply returns the comparison outcome."
+  ],
+  "evidence_refs": [
+    "imports:memcmp",
+    "call:0x422de0"
+  ],
+  "unknowns": [],
+  "confidence": 0.99
+}

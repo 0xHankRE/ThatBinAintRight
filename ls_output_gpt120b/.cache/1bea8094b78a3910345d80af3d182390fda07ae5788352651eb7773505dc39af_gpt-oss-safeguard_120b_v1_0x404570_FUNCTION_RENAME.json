@@ -1,0 +1,16 @@
+{
+  "suggested_name": "ai_initialize",
+  "confidence": 0.62,
+  "rationale": "Function is a thin wrapper that sets a constant and tail-calls sub_404020, which appears to be an initialization stub; likely part of program setup or config initialization.",
+  "evidence_refs": [
+    "constants:0x404020",
+    "call:0x404020"
+  ],
+  "tags": [
+    "config"
+  ],
+  "alt_names": [
+    "ai_init_wrapper",
+    "ai_setup"
+  ]
+}

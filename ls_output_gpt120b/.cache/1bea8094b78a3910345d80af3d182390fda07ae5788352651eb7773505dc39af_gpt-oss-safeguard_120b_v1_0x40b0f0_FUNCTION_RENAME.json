@@ -1,0 +1,15 @@
+{
+  "suggested_name": "ai_cached_string_compare",
+  "confidence": 0.86,
+  "rationale": "Function compares two objects by a cached numeric field (likely a hash or length) and falls back to strcmp if equal, indicating a cached string comparison routine.",
+  "evidence_refs": [
+    "imports:strcmp",
+    "call:0x40b040",
+    "call:0x4046c0"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_compare_string_with_hash",
+    "ai_string_compare_cached"
+  ]
+}

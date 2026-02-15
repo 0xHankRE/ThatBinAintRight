@@ -1,0 +1,15 @@
+{
+  "summary": "sub_404560 initializes a local variable with the constant 0x53 and then tail-calls sub_404020, returning its result without further processing.",
+  "details": [
+    "A local variable var_8 is set to 0x53 but never used, indicating a placeholder or alignment.",
+    "The function performs a tail call to sub_404020, effectively delegating its behavior."
+  ],
+  "evidence_refs": [
+    "call:0x404020",
+    "constants:0x53"
+  ],
+  "unknowns": [
+    "The actual functionality of sub_404020 and the purpose of the unused var_8 variable."
+  ],
+  "confidence": 0.85
+}

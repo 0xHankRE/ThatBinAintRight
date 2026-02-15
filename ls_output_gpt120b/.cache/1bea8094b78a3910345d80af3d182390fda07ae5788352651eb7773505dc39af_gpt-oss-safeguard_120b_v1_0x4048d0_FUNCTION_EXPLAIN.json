@@ -1,0 +1,13 @@
+{
+  "summary": "The function is a thin wrapper that directly returns the result of the imported __ctype_get_mb_cur_max, which reports the maximum number of bytes in a multibyte character for the current locale.",
+  "details": [
+    "It contains a single tail-call to __ctype_get_mb_cur_max and returns its value.",
+    "No additional logic, data processing, or side effects are performed."
+  ],
+  "evidence_refs": [
+    "imports:__ctype_get_mb_cur_max",
+    "call:0x4048d0"
+  ],
+  "unknowns": [],
+  "confidence": 0.99
+}

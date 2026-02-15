@@ -1,0 +1,13 @@
+{
+  "suggested_name": "ai_dummy_function",
+  "confidence": 0.32,
+  "rationale": "The function simply forwards to another stub that does nothing, indicating a no-op or placeholder behavior.",
+  "evidence_refs": [
+    "call:0x404020"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_noop",
+    "ai_stub"
+  ]
+}

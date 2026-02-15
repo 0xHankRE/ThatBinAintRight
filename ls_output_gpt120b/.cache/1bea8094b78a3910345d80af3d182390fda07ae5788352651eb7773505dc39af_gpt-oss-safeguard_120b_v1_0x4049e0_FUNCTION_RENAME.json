@@ -1,0 +1,17 @@
+{
+  "suggested_name": "ai_get_current_working_directory",
+  "confidence": 0.97,
+  "rationale": "The function is a thin wrapper that directly calls the imported getcwd API to retrieve the current working directory.",
+  "evidence_refs": [
+    "imports:getcwd",
+    "call:0x4049e0",
+    "constants:0x422dc8"
+  ],
+  "tags": [
+    "file_io"
+  ],
+  "alt_names": [
+    "ai_getcwd",
+    "ai_get_current_dir"
+  ]
+}

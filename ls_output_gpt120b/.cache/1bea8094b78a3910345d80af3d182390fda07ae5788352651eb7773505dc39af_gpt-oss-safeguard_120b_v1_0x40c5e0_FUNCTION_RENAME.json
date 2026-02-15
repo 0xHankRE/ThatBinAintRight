@@ -1,0 +1,19 @@
+{
+  "suggested_name": "ai_expand_buffer",
+  "confidence": 0.93,
+  "rationale": "The function doubles the size of a buffer, allocating or reallocating memory and copying existing data, typical of a dynamic buffer growth routine.",
+  "evidence_refs": [
+    "imports:malloc",
+    "imports:realloc",
+    "imports:free",
+    "imports:__memcpy_chk",
+    "call:0x4046d0",
+    "call:0x404ba0",
+    "call:0x404aa0"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_buffer_grow",
+    "ai_dynamic_array_resize"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "summary": "sub_410b30 duplicates a null\u2011terminated string by allocating a buffer of the appropriate size and copying the contents, acting like a safe strdup implementation. On allocation failure it invokes an error handler (sub_40e430) and does not return.",
+  "details": [
+    "Computes the length of the input string with strlen and adds one for the terminating null.",
+    "Allocates memory of that size using malloc; if allocation succeeds, copies the string into the new buffer with __memcpy_chk and returns the new pointer.",
+    "If malloc returns NULL, calls sub_40e430 (likely a fatal error routine) and does not return."
+  ],
+  "evidence_refs": [
+    "imports:strlen",
+    "imports:malloc",
+    "imports:__memcpy_chk",
+    "call:0x4048e0",
+    "call:0x4046d0",
+    "call:0x404aa0"
+  ],
+  "unknowns": [
+    "Exact behavior of sub_40e430 (error handling routine) is not detailed."
+  ],
+  "confidence": 0.96
+}

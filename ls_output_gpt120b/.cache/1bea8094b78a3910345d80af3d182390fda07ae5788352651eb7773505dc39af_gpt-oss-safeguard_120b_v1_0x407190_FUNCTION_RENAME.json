@@ -1,0 +1,14 @@
+{
+  "suggested_name": "ai_struct_compare",
+  "confidence": 0.86,
+  "rationale": "The function compares two data structures by inspecting fields at offsets 0x10 and 0x11, computes a result, and falls back to a string comparison via strcmp, indicating a custom comparator routine.",
+  "evidence_refs": [
+    "imports:strcmp",
+    "call:0x4046c0"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_custom_struct_compare",
+    "ai_struct_cmp"
+  ]
+}

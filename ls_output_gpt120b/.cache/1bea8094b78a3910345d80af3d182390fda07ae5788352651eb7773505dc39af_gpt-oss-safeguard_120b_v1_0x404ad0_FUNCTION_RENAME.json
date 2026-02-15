@@ -1,0 +1,13 @@
+{
+  "suggested_name": "ai_copy_memory",
+  "confidence": 0.97,
+  "rationale": "The function directly tail-calls the standard memcpy import, acting as a thin wrapper for memory copying.",
+  "evidence_refs": [
+    "imports:memcpy"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_memcpy_wrapper",
+    "ai_copy_buffer"
+  ]
+}

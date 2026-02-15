@@ -1,0 +1,17 @@
+{
+  "summary": "The deregister_tm_clones function simply returns the address of a global data item (data_423278), likely representing a TM clone table used during program termination.",
+  "details": [
+    "The function contains a single return statement that yields &data_423278.",
+    "It is imported alongside _ITM_deregisterTMCloneTable, suggesting its role in TM clone deregistration, and is called by the _FINI_0 cleanup routine after __cxa_finalize."
+  ],
+  "evidence_refs": [
+    "imports:_ITM_deregisterTMCloneTable",
+    "call:0x406d60",
+    "strings:none"
+  ],
+  "unknowns": [
+    "Exact contents and purpose of data_423278",
+    "Whether the function internally invokes _ITM_deregisterTMCloneTable (no call shown in snippet)"
+  ],
+  "confidence": 0.78
+}

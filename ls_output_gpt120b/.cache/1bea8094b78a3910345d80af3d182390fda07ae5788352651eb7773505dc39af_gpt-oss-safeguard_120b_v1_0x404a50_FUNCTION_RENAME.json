@@ -1,0 +1,13 @@
+{
+  "suggested_name": "ai_calloc_wrapper",
+  "confidence": 0.96,
+  "rationale": "The function is a thin wrapper that directly forwards its arguments to the standard calloc function, indicating its role is memory allocation.",
+  "evidence_refs": [
+    "imports:calloc"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_allocate_memory",
+    "ai_memory_alloc"
+  ]
+}

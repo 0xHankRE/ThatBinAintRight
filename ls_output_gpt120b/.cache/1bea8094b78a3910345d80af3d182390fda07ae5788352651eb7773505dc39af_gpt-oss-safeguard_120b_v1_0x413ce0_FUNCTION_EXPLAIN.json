@@ -1,0 +1,23 @@
+{
+  "summary": "sub_413ce0 manages a resizable array of 128\u2011bit entries, expanding it when the requested index exceeds the current capacity, then invokes a helper (sub_412790) to process the selected entry and updates the stored pointer based on the result.",
+  "details": [
+    "The function checks if the supplied index (arg1) is greater than or equal to the current size stored in data_423250; if so it reallocates the array using sub_410a20, zero\u2011fills the new region with memset, and updates the global pointer data_423270 and size.",
+    "After ensuring capacity, it retrieves the entry at the given index, extracts fields from arg3, and calls sub_412790 with those fields and the entry's pointers; if the returned pointer is beyond the original entry pointer, it stores the new pointer back into the array."
+  ],
+  "evidence_refs": [
+    "imports:__errno_location",
+    "imports:memset",
+    "imports:free",
+    "imports:malloc",
+    "calls:0x410a20",
+    "calls:0x412790",
+    "calls:0x4049c0",
+    "constants:0x7fffffff"
+  ],
+  "unknowns": [
+    "Exact semantics of sub_412790 and the structure of the array elements",
+    "Purpose of the additional arguments passed from arg3 (e.g., arg3[1], arg3+0x28, arg3+0x30)",
+    "Why __errno_location is read at function start (potential stack canary check)"
+  ],
+  "confidence": 0.78
+}

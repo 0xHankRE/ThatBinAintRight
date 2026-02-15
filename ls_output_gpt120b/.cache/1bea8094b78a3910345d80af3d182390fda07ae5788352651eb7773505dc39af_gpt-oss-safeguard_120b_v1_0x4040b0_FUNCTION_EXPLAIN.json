@@ -1,0 +1,16 @@
+{
+  "summary": "sub_4040b0 is a thin wrapper that prepares a stack variable and then tail\u2011calls sub_404020, returning its result.",
+  "details": [
+    "The function allocates an 8\u2011byte local variable (var_8) set to 8 before making a tail call to sub_404020.",
+    "sub_404020 appears to be a stub that sets a local variable to 0 and then jumps to a null address, suggesting it may simply return or be a placeholder."
+  ],
+  "evidence_refs": [
+    "call:0x404020",
+    "constants:0x404020"
+  ],
+  "unknowns": [
+    "The actual effect and return value of sub_404020, since it jumps to a nullptr.",
+    "The purpose of the local variable var_8 in both functions."
+  ],
+  "confidence": 0.78
+}

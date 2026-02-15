@@ -1,0 +1,13 @@
+{
+  "suggested_name": "ai_validate_float_bounds",
+  "confidence": 0.86,
+  "rationale": "The function checks a structure of floating-point values against specific range thresholds (0.1, 0.9, 1.0, 1.1) and resets the pointer on failure, indicating it validates parameter bounds.",
+  "evidence_refs": [],
+  "tags": [
+    "config"
+  ],
+  "alt_names": [
+    "ai_check_parameter_constraints",
+    "ai_validate_numeric_range"
+  ]
+}

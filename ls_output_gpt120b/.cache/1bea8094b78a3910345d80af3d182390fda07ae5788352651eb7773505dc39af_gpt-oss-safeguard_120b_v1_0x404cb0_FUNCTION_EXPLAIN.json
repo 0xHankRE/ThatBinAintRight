@@ -1,0 +1,15 @@
+{
+  "summary": "The function at 0x404cb0 is a thin wrapper that directly forwards its argument to the standard library exit function, terminating the process with the given status.",
+  "details": [
+    "It performs a tail call to exit(status), with no additional logic or cleanup.",
+    "The function imports the exit symbol and its only callee address is 0x422f30, which resolves to the actual exit implementation."
+  ],
+  "evidence_refs": [
+    "imports:exit",
+    "call:0x422f30"
+  ],
+  "unknowns": [
+    "The origin of the status argument passed to this wrapper is not shown in the provided snippet."
+  ],
+  "confidence": 0.96
+}

@@ -1,0 +1,19 @@
+{
+  "summary": "sub_40ad20 first checks a type field at offset 0x15 of both arguments for values 3 or 9 and examines a high\u2011order flag mask (0xf000) at offset 0xac. Depending on those checks it may return a simple numeric ordering result; otherwise it falls back to sub_40ac90 which compares file name extensions and full strings. The function thus implements a two\u2011stage comparison: a quick numeric/flag based ordering followed by a lexical string comparison.",
+  "details": [
+    "Reads arg1[0x15] and arg2[0x15] and sets flags if they equal 3 or 9.",
+    "Masks a 32\u2011bit field at offset 0xac with 0xf000 and compares it against 0x4000 to derive a secondary ordering value.",
+    "If the preliminary checks resolve ordering, returns the difference of the computed values.",
+    "If not resolved, tail\u2011calls sub_40ac90 which extracts file extensions via strrchr and compares them with strcoll, then compares full paths if extensions match."
+  ],
+  "evidence_refs": [
+    "call:0x40ac90",
+    "constants:0xf000",
+    "constants:0x4000"
+  ],
+  "unknowns": [
+    "Exact semantic meaning of the type codes 3 and 9 in the structures",
+    "Purpose of the masked field at offset 0xac and why 0x4000 is significant"
+  ],
+  "confidence": 0.87
+}

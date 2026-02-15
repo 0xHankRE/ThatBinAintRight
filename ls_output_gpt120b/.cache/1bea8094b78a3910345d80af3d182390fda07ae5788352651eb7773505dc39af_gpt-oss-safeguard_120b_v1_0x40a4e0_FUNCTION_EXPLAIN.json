@@ -1,0 +1,20 @@
+{
+  "summary": "sub_40a4e0 implements a comparator that first orders two objects by numeric fields at offsets 0xc and 0xd, returning a non\u2011zero ordering value if they differ. If those fields are equal, it clears errno and falls back to a locale\u2011aware string comparison of the pointers stored at the start of each object using strcoll.",
+  "details": [
+    "Loads 64\u2011bit values from arg1[0xc] and arg2[0xc] and computes a signed comparison, contributing to the result.",
+    "Loads 64\u2011bit values from arg1[0xd] and arg2[0xd] and computes a second signed comparison, combined with the first using a shift\u2011and\u2011add scheme to produce -1, 0, or 1.",
+    "If the combined numeric comparison yields zero, the function retrieves the first pointer from each structure (arg1[0] and arg2[0]), resets errno via __errno_location, and returns the result of strcoll on those strings.",
+    "The function is likely used as a custom comparison routine for sorting or searching structures that contain a primary numeric key and a secondary string key."
+  ],
+  "evidence_refs": [
+    "imports:__errno_location",
+    "imports:strcoll",
+    "call:0x404760",
+    "call:0x404b60"
+  ],
+  "unknowns": [
+    "Exact semantic meaning of the fields at offsets 0xc and 0xd (e.g., timestamp, version, etc.)",
+    "Structure layout beyond the examined fields"
+  ],
+  "confidence": 0.92
+}

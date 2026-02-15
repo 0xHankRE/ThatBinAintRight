@@ -1,0 +1,14 @@
+{
+  "suggested_name": "ai_get_locale_tolower_table",
+  "confidence": 0.78,
+  "rationale": "The function simply forwards to __ctype_tolower_loc, which returns a pointer to the locale-specific lower-case character mapping table.",
+  "evidence_refs": [
+    "imports:__ctype_tolower_loc",
+    "call:0x404d40"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_get_ctype_lower_table",
+    "ai_locale_tolower"
+  ]
+}

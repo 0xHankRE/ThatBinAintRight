@@ -1,0 +1,17 @@
+{
+  "summary": "sub_408170 updates a global byte counter and forwards its arguments to fwrite_unlocked to write data to stdout.",
+  "details": [
+    "Adds the length argument (arg2) to the global variable data_423350, likely tracking total bytes written.",
+    "Calls fwrite_unlocked(arg1, 1, arg2, *(uint64_t*)stdout) to write arg2 bytes from the buffer arg1 directly to the standard output."
+  ],
+  "evidence_refs": [
+    "imports:fwrite_unlocked",
+    "call:0x404b90",
+    "strings:none"
+  ],
+  "unknowns": [
+    "Exact purpose of the global counter beyond byte tracking",
+    "Potential side effects of the caller's context"
+  ],
+  "confidence": 0.96
+}

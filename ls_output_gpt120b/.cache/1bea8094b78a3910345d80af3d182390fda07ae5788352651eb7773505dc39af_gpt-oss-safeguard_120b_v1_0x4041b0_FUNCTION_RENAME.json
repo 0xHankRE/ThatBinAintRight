@@ -1,0 +1,13 @@
+{
+  "suggested_name": "ai_noop_wrapper",
+  "confidence": 0.32,
+  "rationale": "The function simply tail-calls sub_404020, which appears to be a stub/no-op. It likely serves as a placeholder or wrapper with no side effects.",
+  "evidence_refs": [
+    "call:0x404020"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_stub_wrapper",
+    "ai_noop"
+  ]
+}

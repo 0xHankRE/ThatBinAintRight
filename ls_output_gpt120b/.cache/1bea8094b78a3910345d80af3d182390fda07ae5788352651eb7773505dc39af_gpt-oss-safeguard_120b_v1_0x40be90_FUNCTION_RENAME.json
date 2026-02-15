@@ -1,0 +1,18 @@
+{
+  "suggested_name": "ai_lazy_stdout_write",
+  "confidence": 0.78,
+  "rationale": "The function performs a one\u2011time initialization (checking a flag, calling tcgetpgrp and sub_408a60) then writes data to stdout using fwrite_unlocked. It appears to lazily set up output handling before writing buffers.",
+  "evidence_refs": [
+    "imports:fwrite_unlocked",
+    "imports:tcgetpgrp",
+    "call:0x408a60"
+  ],
+  "tags": [
+    "file_io",
+    "process"
+  ],
+  "alt_names": [
+    "ai_init_and_write_stdout",
+    "ai_stdout_output_handler"
+  ]
+}

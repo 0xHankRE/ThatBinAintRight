@@ -1,0 +1,15 @@
+{
+  "suggested_name": "ai_compare_struct_cached_key_strcoll",
+  "confidence": 0.86,
+  "rationale": "The function compares two structures by a cached numeric field (offset 0x19), falling back to a locale-aware string comparison via strcoll, and resets errno. It acts as a comparator for objects with cached keys.",
+  "evidence_refs": [
+    "imports:__errno_location",
+    "imports:strcoll",
+    "call:0x40b040"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_struct_string_compare",
+    "ai_cached_key_string_compare"
+  ]
+}

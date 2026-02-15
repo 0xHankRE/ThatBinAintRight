@@ -1,0 +1,15 @@
+{
+  "suggested_name": "ai_stack_canary_failure",
+  "confidence": 0.96,
+  "rationale": "The function simply tail-calls __stack_chk_fail, indicating it handles stack canary violation detection.",
+  "evidence_refs": [
+    "imports:__stack_chk_fail"
+  ],
+  "tags": [
+    "anti_debug"
+  ],
+  "alt_names": [
+    "ai_stack_chk_fail_handler",
+    "ai_canary_fail"
+  ]
+}

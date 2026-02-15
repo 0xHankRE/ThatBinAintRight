@@ -1,0 +1,20 @@
+{
+  "summary": "sub_40a550 performs preliminary checks on two structures' type fields and a masked flag before delegating to sub_40a4e0 for detailed comparison, returning a numeric difference when the checks fail.",
+  "details": [
+    "It reads a field at offset 0x15 from both arguments and checks if the values are 3 or 9, setting a combined flag rdx_1.",
+    "It examines a 32\u2011bit value at offset 0xac, masks it with 0xf000, and compares the result to 0x4000 to derive a boolean flag.",
+    "If the type checks succeed and the flag conditions match, it tail\u2011calls sub_40a4e0; otherwise it returns the difference of the derived flags.",
+    "sub_40a4e0 then compares additional numeric fields and finally performs a locale\u2011aware string comparison via strcoll."
+  ],
+  "evidence_refs": [
+    "call:0x40a4e0",
+    "constants:0xf000",
+    "constants:0x4000"
+  ],
+  "unknowns": [
+    "Exact semantics of the structures pointed to by arg1 and arg2",
+    "Purpose of the type codes 3 and 9",
+    "Reason for the specific flag mask 0xf000"
+  ],
+  "confidence": 0.86
+}

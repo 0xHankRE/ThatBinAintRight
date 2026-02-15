@@ -1,0 +1,16 @@
+{
+  "suggested_name": "ai_struct_compare_by_type_and_flag",
+  "confidence": 0.86,
+  "rationale": "The function compares two structures based on a type field at offset 0x15, checks a flag mask (0xf000) against 0x4000, and falls back to strcmp on embedded strings, indicating a custom comparator for sorting or matching objects.",
+  "evidence_refs": [
+    "imports:strcmp",
+    "call:0x4046c0",
+    "constants:0xf000",
+    "constants:0x4000"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_struct_comparator",
+    "ai_type_flag_string_compare"
+  ]
+}

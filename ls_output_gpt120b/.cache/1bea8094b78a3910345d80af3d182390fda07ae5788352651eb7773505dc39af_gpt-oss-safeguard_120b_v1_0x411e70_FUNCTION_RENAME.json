@@ -1,0 +1,19 @@
+{
+  "suggested_name": "ai_match_argument_in_list",
+  "confidence": 0.88,
+  "rationale": "The function iterates over an array of strings, comparing each to a target string using strlen and strncmp, returning the index of a unique match, -1 if not found, or -2 if ambiguous, typical of command-line argument or option lookup.",
+  "evidence_refs": [
+    "imports:strlen",
+    "imports:strncmp",
+    "call:0x4048e0",
+    "call:0x404770"
+  ],
+  "tags": [
+    "config",
+    "process"
+  ],
+  "alt_names": [
+    "ai_find_option_index",
+    "ai_lookup_argument"
+  ]
+}

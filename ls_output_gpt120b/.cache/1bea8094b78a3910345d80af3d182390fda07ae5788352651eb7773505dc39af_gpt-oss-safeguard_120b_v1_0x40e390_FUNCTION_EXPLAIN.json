@@ -1,0 +1,23 @@
+{
+  "summary": "sub_40e390 selects a time conversion based on a timezone argument. If no timezone is provided it returns UTC via gmtime_r; otherwise it attempts to set the TZ environment using sub_40e1f0, obtains local time with localtime_r, validates the result with sub_40e0c0, and conditionally cleans up with sub_40e300 before returning the populated struct tm or NULL.",
+  "details": [
+    "When arg1 is NULL the function simply tail\u2011calls gmtime_r(arg2, arg3) to produce a UTC time structure.",
+    "If arg1 is non\u2011NULL, sub_40e1f0 is called to adjust the TZ environment; a non\u2011zero return indicates a successful timezone change.",
+    "localtime_r(arg2, arg3) is then invoked to compute the local time according to the possibly modified TZ setting.",
+    "sub_40e0c0 validates or adjusts the tm structure against the timezone data; if it succeeds and the earlier TZ change returned a special value (1) or sub_40e300 succeeds, the function returns arg3.",
+    "If validation fails or the TZ change did not return the special value, sub_40e300 is called for cleanup and the function returns NULL."
+  ],
+  "evidence_refs": [
+    "imports:localtime_r",
+    "imports:gmtime_r",
+    "call:0x40e1f0",
+    "call:0x40e0c0",
+    "call:0x40e300"
+  ],
+  "unknowns": [
+    "Exact semantics of sub_40e300 (cleanup or state restoration)",
+    "Precise structure and meaning of arg1 and arg2 buffers",
+    "Full logic inside sub_40e0c0 that performs string comparison and memory operations"
+  ],
+  "confidence": 0.86
+}

@@ -1,0 +1,16 @@
+{
+  "suggested_name": "ai_struct_comparator",
+  "confidence": 0.86,
+  "rationale": "The function compares two structures by numeric fields at offsets 0x10/0x11, returns a comparison result, and falls back to a locale-aware string comparison (strcoll) when those fields are equal, typical of a custom comparator.",
+  "evidence_refs": [
+    "imports:__errno_location",
+    "imports:strcoll",
+    "call:0x404760",
+    "call:0x404b60"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_compare_entries",
+    "ai_locale_fallback_compare"
+  ]
+}

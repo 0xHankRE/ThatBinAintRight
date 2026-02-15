@@ -1,0 +1,16 @@
+{
+  "suggested_name": "ai_file_seek",
+  "confidence": 0.96,
+  "rationale": "The function is a thin wrapper that directly forwards arguments to the lseek system call, indicating its role in file offset manipulation.",
+  "evidence_refs": [
+    "imports:lseek",
+    "call:0x404990"
+  ],
+  "tags": [
+    "file_io"
+  ],
+  "alt_names": [
+    "ai_lseek_wrapper",
+    "ai_seek"
+  ]
+}

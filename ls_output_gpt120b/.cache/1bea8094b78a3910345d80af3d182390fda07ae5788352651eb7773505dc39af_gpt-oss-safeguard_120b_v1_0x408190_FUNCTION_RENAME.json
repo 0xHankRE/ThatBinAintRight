@@ -1,0 +1,21 @@
+{
+  "suggested_name": "ai_print_long_array",
+  "confidence": 0.88,
+  "rationale": "The function iterates over a buffer of 64-bit integers, printing each with the format \" %ld\" to stdout using fputs_unlocked and __printf_chk, then writes a newline, indicating it dumps an array of long values to the console.",
+  "evidence_refs": [
+    "strings: %ld",
+    "imports:fputs_unlocked",
+    "imports:__printf_chk",
+    "imports:__overflow",
+    "call:0x404a30",
+    "call:0x404bd0",
+    "call:0x404960"
+  ],
+  "tags": [
+    "file_io"
+  ],
+  "alt_names": [
+    "ai_dump_long_values",
+    "ai_log_int64_array"
+  ]
+}

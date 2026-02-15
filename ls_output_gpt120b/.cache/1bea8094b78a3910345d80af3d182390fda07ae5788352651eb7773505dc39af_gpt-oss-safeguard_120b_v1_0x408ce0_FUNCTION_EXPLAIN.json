@@ -1,0 +1,19 @@
+{
+  "summary": "sub_408ce0 recursively sorts an array of 128\u2011bit elements (two doubles) using a user\u2011supplied comparator, swapping elements when out of order and handling small sub\u2011arrays directly.",
+  "details": [
+    "The function splits the input range using bit\u2011shifts (>>1, >>2) and recursively calls itself on sub\u2011ranges.",
+    "For sub\u2011ranges of size 2 it loads a 128\u2011bit value, calls the comparator arg4 on the two double components, and swaps them via _mm_shuffle_pd if needed.",
+    "Base cases for sizes <=2 are handled directly; larger ranges trigger further recursion.",
+    "The function imports memcpy but does not appear to use it in the shown code; it may be used in omitted sections for moving data."
+  ],
+  "evidence_refs": [
+    "imports:memcpy",
+    "call:0x408ce0",
+    "call:0x404ad0"
+  ],
+  "unknowns": [
+    "Exact sorting algorithm (quick\u2011sort, merge\u2011sort, or insertion sort) is not fully determined from the truncated code.",
+    "Purpose of arg3 (unused in the visible snippet) and any additional data movement performed by omitted code."
+  ],
+  "confidence": 0.86
+}

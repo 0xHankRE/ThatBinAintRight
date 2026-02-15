@@ -1,0 +1,15 @@
+{
+  "summary": "The function at 0x404a40 is a thin wrapper that directly forwards its two arguments to the imported rawmemchr library function and returns its result.",
+  "details": [
+    "The implementation consists solely of a tailcall: return rawmemchr(arg1, arg2);",
+    "The import table lists rawmemchr, and the callee address (0x422df8) corresponds to that imported function."
+  ],
+  "evidence_refs": [
+    "imports:rawmemchr",
+    "call:0x422df8"
+  ],
+  "unknowns": [
+    "The broader context or reason for providing this wrapper within the binary."
+  ],
+  "confidence": 0.97
+}

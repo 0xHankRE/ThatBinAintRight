@@ -1,0 +1,14 @@
+{
+  "suggested_name": "ai_no_op_stub",
+  "confidence": 0.32,
+  "rationale": "The function only sets a local variable and tail-calls another empty function, indicating a placeholder or no-op behavior.",
+  "evidence_refs": [
+    "call:0x404020",
+    "constants:0x4f"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_placeholder",
+    "ai_stub_function"
+  ]
+}

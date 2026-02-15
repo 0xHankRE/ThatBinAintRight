@@ -1,0 +1,14 @@
+{
+  "suggested_name": "ai_increment_global_counter",
+  "confidence": 0.85,
+  "rationale": "The function returns a stored value; if the primary value is zero it increments a secondary global counter and returns the new value, acting as a simple sequential ID generator.",
+  "evidence_refs": [
+    "constants:0x4237c8",
+    "constants:0x4237c4"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_get_next_counter",
+    "ai_generate_sequence_id"
+  ]
+}

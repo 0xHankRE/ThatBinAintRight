@@ -1,0 +1,20 @@
+{
+  "summary": "sub_40a190 compares two file-like structures, first checking special type codes and directory flags, then delegating to sub_40a110 for timestamp and name comparison, effectively implementing a sort order that prioritizes directories and handles special cases.",
+  "details": [
+    "Reads a field at offset 0x15 from both arguments and checks for values 3 or 9, setting a flag if either matches.",
+    "If the second argument has type 3 or 9, it sets a base comparison result of 1; otherwise it extracts the mode bits at offset 0xac, masks with 0xf000, and checks for the directory flag 0x4000.",
+    "When the type flag is not set, it compares the directory flag of the first argument against the expected value and returns a difference if they differ.",
+    "If the preliminary checks pass, it tail\u2011calls sub_40a110, which compares timestamps (fields at 0x10/0x11) and finally falls back to a locale\u2011aware string comparison via strcoll.",
+    "The function returns early with a numeric ordering when directory status or special type codes differ, otherwise it defers to the more detailed comparator."
+  ],
+  "evidence_refs": [
+    "constants:0xf000",
+    "constants:0x4000",
+    "call:0x40a110"
+  ],
+  "unknowns": [
+    "Exact meaning of the values 3 and 9 at offset 0x15",
+    "Why the function returns the difference of boolean flags rather than a fixed ordering value"
+  ],
+  "confidence": 0.86
+}

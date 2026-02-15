@@ -1,0 +1,13 @@
+{
+  "suggested_name": "ai_stub_function",
+  "confidence": 0.62,
+  "rationale": "The function only sets a constant and tail-calls another empty stub, indicating a placeholder or no-op routine.",
+  "evidence_refs": [
+    "call:0x404020"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_noop",
+    "ai_placeholder"
+  ]
+}

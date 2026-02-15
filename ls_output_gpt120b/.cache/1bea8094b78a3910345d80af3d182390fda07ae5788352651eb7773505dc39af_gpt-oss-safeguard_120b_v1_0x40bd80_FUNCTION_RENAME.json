@@ -1,0 +1,20 @@
+{
+  "suggested_name": "ai_map_status_code",
+  "confidence": 0.78,
+  "rationale": "The function examines masked bits of an input value and a global mode flag to return specific constant codes, acting as a lookup/decoder for status or error codes.",
+  "evidence_refs": [
+    "constants:0xf000",
+    "constants:0x8000",
+    "constants:0x4000",
+    "constants:0xa000",
+    "constants:0x1000",
+    "constants:0xc000"
+  ],
+  "tags": [
+    "config"
+  ],
+  "alt_names": [
+    "ai_decode_flag",
+    "ai_status_lookup"
+  ]
+}

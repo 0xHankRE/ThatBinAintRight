@@ -1,0 +1,14 @@
+{
+  "summary": "The function is a thin wrapper that directly forwards its argument to the standard library readdir function and returns the result.",
+  "details": [
+    "It receives a DIR* pointer (dirp) as its argument.",
+    "It performs a tail call to readdir(dirp) without any additional processing or side effects."
+  ],
+  "evidence_refs": [
+    "imports:readdir",
+    "call:0x422e68",
+    "strings:none"
+  ],
+  "unknowns": [],
+  "confidence": 0.99
+}

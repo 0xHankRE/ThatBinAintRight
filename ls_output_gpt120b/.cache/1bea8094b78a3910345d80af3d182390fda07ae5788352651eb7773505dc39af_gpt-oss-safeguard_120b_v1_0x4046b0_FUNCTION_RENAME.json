@@ -1,0 +1,14 @@
+{
+  "suggested_name": "ai_free_memory",
+  "confidence": 0.98,
+  "rationale": "The function is a thin wrapper that directly calls the standard free() to deallocate heap memory.",
+  "evidence_refs": [
+    "imports:free",
+    "call:0x4046b0"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_deallocate",
+    "ai_release_memory"
+  ]
+}

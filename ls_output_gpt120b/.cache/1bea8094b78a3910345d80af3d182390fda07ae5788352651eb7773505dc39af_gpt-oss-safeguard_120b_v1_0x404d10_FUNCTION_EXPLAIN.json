@@ -1,0 +1,15 @@
+{
+  "summary": "The function at 0x404d10 is a thin wrapper that directly tail\u2011calls the imported lgetfilecon routine and returns its result without any additional processing.",
+  "details": [
+    "The only operation in the function is a tailcall to lgetfilecon, indicating it forwards arguments unchanged.",
+    "No strings or extra logic are present, suggesting it serves as an alias or compatibility shim for the library call."
+  ],
+  "evidence_refs": [
+    "imports:lgetfilecon",
+    "call:0x422f60"
+  ],
+  "unknowns": [
+    "Exact arguments passed to lgetfilecon (register state) are not shown in the snippet."
+  ],
+  "confidence": 0.97
+}

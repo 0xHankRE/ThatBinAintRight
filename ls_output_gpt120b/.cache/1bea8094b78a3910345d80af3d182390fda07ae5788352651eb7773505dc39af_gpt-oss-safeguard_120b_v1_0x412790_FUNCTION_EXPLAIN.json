@@ -1,0 +1,27 @@
+{
+  "summary": "sub_412790 is a validation/processing routine that examines a string or buffer according to a mode parameter (r15) limited to values 0\u201110. It uses locale information (__ctype_get_mb_cur_max) and character classification (iswprint, __ctype_b_loc) to compute lengths, compare data (memcmp) and possibly translate messages (dcgettext). If an unsupported mode is supplied it aborts, otherwise it initializes internal state and returns a length or status used by callers such as sub_40bcc0 for further checks.",
+  "details": [
+    "The function checks r15 against a maximum of 0xA and aborts if out of range, indicating r15 is a mode or type identifier.",
+    "It calls __ctype_get_mb_cur_max early, suggesting handling of multibyte character encodings.",
+    "Switch logic initializes many local variables (e.g., var_60_2, var_64_1) based on the mode, likely preparing buffers for parsing.",
+    "Calls to memcmp, iswprint, __ctype_b_loc, and dcgettext imply character property checks and localized error handling.",
+    "Callers (e.g., sub_40bcc0) use the return value as a length to compare against strlen, indicating the function returns a processed length or validation result."
+  ],
+  "evidence_refs": [
+    "imports:abort",
+    "imports:__ctype_get_mb_cur_max",
+    "imports:dcgettext",
+    "imports:strlen",
+    "imports:memcmp",
+    "imports:iswprint",
+    "call:0x404750",
+    "call:0x4048d0",
+    "call:0x4048c0"
+  ],
+  "unknowns": [
+    "Exact semantics of each case branch within the switch (full behavior not shown).",
+    "Precise meaning of all eight arguments and how they map to internal processing.",
+    "The role of the other callee addresses (0x4048e0, 0x404a10, 0x411700) not detailed in the excerpt."
+  ],
+  "confidence": 0.73
+}

@@ -1,0 +1,20 @@
+{
+  "summary": "sub_40a6c0 implements a comparator that first orders two objects by comparing 64\u2011bit fields at offsets 0xE and 0xF. If those fields differ, it returns a signed integer indicating the ordering. When the fields are equal, it falls back to a locale\u2011aware string comparison of the pointers stored at the start of each object, after clearing errno.",
+  "details": [
+    "Loads arg1[0xE] and arg2[0xE] and computes a signed result based on < and > comparisons.",
+    "Loads arg1[0xF] and arg2[0xF] and combines the two comparison results into a single integer using bitwise operations.",
+    "If the combined result is non\u2011zero, it is returned directly.",
+    "If the result is zero, the function retrieves the first pointer from each structure, resets errno to 0, and calls strcoll to compare the referenced strings."
+  ],
+  "evidence_refs": [
+    "imports:__errno_location",
+    "imports:strcoll",
+    "call:0x404760",
+    "call:0x404b60"
+  ],
+  "unknowns": [
+    "Exact semantic meaning of the structures and the fields at offsets 0xE/0xF",
+    "Why the specific bit\u2011wise combination of comparison flags is used"
+  ],
+  "confidence": 0.93
+}

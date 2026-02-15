@@ -1,0 +1,18 @@
+{
+  "suggested_name": "ai_strdup",
+  "confidence": 0.96,
+  "rationale": "Allocates memory for a copy of a given string and copies it using memcpy, matching typical strdup behavior.",
+  "evidence_refs": [
+    "imports:strlen",
+    "imports:malloc",
+    "imports:__memcpy_chk",
+    "call:0x4048e0",
+    "call:0x4046d0",
+    "call:0x404aa0"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_string_duplicate",
+    "ai_copy_string"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "summary": "The function validates its inputs, setting errno and returning -1 on error. If the first argument is NULL it sets errno to 0x5f and fails. If the first argument equals 10 and the second argument points to the string \"unlabeled\", it frees the string, clears the pointer, sets errno to 0x3d, and fails. Otherwise it returns the original first argument unchanged.",
+  "details": [
+    "Checks if arg1 is zero; on failure writes errno=0x5f (EOPNOTSUPP) and returns -1.",
+    "When arg1 equals 0xa (10), it dereferences arg2 to get a string pointer and compares it to \"unlabeled\" using strcmp.",
+    "If the string matches, it calls freecon to release the context, nulls the pointer at arg2, sets errno=0x3d (ENODATA), and returns -1.",
+    "In all other cases it simply returns the original arg1 value."
+  ],
+  "evidence_refs": [
+    "strings:unlabeled",
+    "imports:strcmp",
+    "imports:freecon",
+    "imports:__errno_location",
+    "call:0x4046c0",
+    "call:0x404920",
+    "call:0x404760"
+  ],
+  "unknowns": [
+    "The semantic meaning of the numeric arg1 values beyond the observed case of 10.",
+    "The broader context in which this function is called (e.g., SELinux label handling)."
+  ],
+  "confidence": 0.96
+}

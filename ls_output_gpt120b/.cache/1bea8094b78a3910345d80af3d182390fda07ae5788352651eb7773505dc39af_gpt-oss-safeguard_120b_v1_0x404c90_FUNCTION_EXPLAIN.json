@@ -1,0 +1,15 @@
+{
+  "summary": "The function is a thin wrapper that directly forwards its arguments to the imported gethostname system call and returns its result.",
+  "details": [
+    "It receives parameters (name, len) and performs a tail call to gethostname.",
+    "No additional processing, validation, or error handling is performed."
+  ],
+  "evidence_refs": [
+    "imports:gethostname",
+    "call:0x422f20"
+  ],
+  "unknowns": [
+    "Potential side effects of the underlying gethostname implementation"
+  ],
+  "confidence": 0.99
+}

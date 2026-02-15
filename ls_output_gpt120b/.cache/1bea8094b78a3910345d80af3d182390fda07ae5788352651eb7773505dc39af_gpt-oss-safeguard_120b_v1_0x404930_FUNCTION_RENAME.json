@@ -1,0 +1,14 @@
+{
+  "suggested_name": "ai_strchr_wrapper",
+  "confidence": 0.96,
+  "rationale": "The function directly tail-calls the standard library strchr, acting as a thin wrapper for character search in strings.",
+  "evidence_refs": [
+    "imports:strchr",
+    "call:0x404930"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_find_char",
+    "ai_search_char"
+  ]
+}

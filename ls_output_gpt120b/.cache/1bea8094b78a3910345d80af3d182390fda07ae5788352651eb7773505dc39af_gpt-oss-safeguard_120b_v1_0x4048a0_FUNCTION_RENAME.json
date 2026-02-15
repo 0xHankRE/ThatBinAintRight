@@ -1,0 +1,14 @@
+{
+  "suggested_name": "ai_bind_textdomain_wrapper",
+  "confidence": 0.96,
+  "rationale": "Function is a thin wrapper that directly calls the bindtextdomain library function to set the gettext domain for localization.",
+  "evidence_refs": [
+    "imports:bindtextdomain",
+    "call:0x4048a0"
+  ],
+  "tags": [],
+  "alt_names": [
+    "ai_set_translation_domain",
+    "ai_localization_bind"
+  ]
+}

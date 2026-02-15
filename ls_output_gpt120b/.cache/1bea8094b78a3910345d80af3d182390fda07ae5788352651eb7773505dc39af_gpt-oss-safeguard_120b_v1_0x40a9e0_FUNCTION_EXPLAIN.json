@@ -1,0 +1,16 @@
+{
+  "summary": "The function extracts two string pointers from its arguments, clears the global errno variable, and then forwards the comparison to the locale-aware strcoll function, returning its result.",
+  "details": [
+    "Loads rbx = *(uint64_t*)arg1 and r12 = *(uint64_t*)arg2 as the strings to compare.",
+    "Resets errno to 0 via __errno_location() before performing the comparison.",
+    "Calls strcoll(rbx, r12) and returns the comparison result."
+  ],
+  "evidence_refs": [
+    "imports:__errno_location",
+    "imports:strcoll",
+    "call:0x404760",
+    "call:0x404b60"
+  ],
+  "unknowns": [],
+  "confidence": 0.98
+}

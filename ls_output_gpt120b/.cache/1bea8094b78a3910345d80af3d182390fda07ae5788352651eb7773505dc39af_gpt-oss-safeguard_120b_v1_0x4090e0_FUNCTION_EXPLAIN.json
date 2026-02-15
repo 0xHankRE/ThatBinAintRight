@@ -1,0 +1,23 @@
+{
+  "summary": "sub_4090e0 prints the command-line usage/help text for a GNU coreutils utility (likely ls), using localized strings via dcgettext and writing to stdout, then may exit based on the argument flag.",
+  "details": [
+    "If the first argument is false (e.g., no arguments or error), it prints a formatted usage line with __printf_chk and a series of option descriptions with fputs_unlocked, all retrieved via dcgettext for localization.",
+    "The function references many option strings typical of ls (e.g., -a, -A, --color) and includes usage and help messages, indicating it serves as the help routine for the utility."
+  ],
+  "evidence_refs": [
+    "strings:Usage: %s [OPTION]... [FILE]...",
+    "strings:List information about the FILEs (the current directory by default).",
+    "strings:-a, --all                  do not ignore entries starting with .",
+    "imports:dcgettext",
+    "imports:__printf_chk",
+    "imports:fputs_unlocked",
+    "call:0x4048c0",
+    "call:0x404cd0",
+    "call:0x404cb0"
+  ],
+  "unknowns": [
+    "Exact behavior when arg1 is true (e.g., version output or other messages not shown in the snippet)",
+    "Potential additional branches handling other command-line flags"
+  ],
+  "confidence": 0.92
+}
